@@ -19,6 +19,11 @@ export class AppModule { }
 ```
 ## 3. Import the main libraries styles into your app's global style sheet
 ```css
-    /* Global styles */
-    @import '~@smerante/components/styles/index';
+  /* Global styles */
+  @import '~@smerante/components/styles/theme';
+  
+  /* Override default theme variables */
+  $sm-primary: #027fe6;
+
+  @import '~@smerante/components/styles/core';
 ```
