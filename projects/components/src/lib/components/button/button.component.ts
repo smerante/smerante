@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Renderer2, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'sm-button',
@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SMButtonComponent implements OnInit {
 
-  constructor() { }
+  @Input() type: 'secondary' | 'tertiary';
+
+  constructor(private renderer: Renderer2, private host: ElementRef) { }
 
   ngOnInit(): void {
+      const buttonElement = (this.host.nativeElement as HTMLElement).querySelector('button');
+      this.renderer.addClass(buttonElement, `sm-button--${this.type}`);
   }
 
 }

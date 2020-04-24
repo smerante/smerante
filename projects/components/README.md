@@ -28,3 +28,9 @@ export class AppModule { }
   /* Import core components styles */
   @import '~@smerante/components/styles/core';
 ```
+
+## 4. Import the Roboto font family from Google Fonts
+```html
+<!-- Include this in your root html html head tag-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+```

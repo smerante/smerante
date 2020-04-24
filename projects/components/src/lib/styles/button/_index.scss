@@ -1,6 +1,63 @@
 .sm-button {
+  @include reset();
+  cursor: pointer;
   position: relative;
   display: inline-block;
   height: 48px;
-  color: $sm-primary;
+  background-color: $sm-primary;
+  color: $text-primary;
+  padding: $sp-sm $sp-b;
+  margin: 3px;
+  &:hover {
+    background-color: $sm-primary-hover;
+  }
+  &:focus {
+    background-color: $sm-primary-focus;
+    outline: $border-sm $sm-primary-focus;
+    outline-offset: 2px;
+  }
+  &:active {
+    background-color: $sm-primary-active;
+  }
+}
+
+.sm-button--secondary {
+  background-color: $sm-secondary;
+  color: $text-secondary;
+
+  &:hover {
+    background-color: $sm-secondary-hover;
+    color: $text-primary;
+  }
+  &:focus {
+    background-color: $sm-secondary-focus;
+    color: $text-primary;
+    outline: $border-sm $sm-secondary-focus;
+    outline-offset: 2px;
+  }
+  &:active {
+    background-color: $sm-secondary-active;
+    color: $text-primary;
+  }
+}
+
+.sm-button--tertiary {
+  height: 32px;
+  padding: $sp-xxs;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  background-color: $sm-secondary;
+  color: $text-secondary;
+
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: $sm-secondary;
+    color: $sm-secondary-active;
+  }
+
+  &:focus {
+    outline: $border-sm $sm-secondary-focus;
+    outline-offset: 0px;
+  }
 }

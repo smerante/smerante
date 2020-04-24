@@ -17,6 +17,7 @@ import { SMComponentsModule } from '@smerante/components';
 })
 export class AppModule { }
 ```
+
 ## 3. Import the main libraries styles into your app's global style sheet
 ```scss
   /* Global styles */
@@ -29,4 +30,10 @@ export class AppModule { }
 
   /* Import core components styles */
   @import '~@smerante/components/styles/core';
+```
+
+## 4. Import the Roboto font family from Google Fonts
+```html
+<!-- Include this in your root html html head tag-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 ```

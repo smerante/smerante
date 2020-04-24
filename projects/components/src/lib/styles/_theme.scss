@@ -1,1 +1,16 @@
+@mixin reset {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  -webkit-appearance: none;
+  font-size: 1rem;
+}
+
 @import './variables/colors';
+@import './variables/spacing';
+@import './variables/typography';
+@import './variables/border';
