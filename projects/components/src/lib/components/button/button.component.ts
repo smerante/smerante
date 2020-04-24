@@ -2,10 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'sm-button',
-  templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
+  templateUrl: './button.component.html'
 })
-export class ButtonComponent implements OnInit {
+export class SMButtonComponent implements OnInit {
 
   constructor() { }
 

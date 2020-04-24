@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
-import { ButtonComponent } from './button/button.component';
+import { SMButtonComponent } from './components/button/button.component';
+import { SMMainComponent } from './components/main.component';
 
 
 const components = 
 [
-  ButtonComponent
+  SMButtonComponent,
+  SMMainComponent
 ];
 
 @NgModule({
-  declarations:components,
+  declarations:[components],
   imports: [],
   exports: [components]
 })
-export class ComponentsModule { }
+export class SMComponentsModule { }
