@@ -5,10 +5,12 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "test": "ng test components --browsers ChromeHeadless --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:styles": "cp -a projects/components/src/lib/styles/. dist/components/styles"
+    "build:styles": "cp -a projects/components/src/lib/styles/. dist/components/styles",
+    "publish": "npm run test && npm run pre-publish && npm publish dist/components",
+    "pre-publish": "ng build --prod && cp -a projects/components/src/lib/styles/. dist/components/styles"
   },
   "private": true,
   "dependencies": {
