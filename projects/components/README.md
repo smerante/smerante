@@ -24,6 +24,23 @@ export class AppModule { }
   
   /* Override default theme variables */
   $sm-primary: #027fe6;
+  $sm-primary-hover: #006dc7;
+  $sm-primary-focus: #0058a0;
+  $sm-primary-active: #004c8a;
+  $sm-secondary: #ffffff;
+  $sm-secondary-hover: #006dc7;
+  $sm-secondary-focus: #0058a0;
+  $sm-secondary-active: #004c8a;
+  $text-primary: #ffffff;
+  $text-secondary: #027fe6;
+  $border-primary: #888888;
+
+  $border-sm: 1px solid;
+
+  $sp-xxs: 4px;
+  $sp-xs: 8px;
+  $sp-sm: 16px;
+  $sp-b: 24px;
 
   /* Import core components styles */
   @import '~@smerante/components/styles/core';
