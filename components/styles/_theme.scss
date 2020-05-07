@@ -1,0 +1,17 @@
+@mixin reset {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  -webkit-appearance: none;
+  font-size: 1rem;
+}
+
+@import './theme/colors';
+@import './theme/spacing';
+@import './theme/typography';
+@import './theme/border';
+@import './theme/animation';

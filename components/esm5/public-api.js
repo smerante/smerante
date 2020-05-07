@@ -1,0 +1,6 @@
+/*
+ * Public API Surface of components
+ */
+export * from './lib/components.module';
+export * from './lib/components/button/button.component';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BzbWVyYW50ZS9jb21wb25lbnRzLyIsInNvdXJjZXMiOlsicHVibGljLWFwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7R0FFRztBQUVILGNBQWMseUJBQXlCLENBQUM7QUFDeEMsY0FBYywwQ0FBMEMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG4gKiBQdWJsaWMgQVBJIFN1cmZhY2Ugb2YgY29tcG9uZW50c1xuICovXG5cbmV4cG9ydCAqIGZyb20gJy4vbGliL2NvbXBvbmVudHMubW9kdWxlJztcbmV4cG9ydCAqIGZyb20gJy4vbGliL2NvbXBvbmVudHMvYnV0dG9uL2J1dHRvbi5jb21wb25lbnQnOyJdfQ==

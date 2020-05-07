@@ -1,0 +1,6 @@
+@mixin transition-all($val: 0.3s) {
+  transition: all $val ease;
+  -webkit-transition: all $val ease;
+  -moz-transition: all $val ease;
+  -o-transition: all $val ease;
+}
