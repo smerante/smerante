@@ -9,6 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:styles": "cp -a projects/components/src/lib/styles/. dist/components/styles",
+    "build:component-explorer": "ng build component-explorer --prod --base-href=\"\"",
+    "deploy": "npm run build:component-explorer && gh-pages -d ./dist/component-explorer",
     "publish": "npm run test && npm run pre-publish && npm publish dist/components",
     "pre-publish": "ng build --prod && cp -a projects/components/src/lib/styles/. dist/components/styles"
   },
@@ -22,6 +24,7 @@
     "@angular/platform-browser": "~9.1.0",
     "@angular/platform-browser-dynamic": "~9.1.0",
     "@angular/router": "~9.1.0",
+    "gh-pages": "^2.2.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
