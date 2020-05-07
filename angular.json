@@ -52,7 +52,7 @@
       },
       "root": "projects/component-explorer",
       "sourceRoot": "projects/component-explorer/src",
-      "prefix": "app",
+      "prefix": "explorer",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

@@ -10,7 +10,8 @@
   font-size: 1rem;
 }
 
-@import './variables/colors';
-@import './variables/spacing';
-@import './variables/typography';
-@import './variables/border';
+@import './theme/colors';
+@import './theme/spacing';
+@import './theme/typography';
+@import './theme/border';
+@import './theme/animation';

@@ -1,0 +1,11 @@
+.left-rail {
+  display: flex;
+  &--rail {
+    display: block;
+    width: 25%;
+  }
+  &--body {
+    display: block;
+    width: 75%;
+  }
+}
