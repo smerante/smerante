@@ -1,7 +1,9 @@
 html,
 body,
 p,
+label,
 a,
+input,
 button {
   @include reset();
   font-size: 16px;

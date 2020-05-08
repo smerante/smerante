@@ -1,0 +1,61 @@
+.sm-input {
+  @include reset();
+  position: relative;
+  display: block;
+  height: 32px;
+  width: calc(100% - 40px); //16 + 16 + 4 + 4
+  background-color: $sm-background;
+  color: $text;
+  padding: $sp-xs $sp-sm;
+  &--wrapper {
+    display: block;
+    position: relative;
+    margin: 12px;
+    &:before,
+    &:after {
+      pointer-events: none;
+      @include transition-all();
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0px;
+      top: 0px;
+      left: 0px;
+      border-bottom: $border-md;
+      border-color: transparent;
+    }
+    &:before {
+      border: none;
+      outline: $border-sm $border-primary;
+      width: 100%;
+      left: 0px;
+    }
+    &[focus]:after {
+      width: 100%;
+      border-color: $sm-primary;
+    }
+    &:hover {
+      @include box-shadow();
+    }
+    &[focus]:hover {
+      @include box-shadow(1px 1px 3px 1px, $sm-primary);
+    }
+  }
+  &--label {
+    @include transition-all();
+    pointer-events: none;
+    display: block;
+    position: absolute;
+    left: $sp-sm;
+    top: calc(100% - 40px);
+    line-height: 2rem;
+    background: $sm-background;
+  }
+  &--focus,
+  &:focus + &--label {
+    top: -8px;
+    left: 4px;
+    line-height: 1rem;
+    background: white;
+  }
+}

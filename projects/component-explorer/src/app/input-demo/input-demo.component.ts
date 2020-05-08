@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputDemoComponent implements OnInit {
 
+  input: string = '';
   constructor() { }
-
   ngOnInit(): void {
+  }
+
+  inputChanged($event) {
+    console.warn($event);
   }
 
 }

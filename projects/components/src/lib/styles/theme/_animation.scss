@@ -4,3 +4,7 @@
   -moz-transition: all $val ease;
   -o-transition: all $val ease;
 }
+
+@mixin box-shadow($shadow: 1px 1px 3px 1px, $val: #888888) {
+  box-shadow: $shadow $val;
+}
