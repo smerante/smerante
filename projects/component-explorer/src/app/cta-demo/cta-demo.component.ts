@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'explorer-cta-demo',
@@ -10,6 +10,9 @@ export class CtaDemoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      document.getElementById('primary-button').focus();
+    });
   }
 
 }

@@ -31,9 +31,15 @@
     font-size: 1.5rem;
     text-align: center;
     padding: 24px 0px;
+
     &.active {
       border-bottom: $border-md $sm-primary;
       height: calc(24px - 2px);
+    }
+
+    &:focus {
+      border-bottom: $border-sm $sm-primary-focus;
+      height: calc(24px - 1px);
     }
   }
 }

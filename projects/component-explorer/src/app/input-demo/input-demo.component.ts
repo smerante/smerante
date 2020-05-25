@@ -9,7 +9,11 @@ export class InputDemoComponent implements OnInit {
 
   input: string = '';
   constructor() { }
+
   ngOnInit(): void {
+    setTimeout(() => {
+      document.getElementById('username-input').focus();
+    });
   }
 
   inputChanged($event) {
