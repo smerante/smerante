@@ -1,5 +1,5 @@
 # Reusable common components library
-Visit the [component explorer](https://smerante.github.io/smerante/#/input) to see code usage adn examples.
+Visit the [component explorer](https://smerante.github.io/smerante/#/input) to see code usage and examples.
 
 ## 1. Install the library
     % npm i @smerante/components
