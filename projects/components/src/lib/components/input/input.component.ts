@@ -20,7 +20,7 @@ export class SMInputComponent implements OnInit, ControlValueAccessor {
 
   @Input() id = `sm-${uniqueId++}`;
   @Input() label = `Enter Label`;
-  @Input() input: string;
+  @Input() input = '';
   @Input() focus: boolean;
   @Input() type = 'text';
 
@@ -30,7 +30,6 @@ export class SMInputComponent implements OnInit, ControlValueAccessor {
   constructor(private host: ElementRef) { }
 
   ngOnInit(): void {
-    this.input = '';
     this.focus = false;
   }
 

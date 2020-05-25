@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { SMButtonComponent } from './components/button/button.component';
 import { SMInputComponent } from './components/input/input.component';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 const components =
@@ -12,7 +13,7 @@ const components =
 
 @NgModule({
   declarations: [components],
-  imports: [CommonModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule],
   exports: [components]
 })
 export class SMComponentsModule { }
