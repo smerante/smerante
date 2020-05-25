@@ -1,4 +1,5 @@
 # Reusable common components library
+Visit the [component explorer](https://smerante.github.io/smerante/#/input) to see code usage adn examples.
 
 ## 1. Install the library
     % npm i @smerante/components
@@ -51,3 +52,22 @@ export class AppModule { }
 <!-- Include this in your root html html head tag-->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 ```
+
+## 5. Start using the components
+[Component explorer](https://smerante.github.io/smerante/#/input)
+```html
+<!-- Buttons -->
+<sm-button>Primary</sm-button>
+<sm-button type="secondary">Secondary</sm-button>
+<sm-button type="tertiary">Tertiary</sm-button>
+
+<!-- Inputs -->
+<sm-input label="Username"></sm-input>
+<sm-input type="password" label="Password"></sm-input>
+```
+
+
+
+
+
+
