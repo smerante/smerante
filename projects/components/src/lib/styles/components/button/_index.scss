@@ -41,7 +41,7 @@ sm-button {
     background-color: $sm-primary-active;
   }
   @media screen and (max-width: 768px) {
-    width: 100%;
+    width: calc(100% - 6px);
   }
 }
 

@@ -7,13 +7,15 @@ import { SMComponentsModule } from 'components';
 import { NavComponent } from './nav/nav.component';
 import { CtaDemoComponent } from './cta-demo/cta-demo.component';
 import { InputDemoComponent } from './input-demo/input-demo.component';
+import { TabDemoComponent } from './tab-demo/tab-demo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     CtaDemoComponent,
-    InputDemoComponent
+    InputDemoComponent,
+    TabDemoComponent
   ],
   imports: [
     BrowserModule,

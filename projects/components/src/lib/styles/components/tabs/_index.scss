@@ -1,0 +1,73 @@
+.sm-tab {
+  &--button {
+    @include transition-all();
+    @include reset();
+    display: inline-block;
+    cursor: pointer;
+    pointer-events: all;
+    position: relative;
+    height: 48px;
+    width: max-content;
+    background-color: $sm-background;
+    color: $text;
+    padding: $sp-sm $sp-b;
+    border: $border-sm $sm-border-primary;
+    border-bottom: $border-sm $sm-background;
+
+    &.active {
+      color: $sm-primary;
+      border-bottom: $border-sm $sm-primary;
+    }
+
+    &.active:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      display: block;
+      height: 1px;
+      top: 100%;
+    }
+
+    &:focus {
+      border-bottom: $border-md $sm-secondary-hover;
+    }
+
+    &:hover {
+      background-color: $sm-background-2;
+      color: $text-primary;
+    }
+  }
+}
+sm-tab + sm-tab {
+  > .sm-tab--button {
+    border-left: none;
+  }
+}
+
+.sm-tab-content {
+  display: none;
+  &.active {
+    display: block;
+    overflow: scroll;
+  }
+}
+
+.sm-tabs-component {
+  width: auto;
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+}
+
+.sm-tab-wrapper {
+  display: flex;
+  position: relative;
+  overflow: scroll;
+}
+
+.sm-tab-content-wrapper {
+  position: relative;
+  border: $border-sm $sm-border-primary;
+  padding: $sp-sm;
+  max-width: calc(100% - 32px);
+}

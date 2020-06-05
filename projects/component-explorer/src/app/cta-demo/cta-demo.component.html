@@ -1,5 +1,21 @@
-<sm-button id="primary" (click)="buttonClicked='Primary clicked!'">Primary</sm-button>
-<sm-button type="secondary" (click)="buttonClicked='Secondary clicked!'">Secondary</sm-button>
-<sm-button type="tertiary" (click)="buttonClicked='Tertiary clicked!'">Tertiary</sm-button>
-
-{{buttonClicked}}
+<sm-tabs>
+  <sm-tab>
+    Example
+  </sm-tab>
+  <sm-tab>
+    Code
+  </sm-tab>
+  <sm-tab-content>
+    <sm-button id="primary" (click)="buttonClicked='Primary clicked!'">Primary</sm-button>
+    <sm-button type="secondary" (click)="buttonClicked='Secondary clicked!'">Secondary</sm-button>
+    <sm-button type="tertiary" (click)="buttonClicked='Tertiary clicked!'">Tertiary</sm-button>
+    <br/>
+    buttonClicked: {{buttonClicked}}
+  </sm-tab-content>
+  <sm-tab-content>
+    <pre class="code"><![CDATA[
+  <sm-button id="primary">Primary</sm-button>
+  <sm-button type="secondary">Secondary</sm-button>
+  <sm-button type="tertiary">Tertiary</sm-button>]]></pre>
+  </sm-tab-content>
+</sm-tabs>

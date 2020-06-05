@@ -64,6 +64,50 @@ export class AppModule { }
 <!-- Inputs -->
 <sm-input label="Username"></sm-input>
 <sm-input type="password" label="Password"></sm-input>
+
+<!-- Tabs -->
+<sm-tabs>
+  <sm-tab>
+    Tab 1
+  </sm-tab>
+  <sm-tab>
+    Tab 2
+  </sm-tab>
+  <sm-tab>
+    Tab 3
+  </sm-tab>
+  <sm-tab>
+    Tab 4
+  </sm-tab>
+  <sm-tab-content>
+    <span class="text-center">Tab content 1: Really really long long long long long long text</span>
+    <sm-input id="username" label="Username"></sm-input>
+    <sm-input type="password" label="Password"></sm-input>
+    <sm-button id="primary">Tab 1</sm-button>
+    <sm-button type="secondary">Tab 1</sm-button>
+    <sm-button type="tertiary">Tab 1</sm-button>
+  </sm-tab-content>
+  <sm-tab-content>
+    <span class="text-center">tab content 2</span>
+    <sm-button id="primary">Tab 2</sm-button>
+    <sm-button type="secondary">Tab 2</sm-button>
+    <sm-button type="tertiary">Tab 2</sm-button>
+  </sm-tab-content>
+  <sm-tab-content>
+    <span class="text-center">tab content 3</span>
+    <sm-button id="primary">Tab 3</sm-button>
+    <sm-button type="secondary">Tab 3</sm-button>
+    <sm-button type="tertiary">Tab 3</sm-button>
+  </sm-tab-content>
+  <sm-tab-content>
+    <span class="text-center">tab content 4</span>
+    <sm-button id="primary">Tab 4</sm-button>
+    <sm-button type="secondary">Tab 4</sm-button>
+    <sm-button type="tertiary">Tab 4</sm-button>
+  </sm-tab-content>
+  <sm-tab-content>
+  </sm-tab-content>
+</sm-tabs>
 ```
 
 

@@ -4,8 +4,20 @@ p,
 label,
 a,
 input,
+pre,
 button {
   @include reset();
   font-size: 16px;
   font-family: "Roboto", sans-serif;
+}
+
+.text-center {
+  text-align: center;
+  display: block;
+}
+
+.code {
+  background: #282222;
+  color: #aeee00;
+  overflow: scroll;
 }
