@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, Renderer2, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, Renderer2, ElementRef, AfterViewInit } from '@angular/core';
 
 let uniqueId = 0;
 @Component({
   selector: 'sm-button',
   templateUrl: './button.component.html'
 })
-export class SMButtonComponent implements OnInit {
+export class SMButtonComponent implements OnInit, AfterViewInit {
 
   @Input() id = `sm-${uniqueId++}`;
   @Input() type: 'secondary' | 'tertiary';
@@ -17,4 +17,9 @@ export class SMButtonComponent implements OnInit {
     this.renderer.addClass(buttonElement, `sm-button--${this.type}`);
   }
 
+  ngAfterViewInit(): void {
+    document.getElementById(this.id + '-button').addEventListener('click', ($event) => {
+      document.getElementById(this.id + '-button').focus();
+    });
+  }
 }

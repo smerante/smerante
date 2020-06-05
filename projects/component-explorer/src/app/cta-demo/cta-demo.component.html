@@ -1,3 +1,5 @@
-<sm-button id="primary">Primary</sm-button>
-<sm-button type="secondary">Secondary</sm-button>
-<sm-button type="tertiary">Tertiary</sm-button>
+<sm-button id="primary" (click)="buttonClicked='Primary clicked!'">Primary</sm-button>
+<sm-button type="secondary" (click)="buttonClicked='Secondary clicked!'">Secondary</sm-button>
+<sm-button type="tertiary" (click)="buttonClicked='Tertiary clicked!'">Tertiary</sm-button>
+
+{{buttonClicked}}

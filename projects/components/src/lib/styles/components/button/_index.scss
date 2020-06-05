@@ -1,7 +1,11 @@
+sm-button {
+  pointer-events: none;
+}
 .sm-button {
   @include transition-all();
   @include reset();
   cursor: pointer;
+  pointer-events: all;
   position: relative;
   display: inline-block;
   height: 48px;
@@ -19,9 +23,12 @@
     outline: $border-sm $sm-primary;
   }
   margin: 3px;
+
   &:hover {
     background-color: $sm-primary-hover;
   }
+
+  &:active:before,
   &:focus:before {
     width: calc(100% + 4px);
     height: calc(100% + 4px);
@@ -29,8 +36,12 @@
     left: -2px;
     outline-color: $sm-primary-focus;
   }
+
   &:active {
     background-color: $sm-primary-active;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
   }
 }
 
@@ -74,7 +85,7 @@
     background-color: $sm-secondary;
     color: $sm-secondary-active;
   }
-
+  &:active:before,
   &:focus:before {
     outline: none;
     border: $border-sm $sm-primary-focus;
