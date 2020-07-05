@@ -155,6 +155,20 @@ $spTokens: (
     <a class="card-link" target="_blank" href="https://www.linkedin.com/in/sam-merante/">Linked In</a>
   </card-footer>
 </sm-card>
+
+<!-- Radios -->
+<sm-radio-group groupLabel="Please select the type of label you like">
+  <sm-radio-btn id="short" label="Short">
+    <input type="radio" id="short" name="gender" value="short" />
+  </sm-radio-btn>
+  <sm-radio-btn id="long"
+    label="I like super super super super super super super super super super super super long labels">
+    <input type="radio" id="long" name="gender" value="long" />
+  </sm-radio-btn>
+  <sm-radio-btn id="disabled" label="Disabled labels" [disabled]="true">
+    <input type="radio" id="disabled" name="gender" disabled value="disabled" />
+  </sm-radio-btn>
+</sm-radio-group>
 ```
 
 
