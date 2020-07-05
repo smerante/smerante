@@ -75,3 +75,7 @@ button {
 .body {
   @include text(body);
 }
+
+p {
+  margin-bottom: sp(m);
+}

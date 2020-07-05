@@ -9,6 +9,7 @@ import { CtaDemoComponent } from './cta-demo/cta-demo.component';
 import { InputDemoComponent } from './input-demo/input-demo.component';
 import { TabDemoComponent } from './tab-demo/tab-demo.component';
 import { TextstyleDemoComponent } from './textstyle-demo/textstyle-demo.component';
+import { CardsDemoComponent } from './cards-demo/cards-demo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TextstyleDemoComponent } from './textstyle-demo/textstyle-demo.componen
     CtaDemoComponent,
     InputDemoComponent,
     TabDemoComponent,
-    TextstyleDemoComponent
+    TextstyleDemoComponent,
+    CardsDemoComponent
   ],
   imports: [
     BrowserModule,

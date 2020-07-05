@@ -1,0 +1,8 @@
+<div class="sm-card--wrapper" [attr.imgSrc]="imgSrc ? true : false" [attr.placement]="placement">
+  <div *ngIf="imgSrc" class="sm-card--img" [attr.placement]="placement">
+    <img class="" [src]="imgSrc" />
+  </div>
+  <ng-content select="card-header"></ng-content>
+  <ng-content select="card-body"></ng-content>
+  <ng-content select="card-footer"></ng-content>
+</div>
