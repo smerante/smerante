@@ -21,3 +21,57 @@ button {
   color: #aeee00;
   overflow: scroll;
 }
+
+@mixin text($val) {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  @if ($val == "heading-1") {
+    font-size: 3rem;
+    line-height: 3rem;
+    padding: sp(b) 0;
+  } @else if ($val == "heading-2") {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  } @else if ($val == "heading-3") {
+    font-size: 2rem;
+    line-height: 2rem;
+  } @else if ($val == "heading-4") {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  } @else if ($val == "heading-5") {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+  } @else if ($val == "heading-6") {
+    font-size: 1rem;
+    line-height: 1rem;
+  } @else if ($val == "body") {
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: normal;
+  }
+}
+
+.heading-1 {
+  @include text(heading-1);
+}
+.heading-2 {
+  @include text(heading-2);
+}
+.heading-3 {
+  @include text(heading-3);
+}
+.heading-4 {
+  @include text(heading-4);
+}
+.heading-5 {
+  @include text(heading-5);
+}
+.heading-6 {
+  @include text(heading-6);
+}
+.body {
+  @include text(body);
+}

@@ -1,2 +1,9 @@
-$border-sm: 1px solid;
-$border-md: 2px solid;
+@function border($val) {
+  @return map.get($borderTokens, $val);
+}
+
+$borderTokens: (
+  sm: 1px solid,
+  md: 2px solid,
+  lg: 3px solid
+);

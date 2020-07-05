@@ -8,6 +8,7 @@ import { NavComponent } from './nav/nav.component';
 import { CtaDemoComponent } from './cta-demo/cta-demo.component';
 import { InputDemoComponent } from './input-demo/input-demo.component';
 import { TabDemoComponent } from './tab-demo/tab-demo.component';
+import { TextstyleDemoComponent } from './textstyle-demo/textstyle-demo.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TabDemoComponent } from './tab-demo/tab-demo.component';
     NavComponent,
     CtaDemoComponent,
     InputDemoComponent,
-    TabDemoComponent
+    TabDemoComponent,
+    TextstyleDemoComponent
   ],
   imports: [
     BrowserModule,

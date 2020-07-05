@@ -24,24 +24,51 @@ export class AppModule { }
   @import '~@smerante/components/styles/theme';
   
   /* Override default theme variables */
-  $sm-primary: #027fe6;
-  $sm-primary-hover: #006dc7;
-  $sm-primary-focus: #0058a0;
-  $sm-primary-active: #004c8a;
-  $sm-secondary: #ffffff;
-  $sm-secondary-hover: #006dc7;
-  $sm-secondary-focus: #0058a0;
-  $sm-secondary-active: #004c8a;
-  $text-primary: #ffffff;
-  $text-secondary: #027fe6;
-  $border-primary: #888888;
 
-  $border-sm: 1px solid;
+  // color: color(primary);
+  $colorTokens: (
+  primary: #027fe6,
+  primary-hover: #006dc7,
+  primary-focus: #0058a0,
+  primary-active: #004c8a,
+  secondary: #ffffff,
+  secondary-hover: #006dc7,
+  secondary-focus: #0058a0,
+  secondary-active: #004c8a,
+  text: #6f6f6f,
+  text-light: #8d8383,
+  text-primary: #ffffff,
+  text-secondary: #027fe6,
+  border-primary: #6f6f6f,
+  background: #ffffff,
+  background-2: #cecece,
+  pink: #ff7cf8,
+  black: #000000,
+  white: #ffffff
+);
 
-  $sp-xxs: 4px;
-  $sp-xs: 8px;
-  $sp-sm: 16px;
-  $sp-b: 24px;
+// border: border(sm);
+$borderTokens: (
+  sm: 1px solid,
+  md: 2px solid,
+  lg: 3px solid
+);
+
+// Spacing -> padding: sp(b)
+$spTokens: (
+  xxs: 4px,
+  xs: 8px,
+  sm: 12px,
+  m: 16px,
+  b: 24px,
+  l: 32px,
+  xl: 40px,
+  xxl: 48px,
+  xxxl: 56px,
+  huge: 128px,
+  giant: 256px
+);
+
 
   /* Import core components styles */
   @import '~@smerante/components/styles/core';

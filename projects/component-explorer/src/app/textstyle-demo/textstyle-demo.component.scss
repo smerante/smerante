@@ -1,0 +1,208 @@
+.spacing {
+  display: flex;
+  justify-content: space-between;
+  padding: sp(l) sp(giant);
+}
+
+.token {
+  display: inline-block;
+  width: 100px;
+}
+
+.sp {
+  border: border(sm);
+  background: color(pink);
+  &-xxs {
+    width: sp(xxs);
+    height: sp(xxs);
+  }
+  &-xs {
+    width: sp(xs);
+    height: sp(xs);
+  }
+  &-sm {
+    width: sp(sm);
+    height: sp(sm);
+  }
+  &-m {
+    width: sp(m);
+    height: sp(m);
+  }
+  &-b {
+    width: sp(b);
+    height: sp(b);
+  }
+  &-l {
+    width: sp(l);
+    height: sp(l);
+  }
+  &-xl {
+    width: sp(xl);
+    height: sp(xl);
+  }
+  &-xxl {
+    width: sp(xxl);
+    height: sp(xxl);
+  }
+  &-xxxl {
+    width: sp(xxxl);
+    height: sp(xxxl);
+  }
+  &-huge {
+    width: sp(huge);
+    height: sp(huge);
+  }
+  &-giant {
+    width: sp(giant);
+    height: sp(giant);
+  }
+}
+
+.textstyle {
+  display: block;
+  text-align: center;
+  width: 50%;
+  padding: sp(xs) sp(huge);
+  .heading-1 {
+    @include text(heading-1);
+    padding: 0;
+  }
+  .heading-2 {
+    @include text(heading-2);
+  }
+  .heading-3 {
+    @include text(heading-3);
+  }
+  .heading-4 {
+    @include text(heading-4);
+  }
+  .heading-5 {
+    @include text(heading-5);
+  }
+  .heading-6 {
+    @include text(heading-6);
+  }
+  .body {
+    @include text(body);
+  }
+}
+
+.color {
+  display: block;
+  text-align: center;
+  min-width: 50%;
+  color: color(white);
+  margin: sp(b) auto;
+
+  .primary {
+    background-color: color(primary);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .primary-hover {
+    background-color: color(primary-hover);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .primary-focus {
+    background-color: color(primary-focus);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .primary-active {
+    background-color: color(primary-active);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .secondary {
+    background-color: color(secondary);
+    color: color(black);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .secondary-hover {
+    background-color: color(secondary-hover);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .secondary-focus {
+    background-color: color(secondary-focus);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .secondary-active {
+    background-color: color(secondary-active);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .text {
+    background-color: color(text);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .text-light {
+    background-color: color(text-light);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .text-primary {
+    color: color(black);
+    background-color: color(text-primary);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .text-secondary {
+    background-color: color(text-secondary);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .border-primary {
+    background-color: color(border-primary);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .background {
+    background-color: color(background);
+    color: color(black);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .background-2 {
+    background-color: color(background-2);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .pink {
+    background-color: color(pink);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .black {
+    background-color: color(black);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .white {
+    background-color: color(white);
+    color: color(black);
+    height: 2rem;
+    line-height: 2rem;
+  }
+}
+
+.border {
+  display: block;
+  text-align: center;
+  min-width: 50%;
+  color: color(black);
+  margin: sp(b) auto;
+  &-sm {
+    border: border(sm) color(border-primary);
+  }
+  &-md {
+    border: border(md) color(border-primary);
+  }
+  &-lg {
+    border: border(lg) color(border-primary);
+  }
+}

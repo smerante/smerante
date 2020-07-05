@@ -1,0 +1,321 @@
+<h1 class="heading-1 text-center">Spacing</h1>
+<p class="text-center">Spacing to be used for margin and padding</p>
+<sm-tabs style="display: flex; justify-content: center;">
+  <sm-tab>
+    Example
+  </sm-tab>
+  <sm-tab>
+    Scss
+  </sm-tab>
+  <sm-tab-content>
+
+    <div class="spacing">
+      <div class="token"> xxs (4):</div>
+      <div class="sp sp-xxs"></div>
+    </div>
+    <div class="spacing">
+      <div class="token"> xs (8):</div>
+      <div class="sp sp-xs"></div>
+    </div>
+    <div class="spacing">
+      <div class="token"> sm (12):</div>
+      <div class="sp sp-sm"></div>
+    </div>
+    <div class="spacing">
+      <div class="token"> m (16):</div>
+      <div class="sp sp-m"></div>
+    </div>
+    <div class="spacing">
+      <div class="token"> b (24):</div>
+      <div class="sp sp-b"></div>
+    </div>
+    <div class="spacing">
+      <div class="token"> l (32):</div>
+      <div class="sp sp-l"></div>
+    </div>
+    <div class="spacing">
+      <div class="token"> xl (40):</div>
+      <div class="sp sp-xl"></div>
+    </div>
+    <div class="spacing">
+      <div class="token"> xxl (48):</div>
+      <div class="sp sp-xxl"></div>
+    </div>
+    <div class="spacing">
+      <div class="token"> xxxl (56):</div>
+      <div class="sp sp-xxxl"></div>
+    </div>
+    <div class="spacing">
+      <div class="token"> huge (128):</div>
+      <div class="sp sp-huge"></div>
+    </div>
+    <div class="spacing">
+      <div class="token"> giant (256):</div>
+      <div class="sp sp-giant"></div>
+    </div>
+  </sm-tab-content>
+  <sm-tab-content>
+    <pre class="code"><![CDATA[
+.sp {
+  border: border(sm);
+  background: color(pink);
+  &-xxs {
+    width: sp(xxs);
+    height: sp(xxs);
+  }
+  &-xs {
+    width: sp(xs);
+    height: sp(xs);
+  }
+  &-sm {
+    width: sp(sm);
+    height: sp(sm);
+  }
+  &-m {
+    width: sp(m);
+    height: sp(m);
+  }
+  &-b {
+    width: sp(b);
+    height: sp(b);
+  }
+  &-l {
+    width: sp(l);
+    height: sp(l);
+  }
+  &-xl {
+    width: sp(xl);
+    height: sp(xl);
+  }
+  &-xxl {
+    width: sp(xxl);
+    height: sp(xxl);
+  }
+  &-xxxl {
+    width: sp(xxxl);
+    height: sp(xxxl);
+  }
+  &-huge {
+    width: sp(huge);
+    height: sp(huge);
+  }
+  &-giant {
+    width: sp(giant);
+    height: sp(giant);
+  }
+}
+      ]]></pre>
+  </sm-tab-content>
+</sm-tabs>
+
+<h1 class="text-center heading-1">Textstyles</h1>
+<sm-tabs style="display: flex; justify-content: center;">
+  <sm-tab>
+    Example
+  </sm-tab>
+  <sm-tab>
+    Scss
+  </sm-tab>
+  <sm-tab-content>
+    <div class="textstyle">
+      <div class="heading-1">Heading 1</div>
+    </div>
+    <div class="textstyle">
+      <div class="heading-2">Heading 2</div>
+    </div>
+    <div class="textstyle">
+      <div class="heading-3">Heading 3</div>
+    </div>
+    <div class="textstyle">
+      <div class="heading-4">Heading 4</div>
+    </div>
+    <div class="textstyle">
+      <div class="heading-5">Heading 5</div>
+    </div>
+    <div class="textstyle">
+      <div class="heading-6">Heading 6</div>
+    </div>
+    <div class="textstyle">
+      <div class="body">Body</div>
+    </div>
+  </sm-tab-content>
+  <sm-tab-content>
+    <pre class="code css"><![CDATA[
+  .heading-1 {
+    @include text(heading-1);
+  }
+  .heading-2 {
+    @include text(heading-2);
+  }
+  .heading-3 {
+    @include text(heading-3);
+  }
+  .heading-4 {
+    @include text(heading-4);
+  }
+  .heading-5 {
+    @include text(heading-5);
+  }
+  .heading-6 {
+    @include text(heading-6);
+  }
+      ]]></pre>
+  </sm-tab-content>
+</sm-tabs>
+
+<h1 class="text-center heading-1">Color</h1>
+<sm-tabs style="display: flex; justify-content: center;">
+  <sm-tab>
+    Example
+  </sm-tab>
+  <sm-tab>
+    Scss
+  </sm-tab>
+  <sm-tab-content>
+    <div class="color">
+      <div class="primary">Primary</div>
+    </div>
+    <div class="color">
+      <div class="primary-hover">Primary-hover</div>
+    </div>
+    <div class="color">
+      <div class="primary-focus">Primary-focus</div>
+    </div>
+    <div class="color">
+      <div class="primary-active">Primary-active</div>
+    </div>
+    <div class="color">
+      <div class="secondary">Secondary</div>
+    </div>
+    <div class="color">
+      <div class="secondary-hover">Secondary-hover</div>
+    </div>
+    <div class="color">
+      <div class="secondary-focus">Secondary-focus</div>
+    </div>
+    <div class="color">
+      <div class="secondary-active">Secondary-active</div>
+    </div>
+    <div class="color">
+      <div class="text">Text</div>
+    </div>
+    <div class="color">
+      <div class="text-light">Text-light</div>
+    </div>
+    <div class="color">
+      <div class="text-primary">Text-primary</div>
+    </div>
+    <div class="color">
+      <div class="text-secondary">Text-secondary</div>
+    </div>
+    <div class="color">
+      <div class="border-primary">Border-primary</div>
+    </div>
+    <div class="color">
+      <div class="background">Background</div>
+    </div>
+    <div class="color">
+      <div class="background-2">Background-2</div>
+    </div>
+    <div class="color">
+      <div class="pink">Pink</div>
+    </div>
+    <div class="color">
+      <div class="black">Black</div>
+    </div>
+    <div class="color">
+      <div class="white">White</div>
+    </div>
+  </sm-tab-content>
+  <sm-tab-content>
+    <pre class="code css"><![CDATA[
+.primary {
+  background-color: color(primary);
+}
+.primary-hover {
+  background-color: color(primary-hover);
+}
+.primary-focus {
+  background-color: color(primary-focus);
+}
+.primary-active {
+  background-color: color(primary-active);
+}
+.secondary {
+  background-color: color(secondary);
+}
+.secondary-hover {
+  background-color: color(secondary-hover);
+}
+.secondary-focus {
+  background-color: color(secondary-focus);
+}
+.secondary-active {
+  background-color: color(secondary-active);
+}
+.text {
+  background-color: color(text);
+}
+.text-light {
+  background-color: color(text-light);
+}
+.text-primary {
+  background-color: color(text-primary);
+}
+.text-secondary {
+  background-color: color(text-secondary);
+}
+.border-primary {
+  background-color: color(border-primary);
+}
+.background {
+  background-color: color(background);
+}
+.background-2 {
+  background-color: color(background-2);
+}
+.pink {
+  background-color: color(pink);
+}
+.black {
+  background-color: color(black);
+}
+.white {
+  background-color: color(white);
+}      ]]></pre>
+  </sm-tab-content>
+</sm-tabs>
+
+<h1 class="text-center heading-1">Border</h1>
+<sm-tabs style="display: flex; justify-content: center;">
+  <sm-tab>
+    Example
+  </sm-tab>
+  <sm-tab>
+    Scss
+  </sm-tab>
+  <sm-tab-content>
+    <div class="border">
+      <div class="border-sm">border(sm)</div>
+    </div>
+    <div class="border">
+      <div class="border-md">border(md)</div>
+    </div>
+    <div class="border">
+      <div class="border-lg">border(lg)</div>
+    </div>
+  </sm-tab-content>
+  <sm-tab-content>
+    <pre class="code css"><![CDATA[
+.border-sm {
+  border: border(sm) color(border-primary);
+}
+.border-md {
+  border: border(md) color(border-primary);
+}
+.border-lg {
+  border: border(lg) color(border-primary);
+}
+      ]]></pre>
+  </sm-tab-content>
+</sm-tabs>

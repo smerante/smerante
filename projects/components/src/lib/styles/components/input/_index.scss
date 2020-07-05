@@ -4,9 +4,9 @@
   display: block;
   height: 32px;
   width: calc(100% - 40px); //16 + 16 + 4 + 4
-  background-color: $sm-background;
-  color: $text;
-  padding: $sp-xs $sp-sm;
+  background-color: color(background);
+  color: color(black);
+  padding: sp(xs) sp(sm);
   &--wrapper {
     display: block;
     position: relative;
@@ -21,24 +21,24 @@
       width: 0px;
       top: 0px;
       left: 0px;
-      border-bottom: $border-md;
+      border-bottom: border(md);
       border-color: transparent;
     }
     &:before {
       border: none;
-      outline: $border-sm $border-primary;
+      outline: border(sm) color(border-primary);
       width: 100%;
       left: 0px;
     }
     &[focus]:after {
       width: 100%;
-      border-color: $sm-primary;
+      border-color: color(primary);
     }
     &:hover {
       @include box-shadow();
     }
     &[focus]:hover {
-      @include box-shadow(1px 1px 3px 1px, $sm-primary);
+      @include box-shadow(1px 1px 3px 1px, color(primary));
     }
   }
   &--label {
@@ -46,16 +46,17 @@
     pointer-events: none;
     display: block;
     position: absolute;
-    left: $sp-sm;
+    left: sp(sm);
     top: calc(100% - 40px);
     line-height: 2rem;
-    background: $sm-background;
+    background: color(background);
   }
   &--focus,
   &:focus + &--label {
     top: -8px;
     left: 4px;
     line-height: 1rem;
-    background: white;
+    background: color(white);
+    color: color(text);
   }
 }

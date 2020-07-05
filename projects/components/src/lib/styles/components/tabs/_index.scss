@@ -8,15 +8,15 @@
     position: relative;
     height: 48px;
     width: max-content;
-    background-color: $sm-background;
-    color: $text;
-    padding: $sp-sm $sp-b;
-    border: $border-sm $sm-border-primary;
-    border-bottom: $border-sm $sm-background;
+    background-color: color(background);
+    color: color(text);
+    padding: sp(m) sp(b);
+    border: border(sm) color(border-primary);
+    border-bottom: border(sm) color(background);
 
     &.active {
-      color: $sm-primary;
-      border-bottom: $border-sm $sm-primary;
+      color: color(primary);
+      border-bottom: border(sm) color(primary);
     }
 
     &.active:after {
@@ -29,12 +29,12 @@
     }
 
     &:focus {
-      border-bottom: $border-md $sm-secondary-hover;
+      border-bottom: border(md) color(secondary)-hover;
     }
 
     &:hover {
-      background-color: $sm-background-2;
-      color: $text-primary;
+      background-color: color(background-2);
+      color: color(text)-primary;
     }
   }
 }
@@ -67,7 +67,8 @@ sm-tab + sm-tab {
 
 .sm-tab-content-wrapper {
   position: relative;
-  border: $border-sm $sm-border-primary;
-  padding: $sp-sm;
+  border: border(sm) color(border-primary);
+  padding: sp(m);
   max-width: calc(100% - 32px);
+  min-width: 320px;
 }

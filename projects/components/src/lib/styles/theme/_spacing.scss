@@ -1,4 +1,17 @@
-$sp-xxs: 4px;
-$sp-xs: 8px;
-$sp-sm: 16px;
-$sp-b: 24px;
+@function sp($val) {
+  @return map.get($spTokens, $val);
+}
+
+$spTokens: (
+  xxs: 4px,
+  xs: 8px,
+  sm: 12px,
+  m: 16px,
+  b: 24px,
+  l: 32px,
+  xl: 40px,
+  xxl: 48px,
+  xxxl: 56px,
+  huge: 128px,
+  giant: 256px
+);

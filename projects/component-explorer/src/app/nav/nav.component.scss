@@ -15,8 +15,8 @@
 
 .nav {
   height: 100vh;
-  border-right: $border-md $border-primary;
-  border-bottom: $border-md $border-primary;
+  border-right: border(md) color(border-primary);
+  border-bottom: border(md) color(border-primary);
   &--item {
     position: relative;
     display: table;
@@ -24,7 +24,7 @@
   }
 
   &--link {
-    color: $text;
+    color: color(text);
     display: block;
     width: 100%;
     height: 24px;
@@ -33,12 +33,12 @@
     padding: 24px 0px;
 
     &.active {
-      border-bottom: $border-md $sm-primary;
+      border-bottom: border(md) color(primary);
       height: calc(24px - 2px);
     }
 
     &:focus {
-      border-bottom: $border-sm $sm-primary-focus;
+      border-bottom: border(sm) color(primary)-focus;
       height: calc(24px - 1px);
     }
   }

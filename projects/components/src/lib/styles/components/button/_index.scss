@@ -9,9 +9,9 @@ sm-button {
   position: relative;
   display: inline-block;
   height: 48px;
-  background-color: $sm-primary;
-  color: $text-primary;
-  padding: $sp-sm $sp-b;
+  background-color: color(primary);
+  color: color(text-primary);
+  padding: sp(m) sp(b);
   &:before {
     @include transition-all();
     content: "";
@@ -20,12 +20,12 @@ sm-button {
     left: 0px;
     width: 100%;
     height: 100%;
-    outline: $border-sm $sm-primary;
+    outline: border(sm) color(primary);
   }
   margin: 3px;
 
   &:hover {
-    background-color: $sm-primary-hover;
+    background-color: color(primary-hover);
   }
 
   &:active:before,
@@ -34,11 +34,11 @@ sm-button {
     height: calc(100% + 4px);
     top: -2px;
     left: -2px;
-    outline-color: $sm-primary-focus;
+    outline-color: color(primary-focus);
   }
 
   &:active {
-    background-color: $sm-primary-active;
+    background-color: color(primary-active);
   }
   @media screen and (max-width: 768px) {
     width: calc(100% - 6px);
@@ -46,20 +46,20 @@ sm-button {
 }
 
 .sm-button--secondary {
-  background-color: $sm-secondary;
-  color: $text-secondary;
+  background-color: color(secondary);
+  color: color(text-secondary);
 
   &:hover {
-    background-color: $sm-secondary-hover;
-    color: $text-primary;
+    background-color: color(secondary-hover);
+    color: color(text-primary);
   }
   &:focus {
-    background-color: $sm-secondary-focus;
-    color: $text-primary;
+    background-color: color(secondary-focus);
+    color: color(text-primary);
   }
   &:active {
-    background-color: $sm-secondary-active;
-    color: $text-primary;
+    background-color: color(secondary-active);
+    color: color(text-primary);
   }
 }
 
@@ -67,12 +67,12 @@ sm-button {
   top: -3px;
   font-size: 0.75rem;
   line-height: 0.75rem;
-  background-color: $sm-secondary;
-  color: $text-secondary;
+  background-color: color(secondary);
+  color: color(text-secondary);
 
   &:before {
     outline: none;
-    border: $border-sm transparent;
+    border: border(sm) transparent;
     height: calc(100% - 34px);
     width: calc(100% - 48px);
     top: 16px;
@@ -82,13 +82,13 @@ sm-button {
   &:active,
   &:hover,
   &:focus {
-    background-color: $sm-secondary;
-    color: $sm-secondary-active;
+    background-color: color(secondary);
+    color: color(secondary)-active;
   }
   &:active:before,
   &:focus:before {
     outline: none;
-    border: $border-sm $sm-primary-focus;
+    border: border(sm) color(primary-focus);
     height: calc(100% - 24px);
     width: calc(100% - 24px);
     top: 11px;
