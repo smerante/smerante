@@ -1,5 +1,5 @@
 @function color($val) {
-  @return map.get($colorTokens, $val);
+  @return map-get($colorTokens, $val);
 }
 
 $colorTokens: (

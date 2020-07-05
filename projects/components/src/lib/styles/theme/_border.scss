@@ -1,5 +1,5 @@
 @function border($val) {
-  @return map.get($borderTokens, $val);
+  @return map-get($borderTokens, $val);
 }
 
 $borderTokens: (

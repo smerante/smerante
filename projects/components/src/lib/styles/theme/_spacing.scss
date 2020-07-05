@@ -1,5 +1,5 @@
 @function sp($val) {
-  @return map.get($spTokens, $val);
+  @return map-get($spTokens, $val);
 }
 
 $spTokens: (
