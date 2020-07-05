@@ -135,6 +135,26 @@ $spTokens: (
   <sm-tab-content>
   </sm-tab-content>
 </sm-tabs>
+
+<!-- Cards -->
+<sm-card placement="top" imgSrc="http://robertwimer.com/wp-content/uploads/2018/06/Matrix-Code.jpg">
+  <card-header>
+    Placement top
+  </card-header>
+  <card-body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+      dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo
+      consequat.
+    </p>
+  </card-body>
+  <card-footer>
+    <a class="card-link" target="_blank" href="https://github.com/smerante/">GitHub</a>
+    <a class="card-link" target="_blank" href="https://bitbucket.org/Sammer95/">Bitbucket</a>
+    <a class="card-link" target="_blank" href="https://www.linkedin.com/in/sam-merante/">Linked In</a>
+  </card-footer>
+</sm-card>
 ```
 
 
