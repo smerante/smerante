@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SMRadioButton } from './radio.component';
+import { SMRadioButton, SMRadioGroupComponent } from './radio.component';
 
 describe('SMRadioButton', () => {
   let component: SMRadioButton;
@@ -8,9 +8,10 @@ describe('SMRadioButton', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SMRadioButton ]
+      declarations: [SMRadioGroupComponent, SMRadioButton],
+      providers: [SMRadioGroupComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
