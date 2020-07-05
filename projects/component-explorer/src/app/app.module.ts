@@ -10,6 +10,7 @@ import { InputDemoComponent } from './input-demo/input-demo.component';
 import { TabDemoComponent } from './tab-demo/tab-demo.component';
 import { TextstyleDemoComponent } from './textstyle-demo/textstyle-demo.component';
 import { CardsDemoComponent } from './cards-demo/cards-demo.component';
+import { RadioDemoComponent } from './radio-demo/radio-demo.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CardsDemoComponent } from './cards-demo/cards-demo.component';
     InputDemoComponent,
     TabDemoComponent,
     TextstyleDemoComponent,
-    CardsDemoComponent
+    CardsDemoComponent,
+    RadioDemoComponent
   ],
   imports: [
     BrowserModule,
