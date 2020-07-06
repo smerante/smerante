@@ -1,20 +1,5 @@
 <ul id="nav" class="nav">
-  <li class="nav--item">
-    <a class="nav--link" routerLink="/card" routerLinkActive="active">Cards</a>
-  </li>
-  <li class="nav--item">
-    <a class="nav--link" routerLink="/cta" routerLinkActive="active">CTA</a>
-  </li>
-  <li class="nav--item">
-    <a class="nav--link" routerLink="/input" routerLinkActive="active">Input</a>
-  </li>
-  <li class="nav--item">
-    <a class="nav--link" routerLink="/radio" routerLinkActive="active">Radio</a>
-  </li>
-  <li class="nav--item">
-    <a class="nav--link" routerLink="/tab" routerLinkActive="active">Tabs</a>
-  </li>
-  <li class="nav--item">
-    <a class="nav--link" routerLink="/theme" routerLinkActive="active">Theme</a>
+  <li *ngFor="let link of links" class="nav--item">
+    <a class="nav--link" [routerLink]="'/'+link" routerLinkActive="active">{{link | titlecase}}</a>
   </li>
 </ul>

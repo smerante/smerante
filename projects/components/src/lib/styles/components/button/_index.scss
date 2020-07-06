@@ -26,6 +26,7 @@ sm-button {
 
   &:hover {
     background-color: color(primary-hover);
+    @include box-shadow();
   }
 
   &:active:before,
@@ -52,6 +53,7 @@ sm-button {
   &:hover {
     background-color: color(secondary-hover);
     color: color(text-primary);
+    @include box-shadow();
   }
   &:focus {
     background-color: color(secondary-focus);
@@ -83,7 +85,8 @@ sm-button {
   &:hover,
   &:focus {
     background-color: color(secondary);
-    color: color(secondary)-active;
+    color: color(secondary-active);
+    box-shadow: none;
   }
   &:active:before,
   &:focus:before {

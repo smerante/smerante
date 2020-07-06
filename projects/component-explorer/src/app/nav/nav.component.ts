@@ -8,12 +8,18 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
 
+  links: string[] = [];
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    if (this.router.url === '/') {
-      (document.getElementById('nav').children[0].children[0] as HTMLElement).click();
-    }
+    this.router.config.forEach(value => {
+      this.links.push(value.path);
+    });
+    setTimeout(() => {
+      if (this.router.url === '/') {
+        (document.getElementById('nav').children[0].children[0] as HTMLElement).click();
+      }
+    });
   }
 
 }

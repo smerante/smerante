@@ -11,6 +11,7 @@ import { TabDemoComponent } from './tab-demo/tab-demo.component';
 import { TextstyleDemoComponent } from './textstyle-demo/textstyle-demo.component';
 import { CardsDemoComponent } from './cards-demo/cards-demo.component';
 import { RadioDemoComponent } from './radio-demo/radio-demo.component';
+import { CheckboxDemoComponent } from './checkbox-demo/checkbox-demo.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RadioDemoComponent } from './radio-demo/radio-demo.component';
     TabDemoComponent,
     TextstyleDemoComponent,
     CardsDemoComponent,
-    RadioDemoComponent
+    RadioDemoComponent,
+    CheckboxDemoComponent
   ],
   imports: [
     BrowserModule,

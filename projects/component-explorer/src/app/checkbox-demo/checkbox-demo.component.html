@@ -1,0 +1,44 @@
+<h1 class="heading-1 text-center">Checkbox</h1>
+
+<sm-tabs style="display: flex; justify-content: center;">
+  <sm-tab>
+    Basic
+  </sm-tab>
+  <sm-tab>
+    Code
+  </sm-tab>
+  <sm-tab-content>
+    <sm-checkbox label="Agree to terms and conditions" field_id="modalCheckbox">
+      <input sm-checkbox id="modalCheckbox" type="checkbox"
+        aria-label="Please check here to agree to terms and conditions" />
+    </sm-checkbox>
+    <div style="max-width: 300px">
+      <sm-checkbox label="This is a super long wrapping label to show placement of checkbox and label when text wraps"
+        field_id="checkbox2">
+        <input sm-checkbox id="checkbox2" type="checkbox"
+          aria-label="Please check here to agree to terms and conditions" />
+      </sm-checkbox>
+    </div>
+    <sm-checkbox label="I am a disabled checkbox" field_id="checkbox3">
+      <input sm-checkbox id="checkbox3" disabled="true" type="checkbox"
+        aria-label="Please check here to agree to terms and conditions" />
+    </sm-checkbox>
+  </sm-tab-content>
+  <sm-tab-content>
+    <pre class="code"><![CDATA[
+<sm-checkbox label="Agree to terms and conditions" field_id="modalCheckbox">
+  <input sm-checkbox id="modalCheckbox" type="checkbox"
+    aria-label="Please check here to agree to terms and conditions" />
+</sm-checkbox>
+<sm-checkbox label="This is a super long wrapping label to show placement of checkbox and label when text wraps"
+  field_id="checkbox2">
+  <input sm-checkbox id="checkbox2" type="checkbox"
+    aria-label="Please check here to agree to terms and conditions" />
+</sm-checkbox>
+<sm-checkbox label="I am a disabled checkbox" field_id="checkbox3">
+  <input sm-checkbox id="checkbox3" disabled="true"
+    type="checkbox"
+    aria-label="Please check here to agree to terms and conditions" />
+</sm-checkbox>]]></pre>
+  </sm-tab-content>
+</sm-tabs>

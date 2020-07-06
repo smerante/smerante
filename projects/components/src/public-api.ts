@@ -10,3 +10,4 @@ export * from './lib/components/tabs/tabs.component';
 export * from './lib/components/tabs/tab-content/tab-content.component';
 export * from './lib/components/card/card.component';
 export * from './lib/components/radio/radio.component';
+export * from './lib/components/checkbox/checkbox.component';
