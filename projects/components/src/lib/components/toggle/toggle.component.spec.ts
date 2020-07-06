@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SMToggleComponent } from './toggle.component';
+import { SMToggleComponentWrapper } from './toggle.component';
 
-describe('SMToggleComponent', () => {
-  let component: SMToggleComponent;
-  let fixture: ComponentFixture<SMToggleComponent>;
+describe('SMToggleComponentWrapper', () => {
+  let component: SMToggleComponentWrapper;
+  let fixture: ComponentFixture<SMToggleComponentWrapper>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SMToggleComponent ]
+      declarations: [ SMToggleComponentWrapper ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SMToggleComponent);
+    fixture = TestBed.createComponent(SMToggleComponentWrapper);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
