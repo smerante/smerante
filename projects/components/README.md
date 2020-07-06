@@ -175,6 +175,9 @@ $spTokens: (
   <input sm-checkbox id="modalCheckbox" type="checkbox"
     aria-label="Please check here to agree to terms and conditions" />
 </sm-checkbox>
+
+For a list of components and usage please visit the [Component explorer](https://smerante.github.io/smerante/#/input).
+
 ```
 
 
