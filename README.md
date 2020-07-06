@@ -169,6 +169,12 @@ $spTokens: (
     <input type="radio" id="disabled" name="gender" disabled value="disabled" />
   </sm-radio-btn>
 </sm-radio-group>
+
+<!-- Checkbox -->
+<sm-checkbox label="Agree to terms and conditions" field_id="modalCheckbox">
+  <input sm-checkbox id="modalCheckbox" type="checkbox"
+    aria-label="Please check here to agree to terms and conditions" />
+</sm-checkbox>
 ```
 
 
