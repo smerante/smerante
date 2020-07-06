@@ -12,6 +12,7 @@ import { TextstyleDemoComponent } from './textstyle-demo/textstyle-demo.componen
 import { CardsDemoComponent } from './cards-demo/cards-demo.component';
 import { RadioDemoComponent } from './radio-demo/radio-demo.component';
 import { CheckboxDemoComponent } from './checkbox-demo/checkbox-demo.component';
+import { ToggleDemoComponent } from './toggle-demo/toggle-demo.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CheckboxDemoComponent } from './checkbox-demo/checkbox-demo.component';
     TextstyleDemoComponent,
     CardsDemoComponent,
     RadioDemoComponent,
-    CheckboxDemoComponent
+    CheckboxDemoComponent,
+    ToggleDemoComponent
   ],
   imports: [
     BrowserModule,

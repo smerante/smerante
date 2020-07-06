@@ -7,6 +7,7 @@ import { TextstyleDemoComponent } from './textstyle-demo/textstyle-demo.componen
 import { CardsDemoComponent } from './cards-demo/cards-demo.component';
 import { RadioDemoComponent } from './radio-demo/radio-demo.component';
 import { CheckboxDemoComponent } from './checkbox-demo/checkbox-demo.component';
+import { ToggleDemoComponent } from './toggle-demo/toggle-demo.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'input', component: InputDemoComponent },
   { path: 'radio', component: RadioDemoComponent },
   { path: 'tab', component: TabDemoComponent },
+  { path: 'toggle', component: ToggleDemoComponent },
   { path: 'theme', component: TextstyleDemoComponent }
 ];
 

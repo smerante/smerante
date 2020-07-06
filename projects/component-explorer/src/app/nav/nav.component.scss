@@ -14,7 +14,8 @@
 }
 
 .nav {
-  height: 100vh;
+  height: calc(100vh - 2px);
+  overflow: scroll;
   border-right: border(md) color(border-primary);
   border-bottom: border(md) color(border-primary);
   &--item {

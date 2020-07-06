@@ -1,0 +1,133 @@
+.sm-toggle {
+  &-wrapper {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    min-height: 42px;
+    padding: sp(xxs) 0;
+  }
+  &--field {
+    cursor: pointer;
+    position: absolute;
+    position: absolute;
+    opacity: 0;
+    &:disabled + .sm-toggle--label {
+      color: color(text-disabled);
+      cursor: not-allowed;
+      &::before {
+        background: color(disabled);
+      }
+    }
+
+    &:checked + .sm-toggle--label {
+      &::before {
+        background: color(background);
+        border-color: color(primary);
+      }
+      &::after {
+        top: calc(50% - 16.5px);
+        width: 34px;
+        height: 34px;
+        left: calc(80px - 36px - 4px);
+        border: 0;
+        background: color(primary);
+      }
+      & .sm-toggle--label__icon {
+        top: calc(50% - 16.5px);
+        width: 34px;
+        height: 34px;
+        left: calc(80px - 36px - 4px);
+        &::before {
+          left: 18px;
+          top: 7px;
+          border-right: border(md) color(background);
+          transform: rotate(30deg);
+        }
+        &::after {
+          height: 10px;
+          top: 17px;
+          left: 10px;
+          border-left: border(md) color(background);
+        }
+      }
+    }
+
+    &:focus + .sm-toggle--label {
+      &::before {
+        border: border(md) color(primary-focus);
+      }
+    }
+  }
+  &--label {
+    @include text(body);
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    left: 0px;
+    margin: 0px;
+    line-height: 2.5;
+    padding-left: 88px;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 80px;
+      height: 42px;
+      top: calc(50% - 21px);
+      left: 0px;
+      margin-bottom: 0px;
+      border: border(sm) color(border-light);
+      background: color(white);
+      border-radius: 50px;
+      transition: all ease-in-out 0.25s;
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: calc(50% - 12px);
+      left: 4px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50px;
+      border: border(sm) color(border-light);
+      background: color(white);
+      transition: all ease-in-out 0.25s;
+    }
+    &__icon {
+      display: block;
+      position: absolute;
+      top: calc(50% - 12px);
+      left: 5px;
+      width: 24px;
+      height: 24px;
+      transition: all ease-in-out 0.25s;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 20px;
+        top: calc(50% - 9px);
+        left: calc(50% - 1px);
+        border-right: border(md) color(border-light);
+        z-index: 1;
+        transform: rotate(45deg);
+        transition: all ease-in-out 0.25s;
+        border-radius: 50px;
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 20px;
+        top: calc(50% - 9px);
+        left: calc(50% - 1px);
+        z-index: 1;
+        border-left: border(md) color(border-light);
+        transform: rotate(-45deg);
+        transition: all ease-in-out 0.25s;
+        border-radius: 50px;
+      }
+    }
+  }
+}

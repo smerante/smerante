@@ -9,7 +9,7 @@ import { SMTabContentComponent } from './components/tabs/tab-content/tab-content
 import { SMCardsComponent, SMCardsHeaderComponent, SMCardsBodyComponent, SMCardsFooterComponent } from './components/card/card.component';
 import { SMRadioButton, SMRadioGroupComponent } from './components/radio/radio.component';
 import { SMCheckboxComponent, SMCheckboxComponentWrapper } from './components/checkbox/checkbox.component';
-
+import { SMToggleComponent, SMToggleComponentWrapper } from './components/toggle/toggle.component';
 
 const components =
   [
@@ -25,7 +25,9 @@ const components =
     SMRadioButton,
     SMRadioGroupComponent,
     SMCheckboxComponent,
-    SMCheckboxComponentWrapper
+    SMCheckboxComponentWrapper,
+    SMToggleComponent,
+    SMToggleComponentWrapper
   ];
 
 @NgModule({
