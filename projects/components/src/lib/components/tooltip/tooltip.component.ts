@@ -30,24 +30,29 @@ export class SMTooltipComponent implements OnInit {
     this.updateContainerPos();
   }
 
-  updateContainerPos(){
+  updateContainerPos() {
     let top = (<HTMLElement>document.getElementById(this.tooltipId)).getBoundingClientRect().top;
     let height = window.innerHeight;
-    this.renderer.setStyle(this.tooltipContainer.nativeElement,'bottom', (height - top) + 16 + 'px');
+    this.renderer.setStyle(this.tooltipContainer.nativeElement, 'bottom', (height - top) + 16 + 'px');
 
     let left = (<HTMLElement>document.getElementById(this.tooltipId)).getBoundingClientRect().left;
     let width = this.tooltipContainer.nativeElement.getBoundingClientRect().width;
-    this.renderer.setStyle(this.tooltipContainer.nativeElement,'left', left - (width/2) + 'px');
+    this.renderer.setStyle(this.tooltipContainer.nativeElement, 'left', left - (width / 2) + 'px');
   }
-  
-  toggleTooltip(){
+
+  toggleTooltip() {
     this.contentOpen = !this.contentOpen;
-    if(!this.contentOpen) {
+    if (!this.contentOpen) {
       (<HTMLElement>document.getElementById(this.tooltipId)).focus();
-    }else {
-      setTimeout(()=>{
+    } else {
+      setTimeout(() => {
         this.updateContainerPos();
       });
     }
+  }
+
+  @HostListener('document:keydown.escape')
+  onKeydownHandler() {
+    this.closeTooltip();
   }
 }

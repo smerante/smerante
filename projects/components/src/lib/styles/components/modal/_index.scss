@@ -1,0 +1,109 @@
+.sm-modal-wrapper {
+  position: fixed;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  left: -9999px;
+  top: -9999px;
+  transition: opacity ease-in-out 0.5s;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.overlay {
+  background-color: color(overlay);
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+}
+
+.sm-modal-wrapper-open {
+  opacity: 1;
+  display: flex;
+  position: fixed;
+  z-index: 9999;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+
+  .sm-modal-container {
+    display: block;
+    position: relative;
+    max-height: 75vh;
+    width: 50vw;
+    margin: auto;
+    background: color(background);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: border(sm) color(border-primary);
+    border-radius: 10px;
+    text-align: left;
+    @media screen and (max-width: 768px) {
+      width: 80vw;
+    }
+  }
+  .sm-modal-header {
+    display: block;
+    @include text(heading-3);
+    text-align: center;
+    border-bottom: border(sm) color(border-primary);
+    padding: sp(m) sp(l) sp(m) sp(l);
+    @media screen and (max-width: 575px) {
+      padding-top: sp(l);
+    }
+    background-color: color(background-3);
+  }
+  .sm-modal-body {
+    display: block;
+    @include text(body);
+    border-bottom: border(sm) color(border-primary);
+    padding: sp(m);
+  }
+  .sm-modal-footer {
+    display: block;
+    @include text(body);
+    background-color: color(background-3);
+  }
+}
+.sm-modal-close {
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  top: 6px;
+  right: 6px;
+  border-radius: 10px;
+  cursor: pointer;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-right: border(md) color(border-primary);
+    transform: rotate(45deg);
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    left: 11px;
+    width: 32px;
+    height: 32px;
+    border-left: border(md) color(border-primary);
+    transform: rotate(-45deg);
+  }
+  &:focus {
+    border: none;
+    outline: border(md) #027fe6;
+  }
+}

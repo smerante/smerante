@@ -1,0 +1,9 @@
+<span class="overlay" (click)="close();"></span>
+<div class="sm-modal-container">
+  <span class="sm-modal-container"></span>
+  <ng-content select="sm-modal-header"></ng-content>
+  <ng-content select="sm-modal-body"></ng-content>
+  <ng-content select="sm-modal-footer"></ng-content>
+  <span tabindex="0" role="button" aria-label="close modal window" (click)="close();" (keyup.enter)="close();"
+    (keyup.space)="close();" class="sm-modal-close"></span>
+</div>

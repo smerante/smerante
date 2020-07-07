@@ -11,6 +11,7 @@ import { SMRadioButton, SMRadioGroupComponent } from './components/radio/radio.c
 import { SMCheckboxComponent, SMCheckboxComponentWrapper } from './components/checkbox/checkbox.component';
 import { SMToggleComponent, SMToggleComponentWrapper } from './components/toggle/toggle.component';
 import { SMTooltipComponent } from './components/tooltip/tooltip.component';
+import { SMModalModule } from './components/modal/modal.module';
 
 const components =
   [
@@ -34,7 +35,7 @@ const components =
 
 @NgModule({
   declarations: [components],
-  imports: [CommonModule, ReactiveFormsModule, FormsModule],
-  exports: [components]
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, SMModalModule],
+  exports: [components, SMModalModule]
 })
 export class SMComponentsModule { }

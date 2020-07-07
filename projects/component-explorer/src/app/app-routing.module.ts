@@ -9,6 +9,7 @@ import { RadioDemoComponent } from './radio-demo/radio-demo.component';
 import { CheckboxDemoComponent } from './checkbox-demo/checkbox-demo.component';
 import { ToggleDemoComponent } from './toggle-demo/toggle-demo.component';
 import { TooltipDemoComponent } from './tooltip-demo/tooltip-demo.component';
+import { ModalDemoComponent } from './modal-demo/modal-demo.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'card', component: CardsDemoComponent },
   { path: 'checkbox', component: CheckboxDemoComponent },
   { path: 'input', component: InputDemoComponent },
+  { path: 'modal', component: ModalDemoComponent },
   { path: 'radio', component: RadioDemoComponent },
   { path: 'tab', component: TabDemoComponent },
   { path: 'toggle', component: ToggleDemoComponent },

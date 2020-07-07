@@ -14,6 +14,7 @@ import { RadioDemoComponent } from './radio-demo/radio-demo.component';
 import { CheckboxDemoComponent } from './checkbox-demo/checkbox-demo.component';
 import { ToggleDemoComponent } from './toggle-demo/toggle-demo.component';
 import { TooltipDemoComponent } from './tooltip-demo/tooltip-demo.component';
+import { ModalDemoComponent } from './modal-demo/modal-demo.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TooltipDemoComponent } from './tooltip-demo/tooltip-demo.component';
     RadioDemoComponent,
     CheckboxDemoComponent,
     ToggleDemoComponent,
-    TooltipDemoComponent
+    TooltipDemoComponent,
+    ModalDemoComponent
   ],
   imports: [
     BrowserModule,
