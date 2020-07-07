@@ -12,15 +12,15 @@ button {
 }
 
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    white-space: nowrap;
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .text-center {
@@ -43,10 +43,18 @@ button {
   @if ($val == "heading-1") {
     font-size: 3rem;
     line-height: 3rem;
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
     padding: sp(b) 0;
   } @else if ($val == "heading-2") {
     font-size: 2.5rem;
     line-height: 2.5rem;
+    @media (max-width: 768px) {
+      font-size: 1.25rem;
+      line-height: 1.25rem;
+    }
   } @else if ($val == "heading-3") {
     font-size: 2rem;
     line-height: 2rem;
@@ -63,6 +71,10 @@ button {
     font-size: 1rem;
     line-height: 1rem;
     font-weight: normal;
+  }
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1rem;
   }
 }
 
