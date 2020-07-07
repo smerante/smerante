@@ -1,0 +1,9 @@
+<label [for]="tooltipId" class="sm-tooltip--label" [innerHtml]="tooltipLabel"></label>
+<button [id]="tooltipId" class="sm-tooltip--btn" (click)="toggleTooltip();" [attr.aria-label]="tooltipAriaLabel">
+  <span *ngIf="contentOpen" class="sm-tooltip--chevron"></span>
+</button>
+<div #tooltipContainer [hidden]="!contentOpen" role="tooltip" aria-live="assertive" class="sm-tooltip--container">
+  <span class="sr-only">Tooltip popup</span>
+  <ng-content></ng-content>
+  <button aria-hidden="true" class="sm-tooltip--container__close" (click)="toggleTooltip();"></button>
+</div>

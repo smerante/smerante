@@ -13,6 +13,7 @@ import { CardsDemoComponent } from './cards-demo/cards-demo.component';
 import { RadioDemoComponent } from './radio-demo/radio-demo.component';
 import { CheckboxDemoComponent } from './checkbox-demo/checkbox-demo.component';
 import { ToggleDemoComponent } from './toggle-demo/toggle-demo.component';
+import { TooltipDemoComponent } from './tooltip-demo/tooltip-demo.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ToggleDemoComponent } from './toggle-demo/toggle-demo.component';
     CardsDemoComponent,
     RadioDemoComponent,
     CheckboxDemoComponent,
-    ToggleDemoComponent
+    ToggleDemoComponent,
+    TooltipDemoComponent
   ],
   imports: [
     BrowserModule,

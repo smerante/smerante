@@ -8,6 +8,7 @@ import { CardsDemoComponent } from './cards-demo/cards-demo.component';
 import { RadioDemoComponent } from './radio-demo/radio-demo.component';
 import { CheckboxDemoComponent } from './checkbox-demo/checkbox-demo.component';
 import { ToggleDemoComponent } from './toggle-demo/toggle-demo.component';
+import { TooltipDemoComponent } from './tooltip-demo/tooltip-demo.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'radio', component: RadioDemoComponent },
   { path: 'tab', component: TabDemoComponent },
   { path: 'toggle', component: ToggleDemoComponent },
+  { path: 'tooltip', component: TooltipDemoComponent },
   { path: 'theme', component: TextstyleDemoComponent }
 ];
 
