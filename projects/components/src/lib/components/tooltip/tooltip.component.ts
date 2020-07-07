@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, Input, ViewChild, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, HostListener, Renderer2, Injectable, Inject } from '@angular/core';
 
 let uniqueId = 0;
 @Component({
@@ -25,7 +25,7 @@ export class SMTooltipComponent implements OnInit {
     this.contentOpen = false;
   }
 
-  @HostListener('window:scroll', ['$event.target'])
+  @HostListener('window:scroll')
   onScroll() {
     this.updateContainerPos();
   }
