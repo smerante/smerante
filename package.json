@@ -1,6 +1,6 @@
 {
   "name": "smerante",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -31,7 +31,8 @@
     "zone.js": "~0.10.2"
   },
   "peerDependencies": {
-    "@angular/core": "^9.1.0"
+    "@angular/core": "^9.1.0",
+    "moment": "^2.27.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.2",
