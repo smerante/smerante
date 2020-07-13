@@ -1,0 +1,50 @@
+<sm-calendar-nav
+  [navID]="calendarID"
+  [ariaLabelPrevMonth]="ariaLabelPrevMonth"
+  [ariaLabelNextMonth]="ariaLabelNextMonth"
+  [dayView]="dayView"
+  (dayViewChange)="viewChanged($event)"
+  [(internalDate)]="internalDate"
+></sm-calendar-nav>
+
+<sm-calendar-day-view
+  [calendarOpened]="open"
+  [viewOpened]="dayView && open"
+  [dayView]="dayView"
+  [(internalDate)]="internalDate"
+  [min]="min"
+  [max]="max"
+  [hidden]="!dayView"
+  [range]="range"
+  [dayViewID]="calendarID"
+  [date]="date"
+  [fromDate]="fromDate"
+  [toDate]="toDate"
+  [disableDateFilter]="disableDateFilter"
+  (dateChange)="dateChanged($event)"
+  (fromDateChange)="fromDateChanged($event)"
+  (toDateChange)="toDateChanged($event)"
+  (dateSelect)="dateSelected($event)"
+>
+</sm-calendar-day-view>
+
+<sm-calendar-year-view
+  [yearView]="!dayView && open"
+  [date]="date"
+  [(internalDate)]="internalDate"
+  [min]="min"
+  [max]="max"
+  [yearViewID]="calendarID"
+  (yearSelect)="yearSelected($event)"
+>
+</sm-calendar-year-view>
+<div class="sm-date-picker-clear">
+  <button
+    type="button"
+    [id]="calendarID + '-clear'"
+    class="sm-date-picker-clear-btn"
+    (click)="onClearDate()"
+  >
+    {{ clearLabel }}
+  </button>
+</div>

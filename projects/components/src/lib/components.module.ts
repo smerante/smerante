@@ -12,6 +12,7 @@ import { SMCheckboxComponent, SMCheckboxComponentWrapper } from './components/ch
 import { SMToggleComponent, SMToggleComponentWrapper } from './components/toggle/toggle.component';
 import { SMTooltipComponent } from './components/tooltip/tooltip.component';
 import { SMModalModule } from './components/modal/modal.module';
+import { SMDatePickerModule } from './components/datepicker/date-picker.module';
 
 const components =
   [
@@ -30,12 +31,12 @@ const components =
     SMCheckboxComponentWrapper,
     SMToggleComponent,
     SMToggleComponentWrapper,
-    SMTooltipComponent
+    SMTooltipComponent,
   ];
 
 @NgModule({
   declarations: [components],
-  imports: [CommonModule, ReactiveFormsModule, FormsModule, SMModalModule],
-  exports: [components, SMModalModule]
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, SMModalModule, SMDatePickerModule],
+  exports: [components, SMModalModule, SMDatePickerModule]
 })
 export class SMComponentsModule { }

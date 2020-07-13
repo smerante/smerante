@@ -1,0 +1,18 @@
+<ng-container *ngIf="yearView">
+  <button
+    *ngFor="let y of years; let i = index"
+    #yearButtons
+    type="button"
+    [id]="y.dateID"
+    class="calendar-year-view-years"
+    [tabindex]="y.tabIndex"
+    [disabled]="y.disabled ? true : null"
+    [attr.today]="y.today ? '' : null"
+    [attr.disabledFocus]="y.disabledFocus ? '' : null"
+    [attr.selectedDate]="y.selectedDate ? '' : null"
+    (click)="selectedYear(y.date)"
+    (keydown)="onKeyDown($event, y.date)"
+  >
+    {{ y.year }}
+  </button>
+</ng-container>

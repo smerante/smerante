@@ -46,6 +46,7 @@ sm-tab + sm-tab {
 
 .sm-tab-content {
   display: none;
+  box-sizing: content-box;
   &.active {
     display: block;
     overflow: scroll;
@@ -69,6 +70,5 @@ sm-tab + sm-tab {
   position: relative;
   border: border(sm) color(border-primary);
   padding: sp(m);
-  max-width: calc(100% - 32px);
   min-width: 320px;
 }

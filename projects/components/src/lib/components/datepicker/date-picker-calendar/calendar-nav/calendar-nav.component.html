@@ -1,0 +1,36 @@
+<button *ngIf="dayView" type="button" [id]="navID + '-nav-left'" class="calendar-nav-arrows-left"
+  (focus)="updateLabel('prev')" (click)="selectLeft(); updateLabel('prev')" aria-live="polite"
+  attr.aria-label="{{ ariaLabelPrevMonth }} {{ prevMonthLabel }}">
+  <svg width="32" height="32" viewBox="0 0 228 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M114 227L114 1.49992V0.999918" stroke="black" />
+    <path d="M114 227.137L0.863045 114L114 0.862868" stroke="black" />
+  </svg>
+</button>
+<div class="calendar-nav-date">
+  <div class="calendar-nav-date--view-links">
+    <button type="button" [id]="navID + '-nav-month'" [disabled]="dayView ? true : false" role="navigation"
+      [tabindex]="dayView ? -1 : 0" [attr.activeView]="dayView" class="calendar-nav-date-link" (click)="changeView()"
+      attr.aria-label="Day view {{ currentDateLabel }}">
+      {{ monthViewLabel }}
+    </button>
+    <button type="button" [id]="navID + '-nav-year'" [disabled]="!dayView ? true : false" role="navigation"
+      [tabindex]="!dayView ? -1 : 0" [attr.activeView]="!dayView" class="calendar-nav-date-link" (click)="changeView()"
+      attr.aria-label="Year view {{ currentDateLabel }}">
+      {{ internalDate | smDate: 'YYYY' }}
+    </button>
+  </div>
+</div>
+<button *ngIf="dayView" type="button" [id]="navID + '-nav-right'" class="calendar-nav-arrows-right"
+  (focus)="updateLabel('next')" (click)="selectRight(); updateLabel('next')" aria-live="polite"
+  attr.aria-label="{{ ariaLabelNextMonth }} {{ nextMonthLabel }}">
+  <svg width="32" height="32" viewBox="0 0 228 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M114 1V226.5V227" stroke="black" />
+    <path d="M114 0.8629L227.137 114L114 227.137" stroke="black" />
+  </svg>
+</button>
+
+<div class="calendar-nav-header" *ngIf="dayView">
+  <span *ngFor="let d of daysOfWeekLabel" class="calendar-nav-header-unit">{{
+    d
+  }}</span>
+</div>

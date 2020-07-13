@@ -15,6 +15,7 @@ import { CheckboxDemoComponent } from './checkbox-demo/checkbox-demo.component';
 import { ToggleDemoComponent } from './toggle-demo/toggle-demo.component';
 import { TooltipDemoComponent } from './tooltip-demo/tooltip-demo.component';
 import { ModalDemoComponent } from './modal-demo/modal-demo.component';
+import { DatepickerDemoComponent } from './datepicker-demo/datepicker-demo.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ModalDemoComponent } from './modal-demo/modal-demo.component';
     CheckboxDemoComponent,
     ToggleDemoComponent,
     TooltipDemoComponent,
-    ModalDemoComponent
+    ModalDemoComponent,
+    DatepickerDemoComponent
   ],
   imports: [
     BrowserModule,
