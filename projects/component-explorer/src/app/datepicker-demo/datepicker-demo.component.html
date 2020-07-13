@@ -5,6 +5,9 @@
     Default
   </sm-tab>
   <sm-tab>
+    Range
+  </sm-tab>
+  <sm-tab>
     Code
   </sm-tab>
   <sm-tab-content>
@@ -12,6 +15,8 @@
       Default:
       <sm-date-picker></sm-date-picker>
     </div>
+  </sm-tab-content>
+  <sm-tab-content>
     <div style="min-width: 400px; min-height: 500px">
       Range:
       <sm-date-picker [range]="true"></sm-date-picker>
@@ -19,7 +24,10 @@
   </sm-tab-content>
   <sm-tab-content>
     <pre class="code"><![CDATA[
-<sm-input id="username" label="Username"></sm-input>
-<sm-input type="password" label="Password"></sm-input>]]></pre>
+  <!-- Default Date picker -->
+  <sm-date-picker></sm-date-picker>
+
+  <!-- Range Date picker -->
+  <sm-date-picker [range]="true"></sm-date-picker>]]></pre>
   </sm-tab-content>
 </sm-tabs>

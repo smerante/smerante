@@ -282,6 +282,7 @@ export class DatePickerComponent
     this.onEscape(event);
   }
 
+  @HostListener('document:touchend', ['$event'])
   @HostListener('document:click', ['$event'])
   handleClickEvent(event: Event) {
     if (!this.open) {
