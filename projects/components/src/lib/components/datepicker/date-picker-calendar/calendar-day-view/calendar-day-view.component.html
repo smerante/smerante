@@ -1,0 +1,28 @@
+<div class="calendar-day-view-weeks">
+  <button
+    *ngFor="let d of daysInMonth"
+    type="button"
+    [id]="
+      d.dateID
+        ? d.dateID
+        : dayViewID + '-' + d.date.month() + '-' + d.date.date()
+    "
+    [smCalendarDay]="d"
+    (click)="selectDate(d.date)"
+    [disabled]="d.disabled ? true : null"
+    (keydown)="onKeyDown($event, d.date)"
+    (mouseenter)="dateHover(d.date, true)"
+    (mouseleave)="dateHover(d.date, false)"
+    attr.aria-label="{{ d.date | smDate: 'dddd, MMMM Do YYYY' }} {{
+      d.disabled || d.disabledFocused ? 'disabled' : ''
+    }}"
+  >
+    {{ d.date.date() }}
+    <span *ngIf="d.isInRangeFromDate" class="fromDate"></span>
+    <span *ngIf="d.isToDate" class="toDate"></span>
+    <span
+      *ngIf="d.isInRange && !d.isToDate && !d.isFromDate"
+      class="inRange"
+    ></span>
+  </button>
+</div>

@@ -1,0 +1,106 @@
+<h1 class="heading-1 text-center">Date Picker</h1>
+
+<sm-tabs style="display: flex; justify-content: center;">
+  <sm-tab>
+    Default
+  </sm-tab>
+  <sm-tab>
+    Range
+  </sm-tab>
+  <sm-tab>
+    Code
+  </sm-tab>
+  <sm-tab>
+    Props
+  </sm-tab>
+  <sm-tab-content>
+    <div style="min-width: 400px; min-height: 500px">
+      Default:
+      <sm-date-picker></sm-date-picker>
+    </div>
+  </sm-tab-content>
+  <sm-tab-content>
+    <div style="min-width: 400px; min-height: 500px">
+      Range:
+      <sm-date-picker [range]="true"></sm-date-picker>
+    </div>
+  </sm-tab-content>
+  <sm-tab-content>
+    <pre class="code"><![CDATA[
+  <!-- Default Date picker -->
+  <sm-date-picker></sm-date-picker>
+
+  <!-- Range Date picker -->
+  <sm-date-picker [range]="true"></sm-date-picker>]]></pre>
+  </sm-tab-content>
+  <sm-tab-content>
+    <pre ><![CDATA[
+  @Input() date: Date | Moment | number;
+  
+  @Input() fromDate(): Date | Moment | number;
+  
+  @Input() toDate(): Date | Moment | number;
+  
+  @Input() utc = false;
+  
+  @Input() open = false;
+  
+  @Input() range = false;
+  
+  @Input() dpID = `sm-dp-${uniqueInputId++}`;
+  
+  @Input() ariaLabelPrevMonth = 'Previous';
+  
+  @Input() ariaLabelNextMonth = 'Next';
+  
+  @Input() calendarViewLabel = 'Calendar view';
+  
+  @Input() min: number = moment()
+    .subtract(150, 'years')
+    .valueOf();
+    
+  @Input() max: number = moment()
+    .add(100, 'years')
+    .valueOf();
+    
+  @Input() inputLabel = '';
+  
+  @Input() disabled = false;
+  
+  @Input() inputPlaceholder = '';
+  
+  @Input() inputFormat: string | string[] = 'll';
+  
+  @Input() displayFormat = 'll';
+  
+  @Input() strictMode = false;
+  
+  @Input() resetOnError = false;
+  
+
+  @Input() error(): boolean;
+  
+
+  @Input() disableDateFilter: DatePickerDisableDateFilter;
+  
+
+  @Output() errorChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+    
+  @Output() dateChange: EventEmitter<Date | Moment | number> = new EventEmitter<Date | Moment | number>();
+    
+  @Output() fromDateChange: EventEmitter<Date | Moment | number> = new EventEmitter<Date | Moment | number>();
+    
+  @Output() toDateChange: EventEmitter<Date | Moment | number> = new EventEmitter<Date | Moment | number>();
+    
+
+    export type DatePickerDisableDateFilter = (day: Moment) => boolean;
+
+    export const disableWeekends: DatePickerDisableDateFilter = (
+      day: Moment
+    ): boolean => {
+      if (day) return day.day() === 6 || day.day() === 0;
+      else return false;
+    };
+  ]]></pre>
+  </sm-tab-content>
+</sm-tabs>

@@ -1,0 +1,695 @@
+$sm-dp: sm-date-picker !default;
+
+.#{$sm-dp} {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+
+  &.ng-invalid.ng-dirty .#{$sm-dp}-input .sm-dp-input-btn,
+  &.ng-invalid.ng-dirty .#{$sm-dp}-input .sm-input {
+    border-color: color(red);
+    border-width: 1px;
+  }
+
+  &.ng-invalid.ng-dirty .#{$sm-dp}-input .sm-dp-input-btn:focus,
+  &.ng-invalid.ng-dirty .#{$sm-dp}-input .sm-input:focus {
+    border: border(sm);
+    border-color: color(red);
+  }
+
+  @media screen and (max-width: 578px) {
+    &__overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 9999999999999998;
+      background-color: color(overlay);
+    }
+
+    &-open {
+      overflow: hidden;
+    }
+  }
+
+  &-clear {
+    display: block;
+    text-align: center;
+    padding: sp(xxs) sp(xs);
+    @include text(body);
+    border-top: border(sm) color(border-light);
+  }
+
+  &-clear-btn {
+    @include text(body);
+    color: color(primary);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    margin: sp(xs) auto;
+    &:focus {
+      border: border(sm) color(primary);
+      margin: 7px auto;
+    }
+  }
+}
+
+.#{$sm-dp}-input {
+  display: block;
+  position: relative;
+
+  .sm-input {
+    width: calc(100% - 74px);
+    border-right: 0px;
+    min-width: unset;
+    display: inline-block;
+    border: border(sm) color(border-light);
+    padding: 7px 12px;
+
+    &:focus {
+      border: border(sm);
+      border-color: color(primary);
+      border-right-width: 1px;
+    }
+
+    &--error {
+      border-width: 1px;
+    }
+
+    &--error:focus {
+      border: border(sm);
+      border-color: color(red);
+      border-right-width: 1px;
+    }
+  }
+
+  .sm-dp-input-btn {
+    color: color(primary);
+    background: color(background);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Crect width='200' height='200' fill='url(%23pattern0)' /%3E%3Cdefs%3E%3Cpattern id='pattern0' patternContentUnits='objectBoundingBox' width='1' height='1'%3E%3Cuse xlink:href='%23image0' transform='scale(0.005)' /%3E%3C/pattern%3E%3Cimage id='image0' width='48' height='48' xlink:href='data:image/png;base64,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' /%3E%3C/defs%3E%3C/svg%3E");
+    @include text(body);
+
+    width: 48px;
+    height: 48px;
+    padding: sp(z);
+    overflow: visible;
+    border: border(sm);
+    border-color: color(primary);
+    padding: sp(sm);
+
+    position: relative;
+    cursor: pointer;
+    display: block;
+    float: right;
+
+    .sm-icon {
+      vertical-align: text-top;
+    }
+
+    &:active,
+    &:hover {
+      outline: none;
+      border-color: color(primary-hover);
+    }
+
+    &:focus {
+      outline: none;
+      border: border(md);
+      border-color: color(primary-focus);
+      padding: 11px;
+    }
+
+    &[disabled] {
+      background-color: color(disabled);
+      color: color(text-disabled);
+      border-color: color(text-disabled);
+      cursor: not-allowed;
+    }
+
+    &--error {
+      border-color: color(red);
+      border-width: 1px;
+    }
+
+    &--error:focus {
+      border: border(sm);
+      border-color: color(red);
+    }
+  }
+}
+
+.#{$sm-dp}-calendar {
+  @media screen and (max-width: 578px) {
+    position: fixed;
+    top: calc(50% - 171px);
+    left: calc(50% - 142px);
+    background-color: color(background);
+  }
+
+  width: 285px;
+  right: 0px;
+
+  border: border(sm) color(border-light);
+  background-color: color(background-light);
+  border-color: color(border);
+
+  display: block;
+  position: absolute;
+  box-sizing: content-box;
+  z-index: 9999999999999999;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.#{$sm-dp}-calendar-nav {
+  height: 112px;
+
+  background-color: color(primary-light);
+
+  display: block;
+  position: relative;
+
+  &--year-view {
+    height: 72px;
+  }
+
+  .calendar-nav-date {
+    top: 24px;
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    z-index: 0;
+
+    &--view-links {
+      display: block;
+      position: relative;
+      text-align: center;
+    }
+
+    .calendar-nav-date-link {
+      padding: sp(z) sp(xxxs) sp(z) sp(z);
+      margin: sp(z);
+      min-width: sp(z);
+
+      @include text(body);
+      color: color(text);
+      font-weight: 500;
+      border: sp(z);
+      background: transparent;
+      display: inline-block;
+      padding: 0 sp(xs);
+    }
+
+    .calendar-nav-date-link:focus {
+      border: sp(z);
+      outline: none;
+    }
+
+    .calendar-nav-date-link[activeView="false"] {
+      cursor: pointer;
+      color: color(primary);
+    }
+
+    .calendar-nav-date-link[activeView="false"]:focus {
+      outline: none;
+      background: transparent;
+      color: color(primary-hover);
+      text-decoration: underline;
+    }
+
+    .calendar-nav-date-link[activeView="false"]:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .calendar-nav-arrows-left,
+  .calendar-nav-arrows-right {
+    position: absolute;
+    display: inline-block;
+
+    top: 20px;
+    margin: sp(z) sp(xxxxs) sp(z) sp(z);
+    padding: sp(z);
+    width: 32px;
+    height: 32px;
+
+    color: color(primary);
+    border: sp(z);
+    background: transparent;
+    cursor: pointer;
+    z-index: 1;
+
+    &:focus,
+    &:focus {
+      outline: 1px solid color(primary);
+    }
+  }
+
+  .calendar-nav-arrows-left {
+    left: 15px;
+
+    > svg {
+      fill: #027fe6;
+      left: calc(50% - 10px);
+      position: relative;
+    }
+  }
+
+  .calendar-nav-arrows-right {
+    right: 15px;
+
+    > svg {
+      fill: #027fe6;
+      right: calc(50% - 10px);
+      position: relative;
+    }
+  }
+
+  .calendar-nav-header {
+    position: absolute;
+    bottom: 12px;
+    left: 16px;
+
+    &-unit {
+      width: 32px;
+
+      @include text(body);
+      color: color(text);
+      font-weight: normal;
+
+      margin-right: sp(xxs);
+
+      text-align: center;
+      display: inline-block;
+    }
+  }
+
+  .calendar-nav-header-years {
+    position: absolute;
+    bottom: 12px;
+    left: 24px;
+    @include text(body);
+    color: color(text-primary);
+  }
+}
+
+.#{$sm-dp}-calendar-day-view {
+  display: inline-block;
+  position: relative;
+  padding: 20px sp(m);
+
+  &[hidden] {
+    display: none;
+  }
+
+  .calendar-day-view-weeks {
+    display: block;
+  }
+
+  .calendar-day-view-days {
+    width: 32px;
+    overflow: visible;
+
+    &.last-of-week {
+      margin: sp(z);
+    }
+
+    @include text(body);
+    margin-right: sp(xxs);
+    padding: sp(xs) sp(xxs);
+    font-weight: 500;
+    line-height: 1.25rem;
+
+    color: color(primary);
+    background-color: transparent;
+    border: sp(z);
+    outline: none;
+
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+
+    &.notInMonth {
+      visibility: hidden;
+    }
+
+    &.date-selected,
+    &:hover,
+    &:active {
+      outline: none;
+      color: color(text-primary);
+    }
+
+    &.today::before {
+      width: 4px;
+      height: 4px;
+      bottom: 4px;
+      left: calc(50% - 2px);
+      background-color: color(primary);
+      border-radius: 50%;
+      position: absolute;
+      display: block;
+      content: "";
+      z-index: -1;
+    }
+
+    &.inRange {
+      color: color(primary);
+    }
+
+    &.fromDate,
+    &.toDate {
+      color: color(text-primary);
+    }
+
+    &.date-selected::before {
+      width: 32px;
+      height: 32px;
+      top: calc(50% - 16px);
+      left: 0;
+
+      background: color(primary);
+      border-radius: 50%;
+
+      position: absolute;
+      display: block;
+      content: "";
+      z-index: -1;
+    }
+
+    &:hover::before {
+      width: 32px;
+      height: 32px;
+      top: calc(50% - 16px);
+      left: 0px;
+
+      background: color(primary-hover);
+      border-radius: 50%;
+
+      position: absolute;
+      display: block;
+      content: "";
+      z-index: -1;
+    }
+
+    &:active::before {
+      width: 32px;
+      height: 32px;
+      top: calc(50% - 16px);
+      left: 0;
+
+      background: color(primary);
+      border-radius: 50%;
+
+      position: absolute;
+      display: block;
+      content: "";
+      z-index: -1;
+    }
+
+    &.disabled-focused::before {
+      display: none;
+    }
+
+    & .fromDate::before {
+      width: 32px;
+      height: 32px;
+      top: calc(50% - 16px);
+      left: 8px;
+      border-radius: 0;
+      border: 0;
+
+      background: color(primary-2);
+
+      position: absolute;
+      display: block;
+      content: "";
+      z-index: -3;
+    }
+
+    & .toDate::before {
+      width: 32px;
+      height: 32px;
+      top: calc(50% - 16px);
+      left: -8px;
+      border-radius: 0;
+      border: 0;
+
+      background: color(primary-2);
+
+      position: absolute;
+      display: block;
+      content: "";
+      z-index: -3;
+    }
+
+    &:focus::after {    
+      width: 38px;
+      height: 38px;
+      top: calc(50% - 20px);
+      left: calc(50% - 20px);
+
+      border: border(sm);
+      border-color: color(primary);
+      border-radius: 50%;
+      background: color(background);
+
+      position: absolute;
+      display: block;
+      content: "";
+      z-index: -2;
+    }
+
+    &.disabled-focused:focus::after {
+      width: 40px;
+      height: 40px;
+      top: calc(50% - 20px);
+      left: calc(50% - 20px);
+
+      border: border-style(focus-outline);
+      border-color: color(text-disabled);
+
+      position: absolute;
+      display: block;
+      content: "";
+      z-index: -1;
+    }
+
+    &.inRange::before,
+    & .inRange::before {
+      background: color(primary-2);
+      width: 40px;
+      height: 32px;
+      top: calc(50% - 16px);
+      left: -4px;
+      position: absolute;
+      display: block;
+      content: "";
+      z-index: -3;
+    }
+
+    &.fromDate::before,
+    &.toDate::before {
+      background: color(primary);
+      width: 32px;
+      height: 32px;
+      top: calc(50% - 16px);
+      left: 0px;
+
+      border-radius: 50%;
+
+      position: absolute;
+      display: block;
+      content: "";
+      z-index: -1;
+    }
+
+    &.inRange:hover {
+      color: color(background-light);
+    }
+
+    &.inRange:hover::before {
+      border-radius: 0;
+    }
+
+    &.toDate.inRange:hover::before {
+      border-radius: 50%;
+    }
+
+    &.inRange:hover::after,
+    &.fromDate:hover::after,
+    &.toDate:hover::after {
+      width: 32px;
+      height: 32px;
+      top: calc(50% - 16px);
+      left: 0px;
+
+      background: color(primary-hover);
+      border-radius: 50%;
+
+      position: absolute;
+      display: block;
+      content: "";
+      z-index: -1;
+    }
+
+    &.disabled-focused::before,
+    &[disabled]::before,
+    &[disabled]::after {
+      display: none;
+    }
+
+    &.disabled-focused,
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:focus,
+    &[disabled]:active {
+      font-weight: font-weight(medium);
+      color: color(text-disabled);
+      cursor: not-allowed;
+    }
+
+    &[disabled].inRange:hover::after {
+      background: none;
+      border: 0;
+    }
+  }
+}
+
+.#{$sm-dp}-calendar-year-view {
+  display: block;
+  position: relative;
+
+  &.opened {
+    width: 100%;
+    height: 272px;
+    padding: sp(m);
+
+    overflow-y: scroll;
+  }
+
+  & .calendar-year-view-years {
+    @include text(body);
+    color: color(primary);
+    background-color: transparent;
+
+    width: 88px;
+    height: 40px;
+    margin: sp(xxs) auto;
+    border: sp(z);
+    padding: sp(z);
+    outline: none;
+
+    text-align: center;
+    display: block;
+
+    position: relative;
+    cursor: pointer;
+
+    &[today]::before {
+      width: 4px;
+      height: 4px;
+      bottom: 6px; //Ali override
+      left: calc(50% - 2px);
+      background-color: color(primary);
+      border-radius: 50%;
+      position: absolute;
+      display: block;
+      content: "";
+      z-index: -1;
+    }
+
+    &[selectedDate] {
+      color: color(text-primary);
+    }
+
+    &:focus::after {
+      width: 86px;
+      height: 46px;
+      top: calc(50% - 24px);
+      left: calc(50% - 44px);
+
+      border: border(sm);
+      border-color: color(primary);
+      border-radius: 48px;
+
+      position: absolute;
+      display: block;
+      content: "";
+      z-index: -1;
+    }
+
+    &:active,
+    &:hover {
+      color: color(text-primary);
+    }
+
+    &[selectedDate]:before {
+      width: 80px;
+      height: 40px;
+      top: calc(50% - 20px);
+      left: calc(50% - 40px);
+
+      border-radius: 48px;
+      background-color: color(primary);
+
+      position: absolute;
+      display: block;
+      content: "";
+      z-index: -1;
+    }
+
+    &:active::before,
+    &:hover::before {
+      width: 80px;
+      height: 40px;
+      top: calc(50% - 20px);
+      left: calc(50% - 40px);
+
+      border-radius: 48px;
+      background-color: color(primary-hover);
+
+      position: absolute;
+      display: block;
+      content: "";
+      z-index: -1;
+    }
+
+    &:active::before {
+      background-color: color(primary);
+    }
+
+    &[disabledFocus]:focus::after {
+      border-color: color(text-disabled);
+    }
+
+    &[disabledfocus]:before,
+    &[disabledFocus]:focus::before {
+      display: none;
+    }
+
+    &[disabled]::before,
+    &[disabled]::after {
+      display: none;
+    }
+
+    &[disabled],
+    &[disabledfocus],
+    &[disabled]:hover,
+    &[disabled]:focus,
+    &[disabled]:active,
+    &[disabledFocus]:focus {
+      color: color(text-disabled);
+      cursor: not-allowed;
+      text-decoration: none;
+    }
+  }
+}

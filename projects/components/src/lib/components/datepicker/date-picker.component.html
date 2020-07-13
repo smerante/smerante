@@ -1,0 +1,47 @@
+<span [hidden]="!open" class="sm-date-picker__overlay"></span>
+
+<sm-date-picker-input
+  [calendarViewLabel]="calendarViewLabel"
+  [inputID]="dpID"
+  [disabled]="disabled"
+  [range]="range"
+  [(date)]="date"
+  [dateWasSelected]="dateWasSelected"
+  [inputPlaceholder]="inputPlaceholder"
+  [inputFormat]="inputFormat"
+  [displayFormat]="displayFormat"
+  [strictMode]="strictMode"
+  [fromDate]="fromDate"
+  [toDate]="toDate"
+  (openChange)="calenderViewOpen()"
+  [min]="min"
+  [max]="max"
+  [(error)]="error"
+  (clearDate)="resetDP()"
+  [inputLabel]="inputLabel"
+  [disableDateFilter]="disableDateFilter"
+  (dateChange)="dateSelected()"
+  (resetCalendar)="resetCalendarView()"
+  (fromDateChange)="fromDateChanged($event)"
+  (toDateChange)="toDateChanged($event)"
+>
+</sm-date-picker-input>
+
+<sm-date-picker-calendar
+  [ariaLabelPrevMonth]="ariaLabelPrevMonth"
+  [ariaLabelNextMonth]="ariaLabelNextMonth"
+  [min]="min"
+  [max]="max"
+  [calendarID]="dpID"
+  [range]="range"
+  [(open)]="open"
+  [(date)]="date"
+  [fromDate]="fromDate"
+  [toDate]="toDate"
+  [disableDateFilter]="disableDateFilter"
+  (fromDateChange)="fromDateChanged($event, true)"
+  (toDateChange)="toDateChanged($event, true)"
+  (dateSelect)="dateSelected()"
+  (clearDate)="resetDP(true)"
+>
+</sm-date-picker-calendar>
