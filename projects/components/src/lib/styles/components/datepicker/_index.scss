@@ -49,6 +49,11 @@ $sm-dp: sm-date-picker !default;
     border: 0;
     background: transparent;
     cursor: pointer;
+    margin: sp(xs) auto;
+    &:focus {
+      border: border(sm) color(primary);
+      margin: 7px auto;
+    }
   }
 }
 
@@ -111,8 +116,9 @@ $sm-dp: sm-date-picker !default;
 
     &:focus {
       outline: none;
-      border: border(sm);
-      border-color: color(primary);
+      border: border(md);
+      border-color: color(primary-focus);
+      padding: 11px;
     }
 
     &[disabled] {
@@ -137,11 +143,12 @@ $sm-dp: sm-date-picker !default;
 .#{$sm-dp}-calendar {
   @media screen and (max-width: 578px) {
     position: fixed;
-    top: calc(50vh - 171px);
-    left: calc(50vw - 153px);
+    top: calc(50% - 171px);
+    left: calc(50% - 142px);
+    background-color: color(background);
   }
 
-  width: 304px;
+  width: 285px;
   right: 0px;
 
   border: border(sm) color(border-light);
@@ -269,11 +276,12 @@ $sm-dp: sm-date-picker !default;
 
     &-unit {
       width: 32px;
-      margin-right: sp(xxxs);
 
       @include text(body);
-      color: color(text-primary);
+      color: color(text);
       font-weight: normal;
+
+      margin-right: sp(xxs);
 
       text-align: center;
       display: inline-block;
@@ -292,7 +300,7 @@ $sm-dp: sm-date-picker !default;
 .#{$sm-dp}-calendar-day-view {
   display: inline-block;
   position: relative;
-  padding: sp(s) sp(xs) sp(s) sp(xs);
+  padding: 20px sp(m);
 
   &[hidden] {
     display: none;
@@ -314,6 +322,7 @@ $sm-dp: sm-date-picker !default;
     margin-right: sp(xxs);
     padding: sp(xs) sp(xxs);
     font-weight: 500;
+    line-height: 1.25rem;
 
     color: color(primary);
     background-color: transparent;
@@ -333,7 +342,7 @@ $sm-dp: sm-date-picker !default;
     &:hover,
     &:active {
       outline: none;
-      color: color(text);
+      color: color(text-primary);
     }
 
     &.today::before {
@@ -355,7 +364,7 @@ $sm-dp: sm-date-picker !default;
 
     &.fromDate,
     &.toDate {
-      color: color(text);
+      color: color(text-primary);
     }
 
     &.date-selected::before {
@@ -413,9 +422,9 @@ $sm-dp: sm-date-picker !default;
       top: calc(50% - 16px);
       left: 8px;
       border-radius: 0;
-      border: bw(none);
+      border: 0;
 
-      background: color(primary);
+      background: color(primary-2);
 
       position: absolute;
       display: block;
@@ -429,9 +438,9 @@ $sm-dp: sm-date-picker !default;
       top: calc(50% - 16px);
       left: -8px;
       border-radius: 0;
-      border: bw(none);
+      border: 0;
 
-      background: color(primary);
+      background: color(primary-2);
 
       position: absolute;
       display: block;
@@ -439,13 +448,13 @@ $sm-dp: sm-date-picker !default;
       z-index: -3;
     }
 
-    &:focus::after {
-      width: 40px;
-      height: 40px;
+    &:focus::after {    
+      width: 38px;
+      height: 38px;
       top: calc(50% - 20px);
       left: calc(50% - 20px);
 
-      border: border-style(focus-outline);
+      border: border(sm);
       border-color: color(primary);
       border-radius: 50%;
       background: color(background);
@@ -473,7 +482,7 @@ $sm-dp: sm-date-picker !default;
 
     &.inRange::before,
     & .inRange::before {
-      background: color(primary);
+      background: color(primary-2);
       width: 40px;
       height: 32px;
       top: calc(50% - 16px);
@@ -596,16 +605,16 @@ $sm-dp: sm-date-picker !default;
     }
 
     &[selectedDate] {
-      color: color(text);
+      color: color(text-primary);
     }
 
     &:focus::after {
-      width: 88px;
-      height: 48px;
+      width: 86px;
+      height: 46px;
       top: calc(50% - 24px);
       left: calc(50% - 44px);
 
-      border: border-style(focus-outline);
+      border: border(sm);
       border-color: color(primary);
       border-radius: 48px;
 
@@ -617,7 +626,7 @@ $sm-dp: sm-date-picker !default;
 
     &:active,
     &:hover {
-      color: color(text);
+      color: color(text-primary);
     }
 
     &[selectedDate]:before {
