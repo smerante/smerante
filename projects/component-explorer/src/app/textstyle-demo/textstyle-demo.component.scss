@@ -2,6 +2,9 @@
   display: flex;
   justify-content: space-between;
   padding: sp(l) sp(giant);
+  @media screen and (max-width: 570px) {
+    padding: sp(m) sp(l);
+  }
 }
 
 .token {
