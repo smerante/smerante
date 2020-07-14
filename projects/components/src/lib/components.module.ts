@@ -13,6 +13,7 @@ import { SMToggleComponent, SMToggleComponentWrapper } from './components/toggle
 import { SMTooltipComponent } from './components/tooltip/tooltip.component';
 import { SMModalModule } from './components/modal/modal.module';
 import { SMDatePickerModule } from './components/datepicker/date-picker.module';
+import { SMDrawerComponent } from './components/drawer/drawer.component';
 
 const components =
   [
@@ -32,6 +33,7 @@ const components =
     SMToggleComponent,
     SMToggleComponentWrapper,
     SMTooltipComponent,
+    SMDrawerComponent,
   ];
 
 @NgModule({

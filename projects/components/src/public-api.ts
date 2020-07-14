@@ -18,6 +18,7 @@ export * from './lib/components/modal/modal.component';
 export * from './lib/components/datepicker/date-picker.component';
 export * from './lib/components/datepicker/date-picker.module';
 export * from './lib/components/datepicker/sm-date.pipe';
+export * from './lib/components/drawer/drawer.component';
 export * from './lib/components/datepicker/date-picker-calendar/calendar-day-view/calendar-day-view.component';
 export * from './lib/components/datepicker/date-picker-calendar/date-picker-calendar.component';
 export * from './lib/components/datepicker/date-picker-input/date-picker-input.component';

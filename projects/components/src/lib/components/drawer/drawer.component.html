@@ -1,0 +1,5 @@
+<div *ngIf="noOverlay !== true" class="sm-drawer-overlay" [attr.open]="open ? '' : null" ></div>
+<div [id]="drawerID" class="sm-drawer" [attr.open]="open ? '' : null" [attr.position]="position" tabindex="-1" aria-role="drawer" [attr.aria-label]="position + ' drawer open'">
+  <ng-content></ng-content>
+  <button [attr.aria-label]="'Close ' + position + ' drawer'" (click)="closeDrawer()" class="sm-drawer--close"></button>
+</div>

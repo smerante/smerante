@@ -11,12 +11,15 @@ import { ToggleDemoComponent } from './toggle-demo/toggle-demo.component';
 import { TooltipDemoComponent } from './tooltip-demo/tooltip-demo.component';
 import { ModalDemoComponent } from './modal-demo/modal-demo.component';
 import { DatepickerDemoComponent } from './datepicker-demo/datepicker-demo.component';
+import { DrawerDemoComponent } from './drawer-demo/drawer-demo.component';
+
 
 
 const routes: Routes = [
   { path: 'button', component: CtaDemoComponent },
   { path: 'card', component: CardsDemoComponent },
   { path: 'datepicker', component: DatepickerDemoComponent },
+  { path: 'drawer', component: DrawerDemoComponent },
   { path: 'checkbox', component: CheckboxDemoComponent },
   { path: 'input', component: InputDemoComponent },
   { path: 'modal', component: ModalDemoComponent },

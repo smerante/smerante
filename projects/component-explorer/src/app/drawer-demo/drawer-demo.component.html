@@ -1,0 +1,42 @@
+<h1 class="heading-1 text-center">Drawer</h1>
+
+<sm-tabs style="display: flex; justify-content: center;">
+  <sm-tab>
+    Example
+  </sm-tab>
+  <sm-tab>
+    Code
+  </sm-tab>
+  <sm-tab>
+    Props
+  </sm-tab>
+  <sm-tab-content style="text-align: center;">
+    <sm-button (click)="openDrawer('left')">Open Left</sm-button>
+    <sm-button (click)="openDrawer('right')">Open Right</sm-button>
+    <sm-button (click)="openDrawer('top')">Open Top</sm-button>
+    <sm-button (click)="openDrawer('bottom')">Open Bottom</sm-button>
+  </sm-tab-content>
+  <sm-tab-content>
+    <pre class="code">{{code}}</pre>
+  </sm-tab-content>
+  <sm-tab-content>
+    <pre ><![CDATA[
+  @Input() drawerID = `sm-drawer-${uniqueID++}`;
+
+  @Input() position: 'left' | 'right' | 'top' | 'bottom';
+
+  @Input() open;
+
+  @Input() noOverlay: boolean = false;
+
+  @Output() openChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+  ]]></pre>
+  </sm-tab-content>
+</sm-tabs>
+
+<sm-drawer *ngIf="position === 'left' || position === 'right'" [(open)]="open" [position]="position">
+  {{position}} drawer demo
+</sm-drawer>
+<sm-drawer *ngIf="position === 'bottom' || position === 'top'" [(open)]="open" [position]="position">
+  {{position}} drawer demo
+</sm-drawer>
