@@ -1,0 +1,8 @@
+<sm-drawer [(open)]="open" position="left" [noOverlay]="true">
+  <ul class="sm-side-nav">
+    <li *ngFor="let link of links" class="sm-side-nav--li" (click)="navigate(link)">
+      <a class="sm-side-nav--link" routerLinkActive="active">{{link | titlecase}}</a>
+    </li>
+  </ul>
+</sm-drawer>
+<button (click)="open = !open" class="sm-side-nav--btn"></button>

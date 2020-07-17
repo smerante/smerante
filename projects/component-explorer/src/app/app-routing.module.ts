@@ -27,7 +27,8 @@ const routes: Routes = [
   { path: 'tab', component: TabDemoComponent },
   { path: 'toggle', component: ToggleDemoComponent },
   { path: 'tooltip', component: TooltipDemoComponent },
-  { path: 'theme', component: TextstyleDemoComponent }
+  { path: 'theme', component: TextstyleDemoComponent },
+  { path: '', component: CtaDemoComponent }
 ];
 
 @NgModule({

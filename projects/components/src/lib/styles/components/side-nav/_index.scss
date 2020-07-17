@@ -1,0 +1,59 @@
+.sm-side-nav {
+  display: block;
+
+  &--li {
+    display: block;
+    padding: spacing(xs);
+    cursor: pointer;
+
+    &:hover {
+      background-color: color(background-3);
+    }
+  }
+
+  &--link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: color(text);
+    position: relative;
+
+    &:before {
+      @include transition-all();
+      content: "";
+      position: absolute;
+      background-color: color(primary);
+      top: calc(100% - 2px);
+      left: 0px;
+      width: 0px;
+      height: 2px;
+    }
+
+    &:focus:before {
+      width: 100%;
+    }
+  }
+
+  &--btn {
+    @include reset();
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='4' viewBox='0 0 20 4' fill='none'%3E%3Ccircle cx='2' cy='2' r='2' transform='rotate(-90 2 2)' fill='black'/%3E%3Ccircle cx='10' cy='2' r='2' transform='rotate(-90 10 2)' fill='black'/%3E%3Ccircle cx='18' cy='2' r='2' transform='rotate(-90 18 2)' fill='black'/%3E%3C/svg%3E");
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    padding: spacing(xs);
+    box-sizing: content-box;
+    outline: border(sm) color(border-primary);
+
+    &:focus {
+      outline: border(sm) color(primary);
+    }
+    &:hover {
+      background-color: color(background-3);
+    }
+  }
+}

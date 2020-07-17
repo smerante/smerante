@@ -24,7 +24,11 @@ export class SMDrawerComponent implements OnInit {
   set open(val: boolean) {
     if (val) {
       this.triggerElement = document.activeElement;
-      document.getElementById(this.drawerID).focus();
+      setTimeout(() => {
+        console.warn(document.getElementById(this.drawerID));
+        document.getElementById(this.drawerID).focus();
+        console.warn(document.activeElement);
+      });
     } else if (this.triggerElement) {
       (this.triggerElement as HTMLElement).focus();
     }

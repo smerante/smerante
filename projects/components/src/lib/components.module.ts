@@ -14,6 +14,8 @@ import { SMTooltipComponent } from './components/tooltip/tooltip.component';
 import { SMModalModule } from './components/modal/modal.module';
 import { SMDatePickerModule } from './components/datepicker/date-picker.module';
 import { SMDrawerComponent } from './components/drawer/drawer.component';
+import { SMSideNavComponent } from './components/side-nav/side-nav.component';
+import { RouterModule } from '@angular/router';
 
 const components =
   [
@@ -34,11 +36,12 @@ const components =
     SMToggleComponentWrapper,
     SMTooltipComponent,
     SMDrawerComponent,
+    SMSideNavComponent,
   ];
 
 @NgModule({
   declarations: [components],
-  imports: [CommonModule, ReactiveFormsModule, FormsModule, SMModalModule, SMDatePickerModule],
+  imports: [RouterModule, CommonModule, ReactiveFormsModule, FormsModule, SMModalModule, SMDatePickerModule],
   exports: [components, SMModalModule, SMDatePickerModule]
 })
 export class SMComponentsModule { }

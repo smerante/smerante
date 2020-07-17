@@ -3,7 +3,12 @@ $sm-dp: sm-date-picker !default;
 .#{$sm-dp} {
   display: inline-block;
   position: relative;
-  width: 100%;
+  width: auto;
+
+  @media screen and (max-width: 578px) {
+    display: block;
+  }
+
 
   &.ng-invalid.ng-dirty .#{$sm-dp}-input .sm-dp-input-btn,
   &.ng-invalid.ng-dirty .#{$sm-dp}-input .sm-input {
@@ -58,16 +63,16 @@ $sm-dp: sm-date-picker !default;
 }
 
 .#{$sm-dp}-input {
-  display: block;
+  display: inline-block;
   position: relative;
 
   .sm-input {
-    width: calc(100% - 74px);
+    width: calc(100% - 94px);
     border-right: 0px;
     min-width: unset;
     display: inline-block;
     border: border(sm) color(border-light);
-    padding: 7px 12px;
+    padding: 7px 32px 7px 12px;
 
     &:focus {
       border: border(sm);
@@ -96,7 +101,7 @@ $sm-dp: sm-date-picker !default;
     width: 32px;
     height: 32px;
     top: 8px;
-    right: 56px;
+    right: 53px;
     background-repeat: no-repeat;
     background-position: center;
     &:focus {

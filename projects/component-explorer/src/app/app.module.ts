@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SMComponentsModule } from 'components';
-import { NavComponent } from './nav/nav.component';
 import { CtaDemoComponent } from './cta-demo/cta-demo.component';
 import { InputDemoComponent } from './input-demo/input-demo.component';
 import { TabDemoComponent } from './tab-demo/tab-demo.component';
@@ -21,7 +20,6 @@ import { DrawerDemoComponent } from './drawer-demo/drawer-demo.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
     CtaDemoComponent,
     InputDemoComponent,
     TabDemoComponent,
@@ -33,7 +31,7 @@ import { DrawerDemoComponent } from './drawer-demo/drawer-demo.component';
     TooltipDemoComponent,
     ModalDemoComponent,
     DatepickerDemoComponent,
-    DrawerDemoComponent
+    DrawerDemoComponent,
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,7 @@ export * from './lib/components/radio/radio.component';
 export * from './lib/components/checkbox/checkbox.component';
 export * from './lib/components/toggle/toggle.component';
 export * from './lib/components/tooltip/tooltip.component';
+export * from './lib/components/side-nav/side-nav.component';
 export * from './lib/components/modal/modal.module';
 export * from './lib/components/modal/modal.component';
 export * from './lib/components/datepicker/date-picker.component';
