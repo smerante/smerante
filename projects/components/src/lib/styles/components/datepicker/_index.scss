@@ -177,6 +177,7 @@ $sm-dp: sm-date-picker !default;
   border: border(sm) color(border-light);
   background-color: color(background-light);
   border-color: color(border);
+  border-radius: 50px 0px 50px 0px;
 
   display: block;
   position: absolute;
@@ -195,7 +196,7 @@ $sm-dp: sm-date-picker !default;
 
   display: block;
   position: relative;
-
+  border-radius: 50px 0px;
   &--year-view {
     height: 72px;
   }
