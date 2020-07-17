@@ -1,4 +1,4 @@
-# Reusable common components library
+# Reusable angular components library
 Visit the [component explorer](https://smerante.github.io/smerante/#/input) to see code usage and examples.
 
 ## 1. Install the library
