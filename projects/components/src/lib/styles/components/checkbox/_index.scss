@@ -3,7 +3,7 @@
     display: inline-block;
     position: relative;
     min-height: 38px;
-    padding: sp(xxs);
+    padding: spacing(xxs);
   }
   &--field {
     cursor: pointer;
@@ -50,7 +50,7 @@
     left: 0px;
     margin: 0px;
     line-height: 2;
-    padding-left: sp(xxl);
+    padding-left: spacing(xxl);
     transition: all ease-in-out 0.25s;
     &::before {
       transition: all ease-in-out 0.25s;

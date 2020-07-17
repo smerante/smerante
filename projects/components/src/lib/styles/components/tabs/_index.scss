@@ -10,7 +10,7 @@
     width: max-content;
     background-color: color(background);
     color: color(text);
-    padding: sp(m) sp(b);
+    padding: spacing(m) spacing(b);
     border: border(sm) color(border-primary);
     border-bottom: border(sm) color(background);
 
@@ -29,7 +29,7 @@
     }
 
     &:focus {
-      border-bottom: border(md) color(secondary)-hover;
+      border-bottom: border(md) color(secondary-hover);
     }
 
     &:hover {
@@ -69,6 +69,6 @@ sm-tab + sm-tab {
 .sm-tab-content-wrapper {
   position: relative;
   border: border(sm) color(border-primary);
-  padding: sp(m);
+  padding: spacing(m);
   min-width: 320px;
 }

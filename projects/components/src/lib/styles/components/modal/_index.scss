@@ -53,9 +53,9 @@
     @include text(heading-3);
     text-align: center;
     border-bottom: border(sm) color(border-primary);
-    padding: sp(m) sp(l) sp(m) sp(l);
+    padding: spacing(m) spacing(l) spacing(m) spacing(l);
     @media screen and (max-width: 575px) {
-      padding-top: sp(l);
+      padding-top: spacing(l);
     }
     background-color: color(background-3);
   }
@@ -63,7 +63,7 @@
     display: block;
     @include text(body);
     border-bottom: border(sm) color(border-primary);
-    padding: sp(m);
+    padding: spacing(m);
   }
   .sm-modal-footer {
     display: block;

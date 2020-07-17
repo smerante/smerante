@@ -11,7 +11,7 @@ sm-button {
   height: 48px;
   background-color: color(primary);
   color: color(text-primary);
-  padding: sp(m) sp(b);
+  padding: spacing(m) spacing(b);
   &:before {
     @include transition-all();
     content: "";
@@ -48,7 +48,7 @@ sm-button {
 
 .sm-button--secondary {
   background-color: color(secondary);
-  color: color(text-secondary);
+  color: color(text-primary);
 
   &:hover {
     background-color: color(secondary-hover);
@@ -69,8 +69,8 @@ sm-button {
   top: -3px;
   font-size: 0.75rem;
   line-height: 0.75rem;
-  background-color: color(secondary);
-  color: color(text-secondary);
+  background-color: color(background);
+  color: color(tertiary);
 
   &:before {
     outline: none;
@@ -81,17 +81,24 @@ sm-button {
     left: 23px;
   }
 
-  &:active,
-  &:hover,
-  &:focus {
-    background-color: color(secondary);
-    color: color(secondary-active);
+  
+  &:hover {
+    background-color: color(tertiary-hover);
+    color: color(text-primary);
     box-shadow: none;
   }
+
+  &:active,
+  &:focus {
+    background-color: color(background);
+    color: color(tertiary);
+    box-shadow: none;
+  }
+  
   &:active:before,
   &:focus:before {
     outline: none;
-    border: border(sm) color(primary-focus);
+    border: border(sm) color(tertiary);
     height: calc(100% - 24px);
     width: calc(100% - 24px);
     top: 11px;

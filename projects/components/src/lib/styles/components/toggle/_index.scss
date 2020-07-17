@@ -4,7 +4,7 @@
     display: inline-block;
     position: relative;
     min-height: 42px;
-    padding: sp(xxs) 0;
+    padding: spacing(xxs) 0;
   }
   &--field {
     cursor: pointer;
@@ -65,9 +65,8 @@
     position: relative;
     left: 0px;
     margin: 0px;
-    line-height: 2.5;
-    padding-left: 88px;
-    padding-bottom: sp(xs);
+    line-height: 2rem;    
+    padding: 12px 0px 8px 88px;
     &:before {
       content: "";
       display: block;

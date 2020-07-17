@@ -1,9 +1,9 @@
 .spacing {
   display: flex;
   justify-content: space-between;
-  padding: sp(l) sp(giant);
+  padding: spacing(l) spacing(giant);
   @media screen and (max-width: 570px) {
-    padding: sp(m) sp(l);
+    padding: spacing(m) spacing(l);
   }
 }
 
@@ -16,48 +16,48 @@
   border: border(sm);
   background: color(pink);
   &-xxs {
-    width: sp(xxs);
-    height: sp(xxs);
+    width: spacing(xxs);
+    height: spacing(xxs);
   }
   &-xs {
-    width: sp(xs);
-    height: sp(xs);
+    width: spacing(xs);
+    height: spacing(xs);
   }
   &-sm {
-    width: sp(sm);
-    height: sp(sm);
+    width: spacing(sm);
+    height: spacing(sm);
   }
   &-m {
-    width: sp(m);
-    height: sp(m);
+    width: spacing(m);
+    height: spacing(m);
   }
   &-b {
-    width: sp(b);
-    height: sp(b);
+    width: spacing(b);
+    height: spacing(b);
   }
   &-l {
-    width: sp(l);
-    height: sp(l);
+    width: spacing(l);
+    height: spacing(l);
   }
   &-xl {
-    width: sp(xl);
-    height: sp(xl);
+    width: spacing(xl);
+    height: spacing(xl);
   }
   &-xxl {
-    width: sp(xxl);
-    height: sp(xxl);
+    width: spacing(xxl);
+    height: spacing(xxl);
   }
   &-xxxl {
-    width: sp(xxxl);
-    height: sp(xxxl);
+    width: spacing(xxxl);
+    height: spacing(xxxl);
   }
   &-huge {
-    width: sp(huge);
-    height: sp(huge);
+    width: spacing(huge);
+    height: spacing(huge);
   }
   &-giant {
-    width: sp(giant);
-    height: sp(giant);
+    width: spacing(giant);
+    height: spacing(giant);
   }
 }
 
@@ -65,7 +65,7 @@
   display: block;
   text-align: center;
   width: 50%;
-  padding: sp(xs) sp(huge);
+  padding: spacing(xs) spacing(huge);
   .heading-1 {
     @include text(heading-1);
     padding: 0;
@@ -95,7 +95,7 @@
   text-align: center;
   min-width: 50%;
   color: color(white);
-  margin: sp(b) auto;
+  margin: spacing(b) auto;
 
   .primary {
     background-color: color(primary);
@@ -135,6 +135,28 @@
   }
   .secondary-active {
     background-color: color(secondary-active);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .tertiary {
+    background-color: color(tertiary);
+    color: color(black);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .tertiary-hover {
+    background-color: color(tertiary-hover);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .tertiary-focus {
+    background-color: color(tertiary-focus);
+    color: color(black);
+    height: 2rem;
+    line-height: 2rem;
+  }
+  .tertiary-active {
+    background-color: color(tertiary-active);
     height: 2rem;
     line-height: 2rem;
   }
@@ -198,7 +220,7 @@
   text-align: center;
   min-width: 50%;
   color: color(black);
-  margin: sp(b) auto;
+  margin: spacing(b) auto;
   &-sm {
     border: border(sm) color(border-primary);
   }

@@ -6,7 +6,7 @@
   width: calc(100% - 40px); //16 + 16 + 4 + 4
   background-color: color(background);
   color: color(black);
-  padding: sp(xs) sp(sm);
+  padding: spacing(xs) spacing(sm);
   box-sizing: content-box;
   &--wrapper {
     display: block;
@@ -47,7 +47,7 @@
     pointer-events: none;
     display: block;
     position: absolute;
-    left: sp(sm);
+    left: spacing(sm);
     top: calc(100% - 40px);
     line-height: 2rem;
     background: color(background);

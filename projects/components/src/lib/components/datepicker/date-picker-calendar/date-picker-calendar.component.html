@@ -6,7 +6,6 @@
   (dayViewChange)="viewChanged($event)"
   [(internalDate)]="internalDate"
 ></sm-calendar-nav>
-
 <sm-calendar-day-view
   [calendarOpened]="open"
   [viewOpened]="dayView && open"
@@ -27,7 +26,6 @@
   (dateSelect)="dateSelected($event)"
 >
 </sm-calendar-day-view>
-
 <sm-calendar-year-view
   [yearView]="!dayView && open"
   [date]="date"
@@ -38,13 +36,3 @@
   (yearSelect)="yearSelected($event)"
 >
 </sm-calendar-year-view>
-<div class="sm-date-picker-clear">
-  <button
-    type="button"
-    [id]="calendarID + '-clear'"
-    class="sm-date-picker-clear-btn"
-    (click)="onClearDate()"
-  >
-    {{ clearLabel }}
-  </button>
-</div>

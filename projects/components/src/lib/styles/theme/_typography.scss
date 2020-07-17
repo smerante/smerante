@@ -47,7 +47,7 @@ button {
       font-size: 1.5rem;
       line-height: 1.5rem;
     }
-    padding: sp(b) 0;
+    padding: spacing(b) 0;
   } @else if ($val == "heading-2") {
     font-size: 2.5rem;
     line-height: 2.5rem;
@@ -101,5 +101,5 @@ button {
 }
 
 p {
-  margin-bottom: sp(m);
+  margin-bottom: spacing(m);
 }

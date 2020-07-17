@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  padding: sp(xs) sp(xxs);
+  padding: spacing(xs) spacing(xxs);
   @include text(body);
   &--label {
     display: inline;
@@ -21,7 +21,7 @@
     background: color(background);
     border: border(sm) color(primary);
     border-radius: 50%;
-    margin-left: sp(xs);
+    margin-left: spacing(xs);
     &:hover,
     &:active {
       color: color(background);
@@ -66,7 +66,7 @@
     border-radius: 10px;
     bottom: calc(100% + 8px);
     @include box-shadow();
-    padding: sp(l) sp(b) sp(l) sp(m);
+    padding: spacing(l) spacing(b) spacing(l) spacing(m);
     margin: 0px 16px;
     z-index: 9999;
     &[hidden] {
@@ -86,7 +86,7 @@
     cursor: pointer;
     &::after {
       content: "x";
-      padding: 0 sp(xxs);
+      padding: 0 spacing(xxs);
     }
     &:focus {
       &::after {

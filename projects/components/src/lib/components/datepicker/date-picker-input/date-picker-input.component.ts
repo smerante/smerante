@@ -160,4 +160,8 @@ export class DatePickerInputComponent  {
   invalidBounds(newDate: Moment): boolean {
     return !moment(newDate).isBetween(this.min, this.max, 'day', '[]');
   }
+  
+  onClearDate() {
+    this.clearDate.emit();
+  }
 }

@@ -1,6 +1,6 @@
 .sm-radio-btn {
   display: inline-block;
-  padding: 0 sp(m) sp(m) 0;
+  padding: 0 spacing(m) spacing(m) 0;
   cursor: pointer;
   @media screen and (max-width: 425px) {
     display: block;
@@ -27,9 +27,9 @@
   .sm-radio-label {
     @include text(body);
     color: color(text);
-    padding-top: sp(xs);
+    padding-top: spacing(xs);
     display: inline;
-    margin-left: sp(xl);
+    margin-left: spacing(xl);
     cursor: pointer;
     display: inline-block;
   }
@@ -38,7 +38,7 @@
 .sm-group-label {
   @include text(body);
   color: color(text);
-  margin-bottom: sp(xs);
+  margin-bottom: spacing(xs);
   display: block;
   font-weight: 500;
 }

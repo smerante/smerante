@@ -36,7 +36,7 @@ $sm-dp: sm-date-picker !default;
   &-clear {
     display: block;
     text-align: center;
-    padding: sp(xxs) sp(xs);
+    padding: spacing(xxs) spacing(xs);
     @include text(body);
     border-top: border(sm) color(border-light);
   }
@@ -49,7 +49,7 @@ $sm-dp: sm-date-picker !default;
     border: 0;
     background: transparent;
     cursor: pointer;
-    margin: sp(xs) auto;
+    margin: spacing(xs) auto;
     &:focus {
       border: border(sm) color(primary);
       margin: 7px auto;
@@ -86,6 +86,26 @@ $sm-dp: sm-date-picker !default;
     }
   }
 
+  .sm-input-clear {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='47' viewBox='0 0 46 47' fill='none'%3E%3Cpath d='M11.6863 12.1862L34.3137 34.8136' stroke='black'/%3E%3Cpath d='M11.3327 34.4601L33.9602 11.8327' stroke='black'/%3E%3C/svg%3E");
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: 32px;
+    top: 8px;
+    right: 56px;
+    background-repeat: no-repeat;
+    background-position: center;
+    &:focus {
+      outline: border(sm) color(primary);
+    }
+    &:hover {
+      background-color: color(background-3);
+    }
+  }
   .sm-dp-input-btn {
     color: color(primary);
     background: color(background);
@@ -96,11 +116,11 @@ $sm-dp: sm-date-picker !default;
 
     width: 48px;
     height: 48px;
-    padding: sp(z);
+    padding: spacing(z);
     overflow: visible;
     border: border(sm);
     border-color: color(primary);
-    padding: sp(sm);
+    padding: spacing(sm);
 
     position: relative;
     cursor: pointer;
@@ -181,7 +201,7 @@ $sm-dp: sm-date-picker !default;
   }
 
   .calendar-nav-date {
-    top: 24px;
+    top: 10px;
     position: absolute;
     display: inline-block;
     width: 100%;
@@ -194,37 +214,39 @@ $sm-dp: sm-date-picker !default;
     }
 
     .calendar-nav-date-link {
-      padding: sp(z) sp(xxxs) sp(z) sp(z);
-      margin: sp(z);
-      min-width: sp(z);
-
       @include text(body);
-      color: color(text);
+
+      padding: spacing(z) spacing(xxxs) spacing(z) spacing(z);
+      margin: spacing(xs) auto;
+      min-width: spacing(z);
+
+      color: color(secondary);
       font-weight: 500;
-      border: sp(z);
+      border: spacing(z);
       background: transparent;
-      display: inline-block;
-      padding: 0 sp(xs);
+      display: block;
+      padding: 0 spacing(xs);
     }
 
     .calendar-nav-date-link:focus {
-      border: sp(z);
+      border: spacing(z);
       outline: none;
     }
 
     .calendar-nav-date-link[activeView="false"] {
       cursor: pointer;
-      color: color(primary);
+      color: color(tertiary);
     }
 
     .calendar-nav-date-link[activeView="false"]:focus {
       outline: none;
       background: transparent;
-      color: color(primary-hover);
+      color: color(tertiary-focus);
       text-decoration: underline;
     }
 
     .calendar-nav-date-link[activeView="false"]:hover {
+      color: color(background);
       text-decoration: underline;
     }
   }
@@ -235,20 +257,23 @@ $sm-dp: sm-date-picker !default;
     display: inline-block;
 
     top: 20px;
-    margin: sp(z) sp(xxxxs) sp(z) sp(z);
-    padding: sp(z);
+    margin: spacing(z) spacing(xxxxs) spacing(z) spacing(z);
+    padding: spacing(z);
     width: 32px;
     height: 32px;
 
     color: color(primary);
-    border: sp(z);
+    border: spacing(z);
     background: transparent;
     cursor: pointer;
     z-index: 1;
 
-    &:focus,
+    &:hover svg {
+      fill: color(background);
+    }
+
     &:focus {
-      outline: 1px solid color(primary);
+      outline: 1px solid color(background);
     }
   }
 
@@ -256,7 +281,7 @@ $sm-dp: sm-date-picker !default;
     left: 15px;
 
     > svg {
-      fill: #027fe6;
+      fill: color(tertiary);
       left: calc(50% - 10px);
       position: relative;
     }
@@ -266,7 +291,7 @@ $sm-dp: sm-date-picker !default;
     right: 15px;
 
     > svg {
-      fill: #027fe6;
+      fill: color(tertiary);
       right: calc(50% - 10px);
       position: relative;
     }
@@ -281,10 +306,10 @@ $sm-dp: sm-date-picker !default;
       width: 32px;
 
       @include text(body);
-      color: color(text);
+      color: color(secondary);
       font-weight: normal;
 
-      margin-right: sp(xxs);
+      margin-right: spacing(xxs);
 
       text-align: center;
       display: inline-block;
@@ -296,14 +321,14 @@ $sm-dp: sm-date-picker !default;
     bottom: 12px;
     left: 24px;
     @include text(body);
-    color: color(text-primary);
+    color: color(secondary);
   }
 }
 
 .#{$sm-dp}-calendar-day-view {
   display: inline-block;
   position: relative;
-  padding: 20px sp(m);
+  padding: 20px spacing(m);
 
   &[hidden] {
     display: none;
@@ -318,18 +343,18 @@ $sm-dp: sm-date-picker !default;
     overflow: visible;
 
     &.last-of-week {
-      margin: sp(z);
+      margin: spacing(z);
     }
 
     @include text(body);
-    margin-right: sp(xxs);
-    padding: sp(xs) sp(xxs);
+    margin-right: spacing(xxs);
+    padding: spacing(xs) spacing(xxs);
     font-weight: 500;
     line-height: 1.25rem;
 
     color: color(primary);
     background-color: transparent;
-    border: sp(z);
+    border: spacing(z);
     outline: none;
 
     text-align: center;
@@ -345,7 +370,7 @@ $sm-dp: sm-date-picker !default;
     &:hover,
     &:active {
       outline: none;
-      color: color(text-primary);
+      color: color(secondary);
     }
 
     &.today::before {
@@ -354,7 +379,6 @@ $sm-dp: sm-date-picker !default;
       bottom: 4px;
       left: calc(50% - 2px);
       background-color: color(primary);
-      border-radius: 50%;
       position: absolute;
       display: block;
       content: "";
@@ -362,12 +386,12 @@ $sm-dp: sm-date-picker !default;
     }
 
     &.inRange {
-      color: color(primary);
+      color: color(secondary);
     }
 
     &.fromDate,
     &.toDate {
-      color: color(text-primary);
+      color: color(secondary);
     }
 
     &.date-selected::before {
@@ -377,7 +401,6 @@ $sm-dp: sm-date-picker !default;
       left: 0;
 
       background: color(primary);
-      border-radius: 50%;
 
       position: absolute;
       display: block;
@@ -392,7 +415,6 @@ $sm-dp: sm-date-picker !default;
       left: 0px;
 
       background: color(primary-hover);
-      border-radius: 50%;
 
       position: absolute;
       display: block;
@@ -407,7 +429,6 @@ $sm-dp: sm-date-picker !default;
       left: 0;
 
       background: color(primary);
-      border-radius: 50%;
 
       position: absolute;
       display: block;
@@ -424,7 +445,6 @@ $sm-dp: sm-date-picker !default;
       height: 32px;
       top: calc(50% - 16px);
       left: 8px;
-      border-radius: 0;
       border: 0;
 
       background: color(primary-2);
@@ -440,7 +460,6 @@ $sm-dp: sm-date-picker !default;
       height: 32px;
       top: calc(50% - 16px);
       left: -8px;
-      border-radius: 0;
       border: 0;
 
       background: color(primary-2);
@@ -451,7 +470,7 @@ $sm-dp: sm-date-picker !default;
       z-index: -3;
     }
 
-    &:focus::after {    
+    &:focus::after {
       width: 38px;
       height: 38px;
       top: calc(50% - 20px);
@@ -459,7 +478,6 @@ $sm-dp: sm-date-picker !default;
 
       border: border(sm);
       border-color: color(primary);
-      border-radius: 50%;
       background: color(background);
 
       position: absolute;
@@ -504,7 +522,6 @@ $sm-dp: sm-date-picker !default;
       top: calc(50% - 16px);
       left: 0px;
 
-      border-radius: 50%;
 
       position: absolute;
       display: block;
@@ -516,13 +533,7 @@ $sm-dp: sm-date-picker !default;
       color: color(background-light);
     }
 
-    &.inRange:hover::before {
-      border-radius: 0;
-    }
 
-    &.toDate.inRange:hover::before {
-      border-radius: 50%;
-    }
 
     &.inRange:hover::after,
     &.fromDate:hover::after,
@@ -533,7 +544,6 @@ $sm-dp: sm-date-picker !default;
       left: 0px;
 
       background: color(primary-hover);
-      border-radius: 50%;
 
       position: absolute;
       display: block;
@@ -571,7 +581,7 @@ $sm-dp: sm-date-picker !default;
   &.opened {
     width: 100%;
     height: 272px;
-    padding: sp(m);
+    padding: spacing(m);
 
     overflow-y: scroll;
   }
@@ -581,15 +591,15 @@ $sm-dp: sm-date-picker !default;
     color: color(primary);
     background-color: transparent;
 
-    width: 88px;
+    width: 84px;
     height: 40px;
-    margin: sp(xxs) auto;
-    border: sp(z);
-    padding: sp(z);
+    margin: spacing(xxs) auto;
+    border: spacing(z);
+    padding: spacing(z);
     outline: none;
 
     text-align: center;
-    display: block;
+    display: inline-block;
 
     position: relative;
     cursor: pointer;
@@ -600,7 +610,6 @@ $sm-dp: sm-date-picker !default;
       bottom: 6px; //Ali override
       left: calc(50% - 2px);
       background-color: color(primary);
-      border-radius: 50%;
       position: absolute;
       display: block;
       content: "";
@@ -619,7 +628,6 @@ $sm-dp: sm-date-picker !default;
 
       border: border(sm);
       border-color: color(primary);
-      border-radius: 48px;
 
       position: absolute;
       display: block;
@@ -638,7 +646,6 @@ $sm-dp: sm-date-picker !default;
       top: calc(50% - 20px);
       left: calc(50% - 40px);
 
-      border-radius: 48px;
       background-color: color(primary);
 
       position: absolute;
@@ -654,7 +661,6 @@ $sm-dp: sm-date-picker !default;
       top: calc(50% - 20px);
       left: calc(50% - 40px);
 
-      border-radius: 48px;
       background-color: color(primary-hover);
 
       position: absolute;

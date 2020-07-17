@@ -79,8 +79,6 @@ export class DatePickerComponent
     this._fromDate = value;
     this.setInitialDateType();
     this.convertDatesToMoments();
-    if (!!this._fromDate)
-      this.emitEventBasedOnType(this.fromDateChange, <Moment>this._fromDate);
   }
 
   @Input()
@@ -254,6 +252,8 @@ export class DatePickerComponent
     this.dpCalendar.dayViewComponent.updateMonths(
       this.dpCalendar.dayViewComponent.internalDate
     );
+    if (!!this._fromDate)
+      this.emitEventBasedOnType(this.fromDateChange, <Moment>this._fromDate);
   }
 
   toDateChanged($event: Moment, changedFromCalendar: boolean = false) {

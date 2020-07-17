@@ -60,7 +60,7 @@ export class DatePickerCalendarComponent {
     this._open = open;
   }
 
-  clearLabel = 'Clear';
+  clearLabel = 'Reset';
 
   @Input() calendarID: string;
   @Input() ariaLabelNextMonth: string;
@@ -73,7 +73,6 @@ export class DatePickerCalendarComponent {
   @Output() dateSelect: EventEmitter<Moment> = new EventEmitter<Moment>();
   @Output() fromDateChange: EventEmitter<Moment> = new EventEmitter<Moment>();
   @Output() toDateChange: EventEmitter<Moment> = new EventEmitter<Moment>();
-  @Output() clearDate: EventEmitter<void> = new EventEmitter<void>();
 
   @ViewChild(CalendarDayViewComponent, { static: false })
   dayViewComponent: CalendarDayViewComponent;
@@ -129,7 +128,4 @@ export class DatePickerCalendarComponent {
     this.internalDate = $event;
   }
 
-  onClearDate() {
-    this.clearDate.emit();
-  }
 }

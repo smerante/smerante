@@ -54,7 +54,7 @@ $borderTokens: (
   lg: 3px solid
 );
 
-// Spacing -> padding: sp(b)
+// Spacing -> padding: spacing(b)
 $spTokens: (
   xxs: 4px,
   xs: 8px,

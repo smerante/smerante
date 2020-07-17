@@ -1,4 +1,4 @@
-@function sp($val) {
+@function spacing($val) {
   @return map-get($spTokens, $val);
 }
 

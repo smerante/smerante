@@ -4,6 +4,7 @@
 <input class="sm-input" #dpInputField [disabled]="disabled ? disabled : null" [id]="inputID"
   [placeholder]="inputPlaceholder" [value]="getValue()" (blur)="onBlur($event)" (keydown.enter)="onBlur($event)"
   autocomplete="off" />
+<button class="sm-input-clear" (click)="onClearDate()"></button>
 <button type="button" [disabled]="disabled ? disabled : null" [id]="inputID + '-btn'" class="sm-dp-input-btn"
   [ngClass]="{ 'sm-dp-input-btn--error': error }" (click)="onOpen()" [attr.aria-label]="calendarViewLabel">
 </button>
