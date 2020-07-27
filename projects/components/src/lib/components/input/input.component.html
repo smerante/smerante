@@ -1,2 +1,2 @@
-<input [id]="id + '-input'" [type]="type" class="sm-input" (input)="onInput($event)" (focus)="onFocused()" (blur)="onBlured()" [(ngModel)]="input" />
-<label [for]="id + '-input'" class="sm-input--label" [ngClass]="{'sm-input--focus': input}">{{label}}</label>
+<input [id]="field_id" [type]="type" class="sm-input" (input)="onInput($event)" (focus)="onFocused()" (blur)="onBlured()" [(ngModel)]="input" />
+<label [for]="field_id" class="sm-input--label" [ngClass]="{'sm-input--focus': input}">{{label}}</label>

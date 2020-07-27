@@ -10,6 +10,9 @@
   <sm-tab>
     Code
   </sm-tab>
+  <sm-tab>
+    Props
+  </sm-tab>
   <sm-tab-content>
     <sm-card>
       <card-header>
@@ -132,5 +135,10 @@
   </card-footer>
 </sm-card>
       ]]></pre>
+  </sm-tab-content>
+  <sm-tab-content>
+    <pre><![CDATA[
+  @Input('imgSrc') imgSrc: string;
+  @Input('placement') placement: 'top' | 'right' | 'bottom' | 'right';]]></pre>
   </sm-tab-content>
 </sm-tabs>

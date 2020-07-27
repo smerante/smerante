@@ -18,7 +18,7 @@ let uniqueId = 0;
 })
 export class SMInputComponent implements OnInit, ControlValueAccessor {
 
-  @Input() id = `sm-${uniqueId++}`;
+  @Input() field_id = `sm-${uniqueId++}`;
   @Input() label = `Enter Label`;
   @Input() input = '';
   @Input() focus: boolean;

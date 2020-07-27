@@ -7,7 +7,7 @@ let uniqueId = 0;
 })
 export class SMButtonComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  @Input() id = `sm-${uniqueId++}`;
+  @Input() field_id = `sm-button-${uniqueId++}`;
   @Input() type: 'secondary' | 'tertiary';
 
   clickListener;
@@ -21,15 +21,15 @@ export class SMButtonComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    document.getElementById(this.id + '-button').addEventListener('click', this.clickListener);
+    document.getElementById(this.field_id).addEventListener('click', this.clickListener);
   }
 
   onClick() {
-    document.getElementById(this.id + '-button').focus();
+    document.getElementById(this.field_id).focus();
   }
 
   ngOnDestroy(): void {
-    if (document.getElementById(this.id + '-button'))
-      document.getElementById(this.id + '-button').removeEventListener('click', this.clickListener);
+    if (document.getElementById(this.field_id))
+      document.getElementById(this.field_id).removeEventListener('click', this.clickListener);
   }
 }

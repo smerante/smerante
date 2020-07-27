@@ -7,6 +7,9 @@
   <sm-tab>
     Code
   </sm-tab>
+  <sm-tab>
+    Props
+  </sm-tab>
   <sm-tab-content style="height: 128px">
     <p>The tip window will adjust depending on where on the screen the initator button is</p>
     <sm-tooltip tooltipLabel="Default tooltip" tooltipAriaLabel="This is a default tooltip">
@@ -31,5 +34,10 @@
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
   dolore
 </sm-tooltip>]]></pre>
+  </sm-tab-content>
+  <sm-tab-content>
+    @Input('tooltipId') tooltipId: string = 'sm-tooltip-' + (++uniqueId);<br>
+    @Input('tooltipLabel') tooltipLabel: string = 'Label ' + uniqueId;<br>
+    @Input('tooltipAriaLabel') tooltipAriaLabel: string = this.tooltipLabel + '. Open tooltip';
   </sm-tab-content>
 </sm-tabs>

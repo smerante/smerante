@@ -10,7 +10,7 @@ import { Component, OnInit, Input, ViewEncapsulation, ContentChildren, QueryList
 export class SMRadioButton implements OnInit {
 
   @Input() label: string;
-  @Input() id: string;
+  @Input() field_id: string;
 
   @HostBinding('class.sm-radio-btn-disabled') @Input() disabled = false;
 
@@ -25,7 +25,7 @@ export class SMRadioButton implements OnInit {
   @HostListener('click')
   click() {
     if (!this.disabled) {
-      this.parent.check(this.id);
+      this.parent.check(this.field_id);
       this.checked = true;
     }
   }
@@ -59,7 +59,7 @@ export class SMRadioGroupComponent implements AfterContentInit {
     this.comps.forEach(
       (comp: SMRadioButton) => {
         comp.checked = false;
-        if (comp.id === id) {
+        if (comp.field_id === id) {
           comp.checked = true;
         }
       });

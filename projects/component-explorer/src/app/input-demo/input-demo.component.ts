@@ -12,7 +12,7 @@ export class InputDemoComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      document.getElementById('username-input').focus();
+      document.getElementById('username').focus();
     });
   }
 

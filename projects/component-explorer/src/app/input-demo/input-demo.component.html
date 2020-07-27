@@ -7,15 +7,29 @@
   <sm-tab>
     Code
   </sm-tab>
+  <sm-tab>
+    Props
+  </sm-tab>
   <sm-tab-content>
     <div style="min-width: 400px;">
-      <sm-input id="username" label="Username"></sm-input>
+      <sm-input field_id="username" label="Username"></sm-input>
       <sm-input type="password" label="Password"></sm-input>
     </div>
   </sm-tab-content>
   <sm-tab-content>
     <pre class="code"><![CDATA[
-<sm-input id="username" label="Username"></sm-input>
+<sm-input field_id="username" label="Username"></sm-input>
 <sm-input type="password" label="Password"></sm-input>]]></pre>
+  </sm-tab-content>
+  <sm-tab-content>
+    <pre><![CDATA[
+@Input() field_id = `sm-${uniqueId++}`;
+@Input() label = `Enter Label`;
+@Input() input = '';
+@Input() focus: boolean;
+@Input() type = 'text';
+
+@Output() inputChange: EventEmitter<string> = new EventEmitter<string>();
+@Output() focusChanged: EventEmitter<boolean> = new EventEmitter<boolean>();]]></pre>
   </sm-tab-content>
 </sm-tabs>

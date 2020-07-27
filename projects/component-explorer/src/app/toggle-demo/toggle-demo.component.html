@@ -13,27 +13,34 @@
   <sm-tab>
     Code
   </sm-tab>
+  <sm-tab>
+    Props
+  </sm-tab>
   <sm-tab-content>
     <sm-toggle label="Lock Credit Card" field_id="toggle1">
-      <input sm-toggle id="toggle1" type="checkbox" role="switch" aria-label="Lock credit card toggle switch" />
+      <input sm-toggle field_id="toggle1" type="checkbox" role="switch" aria-label="Lock credit card toggle switch" />
     </sm-toggle>
   </sm-tab-content>
   <sm-tab-content>
     <sm-toggle label="Long wrapping label to show placement of toggle and label" field_id="toggle2">
-      <input sm-toggle id="toggle2" type="checkbox"
+      <input sm-toggle field_id="toggle2" type="checkbox"
         role="switch" aria-label="Lock credit card toggle switch" />
     </sm-toggle>
   </sm-tab-content>
   <sm-tab-content>
     <sm-toggle label="Disabled toggle" field_id="toggle3">
-      <input sm-toggle disabled="true" id="toggle3" 
+      <input sm-toggle disabled="true" field_id="toggle3" 
         type="checkbox" role="switch"
         aria-label="Lock credit card toggle switch" />
     </sm-toggle>
   </sm-tab-content>
   <sm-tab-content>
     <pre class="code"><![CDATA[
-<sm-input id="username" label="Username"></sm-input>
+<sm-input field_id="username" label="Username"></sm-input>
 <sm-input type="password" label="Password"></sm-input>]]></pre>
+  </sm-tab-content>
+  <sm-tab-content>
+  @Input() field_id: string;<br/>
+  @Input() label: string;
   </sm-tab-content>
 </sm-tabs>

@@ -12,7 +12,7 @@ export class CtaDemoComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      document.getElementById('primary-button').focus();
+      document.getElementById('primary').focus();
     });
   }
 

@@ -6,7 +6,7 @@
   border: border(sm) color(border-primary);
   background-color: color(background);
   z-index: 99999;
-  padding: spacing(b);
+  padding: spacing(b) spacing(xxl);
   overflow: scroll;
 
   &[position="left"] {
@@ -68,6 +68,7 @@
     right: 0;
     padding: spacing(xs);
     box-sizing: content-box;
+    background-color: color(background);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='47' viewBox='0 0 46 47' fill='none'%3E%3Cpath d='M11.6863 12.1862L34.3137 34.8136' stroke='black'/%3E%3Cpath d='M11.3327 34.4601L33.9602 11.8327' stroke='black'/%3E%3C/svg%3E");
     &:focus {
       outline: border(sm) color(primary);

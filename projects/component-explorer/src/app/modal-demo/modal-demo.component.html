@@ -7,6 +7,9 @@
   <sm-tab>
     Code
   </sm-tab>
+  <sm-tab>
+    Props
+  </sm-tab>
   <sm-tab-content>
     <sm-button (click)="modal.open();">Open Modal</sm-button>
     <sm-modal #modal>
@@ -14,31 +17,31 @@
       <sm-modal-body>
         <div class="row">
           <div class="col-sm-5">
-            <sm-input label="User name" id="modalName" aria-label="Please enter your user name to register"></sm-input>
+            <sm-input label="User name" field_id="modalName" aria-label="Please enter your user name to register"></sm-input>
           </div>
           <div class="col-sm-5">
-            <sm-input label="Email" id="modalPW" type="password" aria-label="Please enter your password to register">
+            <sm-input label="Email" field_id="modalPW" type="password" aria-label="Please enter your password to register">
             </sm-input>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-10">
             <sm-radio-group groupLabel="Please select the type of label you like">
-              <sm-radio-btn id="short" label="Short">
-                <input type="radio" id="short" name="gender" value="short" />
+              <sm-radio-btn field_id="short" label="Short">
+                <input type="radio" field_id="short" name="gender" value="short" />
               </sm-radio-btn>
-              <sm-radio-btn id="long"
+              <sm-radio-btn field_id="long"
                 label="I like super super super super super super super super super super super super long labels">
-                <input type="radio" id="long" name="gender" value="long" />
+                <input type="radio" field_id="long" name="gender" value="long" />
               </sm-radio-btn>
-              <sm-radio-btn id="disabled" label="Disabled labels" [disabled]="true">
-                <input type="radio" id="disabled" name="gender" disabled value="disabled" />
+              <sm-radio-btn field_id="disabled" label="Disabled labels" [disabled]="true">
+                <input type="radio" field_id="disabled" name="gender" disabled value="disabled" />
               </sm-radio-btn>
             </sm-radio-group>
           </div>
           <div class="col-sm-10">
             <sm-checkbox label="Agree to terms and conditions" field_id="modalCheckbox">
-              <input sm-checkbox id="modalCheckbox" type="checkbox"
+              <input sm-checkbox field_id="modalCheckbox" type="checkbox"
                 aria-label="Please check here to agree to terms and conditions" />
             </sm-checkbox>
           </div>
@@ -78,31 +81,31 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-6">
-          <sm-input label="User name" id="modalName" aria-label="Please enter your user name to register" ></sm-input>
+          <sm-input label="User name" field_id="modalName" aria-label="Please enter your user name to register" ></sm-input>
         </div>
         <div class="col-sm-6">
-          <sm-input label="User name" id="modalPW" type="password"
+          <sm-input label="User name" field_id="modalPW" type="password"
             aria-label="Please enter your password to register" ></sm-input>
         </div>
       </div>
 
       <sm-radio-group groupLabel="Please select the type of label you like">
-        <sm-radio-btn id="short" label="Short">
-          <input type="radio" id="short" name="gender" value="short" />
+        <sm-radio-btn field_id="short" label="Short">
+          <input type="radio" field_id="short" name="gender" value="short" />
         </sm-radio-btn>
-        <sm-radio-btn id="long"
+        <sm-radio-btn field_id="long"
           label="I like super super super super super super super super super super super super long labels">
-          <input type="radio" id="long" name="gender" value="long" />
+          <input type="radio" field_id="long" name="gender" value="long" />
         </sm-radio-btn>
-        <sm-radio-btn id="disabled" label="Disabled labels" [disabled]="true">
-          <input type="radio" id="disabled" name="gender" disabled value="disabled" />
+        <sm-radio-btn field_id="disabled" label="Disabled labels" [disabled]="true">
+          <input type="radio" field_id="disabled" name="gender" disabled value="disabled" />
         </sm-radio-btn>
       </sm-radio-group>
 
       <div class="row">
         <div class="col-sm-12 pt-3 pb-3">
           <sm-checkbox label="Agree to terms and conditions" field_id="modalCheckbox">
-            <input sm-checkbox id="modalCheckbox" type="checkbox"
+            <input sm-checkbox field_id="modalCheckbox" type="checkbox"
               aria-label="Please check here to agree to terms and conditions" />
           </sm-checkbox>
         </div>
@@ -133,6 +136,11 @@
     </div>
   </sm-modal-footer>
 </sm-modal>
+]]></pre>
+  </sm-tab-content>
+  <sm-tab-content>
+    <pre class="code"><![CDATA[
+  @Input() imgURL: string;
 ]]></pre>
   </sm-tab-content>
 </sm-tabs>
