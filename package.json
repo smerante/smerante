@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "build:styles": "cp -a projects/components/src/lib/styles/. dist/components/styles",
     "build:component-explorer": "ng build component-explorer --prod --base-href=\"\"",
-    "deploy": "npm run build:styles && npm run build:component-explorer && gh-pages -d ./dist/component-explorer",
+    "deploy-github-pages": "ng build --prod && npm run build:styles && npm run build:component-explorer && gh-pages -d ./dist/component-explorer",
     "publish": "npm run test && npm run pre-publish && npm publish dist/components",
     "pre-publish": "ng build --prod && npm run build:styles"
   },
