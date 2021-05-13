@@ -437,87 +437,6 @@
     ],
     "components": [
         {
-            "name": "ButtonComponent",
-            "id": "component-ButtonComponent-642c6c4e474cd5a0ac760dfda26b2fc9",
-            "file": "stories/button.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-button",
-            "styleUrls": [
-                "./button.css"
-            ],
-            "styles": [],
-            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "backgroundColor",
-                    "description": "<p>What background color to use</p>\n",
-                    "line": 26,
-                    "type": "string"
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "'Button'",
-                    "description": "<p>Button contents</p>\n",
-                    "line": 40
-                },
-                {
-                    "name": "primary",
-                    "defaultValue": "false",
-                    "description": "<p>Is this the principal call to action on the page?</p>\n",
-                    "line": 20
-                },
-                {
-                    "name": "size",
-                    "defaultValue": "'medium'",
-                    "description": "<p>How large should the button be?</p>\n",
-                    "line": 32,
-                    "type": "\"small\" | \"medium\" | \"large\""
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onClick",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "description": "<p>Optional click handler</p>\n",
-                    "line": 46,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "",
-            "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
-                    "styleUrl": "./button.css"
-                }
-            ],
-            "stylesData": "",
-            "accessors": {
-                "classes": {
-                    "name": "classes",
-                    "getSignature": {
-                        "name": "classes",
-                        "type": "[]",
-                        "returnType": "string[]",
-                        "line": 48
-                    }
-                }
-            }
-        },
-        {
             "name": "CalendarDayViewComponent",
             "id": "component-CalendarDayViewComponent-9f7b716a413cfc15f59ffa367fb6fe9a",
             "file": "projects/components/src/lib/components/datepicker/date-picker-calendar/calendar-day-view/calendar-day-view.component.ts",
@@ -4087,130 +4006,6 @@
             "templateData": "<label [for]=\"inputID\" *ngIf=\"inputLabel\" class=\"sm-form-label\">{{\r\n  inputLabel\r\n}}</label>\r\n<input class=\"sm-input\" #dpInputField [disabled]=\"disabled ? disabled : null\" [id]=\"inputID\"\r\n  [placeholder]=\"inputPlaceholder\" [value]=\"getValue()\" (blur)=\"onBlur($event)\" (keydown.enter)=\"onBlur($event)\"\r\n  autocomplete=\"off\" />\r\n<button class=\"sm-input-clear\" (click)=\"onClearDate()\"></button>\r\n<button type=\"button\" [disabled]=\"disabled ? disabled : null\" [id]=\"inputID + '-btn'\" class=\"sm-dp-input-btn\"\r\n  [ngClass]=\"{ 'sm-dp-input-btn--error': error }\" (click)=\"onOpen()\" [attr.aria-label]=\"calendarViewLabel\">\r\n</button>"
         },
         {
-            "name": "HeaderComponent",
-            "id": "component-HeaderComponent-246e2a69dc126a3bd76c6328dd3b93e2",
-            "file": "stories/header.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-header",
-            "styleUrls": [
-                "./header.css"
-            ],
-            "styles": [],
-            "template": "<header>    <div class=\"wrapper\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <storybook-button\n          *ngIf=\"user\"\n          size=\"small\"\n          (onClick)=\"onLogout.emit($event)\"\n          label=\"Log out\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          size=\"small\"\n          (onClick)=\"onLogin.emit($event)\"\n          label=\"Log in\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          primary\n          size=\"small\"\n          (onClick)=\"onCreateAccount.emit($event)\"\n          label=\"Sign up\"\n        ></storybook-button>\n      </div>\n    </div>\n  </header>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "user",
-                    "defaultValue": "null",
-                    "line": 53,
-                    "type": "unknown"
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onCreateAccount",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "line": 62,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogin",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "line": 56,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogout",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "line": 59,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "",
-            "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-header',\n  template: `<header>\n    <div class=\"wrapper\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <storybook-button\n          *ngIf=\"user\"\n          size=\"small\"\n          (onClick)=\"onLogout.emit($event)\"\n          label=\"Log out\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          size=\"small\"\n          (onClick)=\"onLogin.emit($event)\"\n          label=\"Log in\"\n        ></storybook-button>\n        <storybook-button\n          *ngIf=\"!user\"\n          primary\n          size=\"small\"\n          (onClick)=\"onCreateAccount.emit($event)\"\n          label=\"Sign up\"\n        ></storybook-button>\n      </div>\n    </div>\n  </header>`,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  @Input()\n  user: unknown = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".wrapper {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\nsvg {\n  display: inline-block;\n  vertical-align: top;\n}\n\nh1 {\n  font-weight: 900;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nbutton + button {\n  margin-left: 10px;\n}\n",
-                    "styleUrl": "./header.css"
-                }
-            ],
-            "stylesData": ""
-        },
-        {
-            "name": "PageComponent",
-            "id": "component-PageComponent-8f196770333aa216860a88c0b6b221aa",
-            "file": "stories/page.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-page",
-            "styleUrls": [
-                "./page.css"
-            ],
-            "styles": [],
-            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"onLogout.emit($event)\"\n      (onLogin)=\"onLogin.emit($event)\"\n      (onCreateAccount)=\"onCreateAccount.emit($event)\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "user",
-                    "defaultValue": "null",
-                    "line": 64,
-                    "type": "unknown"
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onCreateAccount",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "line": 73,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogin",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "line": 67,
-                    "type": "EventEmitter"
-                },
-                {
-                    "name": "onLogout",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "line": 70,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "",
-            "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-page',\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"onLogout.emit($event)\"\n      (onLogin)=\"onLogin.emit($event)\"\n      (onCreateAccount)=\"onCreateAccount.emit($event)\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  @Input()\n  user: unknown = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n\n// export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (\n//   <article>\n//     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />\n\n// );\n// Page.propTypes = {\n//   user: PropTypes.shape({}),\n//   onLogin: PropTypes.func.isRequired,\n//   onLogout: PropTypes.func.isRequired,\n//   onCreateAccount: PropTypes.func.isRequired,\n// };\n\n// Page.defaultProps = {\n//   user: null,\n// };\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "section {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\nh2 {\n  font-weight: 900;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\np {\n  margin: 1em 0;\n}\n\na {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\nul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\nli {\n  margin-bottom: 8px;\n}\n\n.tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\n.tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\n.tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\n.tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
-                    "styleUrl": "./page.css"
-                }
-            ],
-            "stylesData": ""
-        },
-        {
             "name": "SMButtonComponent",
             "id": "component-SMButtonComponent-1c0aa0b24134a49502f3c519295d49b4",
             "file": "projects/components/src/lib/components/button/button.component.ts",
@@ -6381,6 +6176,14 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "Bottom",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Cards.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind(this,{placement: 'bottom'})"
+            },
+            {
                 "name": "components",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -6413,6 +6216,70 @@
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Cards.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind(this)"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Checkbox.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind(this)"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/DP.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind(this)"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Input.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind(this)"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Radio.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind(this)"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Modal.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind(this)"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Tabs.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind(this)"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Toggle.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind(this)"
+            },
+            {
                 "name": "disableWeekends",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -6421,44 +6288,12 @@
                 "defaultValue": "(\r\n  day: Moment\r\n): boolean => {\r\n  if (day) return day.day() === 6 || day.day() === 0;\r\n  else return false;\r\n}"
             },
             {
-                "name": "Large",
+                "name": "Left",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Button.stories.ts",
+                "file": "stories/Cards.stories.ts",
                 "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "stories/Header.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "stories/Page.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "stories/Header.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "stories/Page.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
+                "defaultValue": "Template.bind(this,{placement: 'left'})"
             },
             {
                 "name": "moment",
@@ -6496,7 +6331,7 @@
                 "name": "moment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/components/src/lib/components/datepicker/date-picker-calendar/calendar-nav/calendar-nav.component.ts",
+                "file": "projects/components/src/lib/components/datepicker/date-picker-calendar/calendar-day-view/calendar-day-view.component.ts",
                 "type": "",
                 "defaultValue": "moment_"
             },
@@ -6504,7 +6339,7 @@
                 "name": "moment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/components/src/lib/components/datepicker/date-picker-calendar/calendar-day-view/calendar-day-view.component.ts",
+                "file": "projects/components/src/lib/components/datepicker/date-picker-calendar/calendar-nav/calendar-nav.component.ts",
                 "type": "",
                 "defaultValue": "moment_"
             },
@@ -6520,17 +6355,17 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Button.stories.ts",
+                "file": "stories/CTA.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "Primary",
+                "name": "Range",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/CTA.stories.ts",
+                "file": "stories/DP.stories.ts",
                 "type": "",
-                "defaultValue": "Template.bind({})"
+                "defaultValue": "Template.bind(this)"
             },
             {
                 "name": "require",
@@ -6540,12 +6375,12 @@
                 "type": "literal type"
             },
             {
-                "name": "Secondary",
+                "name": "Right",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Button.stories.ts",
+                "file": "stories/Cards.stories.ts",
                 "type": "",
-                "defaultValue": "Template.bind({})"
+                "defaultValue": "Template.bind(this,{placement: 'right'})"
             },
             {
                 "name": "Secondary",
@@ -6556,20 +6391,20 @@
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "Small",
+                "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Button.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
+                "file": "stories/Cards.stories.ts",
+                "type": "Story<SMCardsComponent>",
+                "defaultValue": "(args: SMCardsComponent) => ({\n  props: args,\n  template: `\n  <sm-card placement=\"${args.placement}\" imgSrc=\"http://robertwimer.com/wp-content/uploads/2018/06/Matrix-Code.jpg\">\n    <card-header>\n      Placement ${args.placement}\n    </card-header>\n    <card-body>\n      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et\n        dolore\n        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n        commodo\n        consequat.\n      </p>\n    </card-body>\n    <card-footer>\n      <a class=\"card-link\" target=\"_blank\" href=\"https://github.com/smerante/\">GitHub</a>\n      <a class=\"card-link\" target=\"_blank\" href=\"https://bitbucket.org/Sammer95/\">Bitbucket</a>\n      <a class=\"card-link\" target=\"_blank\" href=\"https://www.linkedin.com/in/sam-merante/\">Linked In</a>\n    </card-footer>\n  </sm-card>`,\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Button.stories.ts",
-                "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                "file": "stories/Checkbox.stories.ts",
+                "type": "Story<SMCheckboxComponentWrapper>",
+                "defaultValue": "(args: SMCheckboxComponentWrapper) => ({\n  props: args,\n  template: `<sm-checkbox label=\"Agree to terms and conditions\" field_id=\"modalCheckbox\">\n<input sm-checkbox id=\"modalCheckbox\" type=\"checkbox\"\n  aria-label=\"Please check here to agree to terms and conditions\" />\n</sm-checkbox>\n<div style=\"max-width: 300px\">\n<sm-checkbox label=\"This is a super long wrapping label to show placement of checkbox and label when text wraps\"\n  field_id=\"checkbox2\">\n  <input sm-checkbox id=\"checkbox2\" type=\"checkbox\"\n    aria-label=\"Please check here to agree to terms and conditions\" />\n</sm-checkbox>\n</div>\n<sm-checkbox label=\"I am a disabled checkbox\" field_id=\"checkbox3\">\n<input sm-checkbox id=\"checkbox3\" disabled=\"true\" type=\"checkbox\"\n  aria-label=\"Please check here to agree to terms and conditions\" />\n</sm-checkbox>`,\n})"
             },
             {
                 "name": "Template",
@@ -6577,23 +6412,55 @@
                 "subtype": "variable",
                 "file": "stories/CTA.stories.ts",
                 "type": "Story<SMButtonComponent>",
-                "defaultValue": "(args: SMButtonComponent) => ({\n  props: args,\n  template: `<sm-button type=${args.type}> Click me</sm-button>`,\n})"
+                "defaultValue": "(args: any) => ({\n  props: args,\n  template: `<sm-button type=\"${args.type}\">${args.content}</sm-button>`,\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Header.stories.ts",
-                "type": "Story<Header>",
-                "defaultValue": "(args: Header) => ({\n  props: args,\n})"
+                "file": "stories/DP.stories.ts",
+                "type": "Story<DatePickerCalendarComponent>",
+                "defaultValue": "(args: DatePickerCalendarComponent) => ({\n  props: args,\n  template: `<sm-date-picker [range]=\"${args.range}\" [date]=\"${args.date}\"></sm-date-picker>`,\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Page.stories.ts",
-                "type": "Story<Page>",
-                "defaultValue": "(args: Page) => ({\n  props: args,\n})"
+                "file": "stories/Input.stories.ts",
+                "type": "Story<SMInputComponent>",
+                "defaultValue": "(args: SMInputComponent) => ({\n  props: args,\n  template: `<sm-input field_id=\"username\" label=\"Username\"></sm-input>\n  <sm-input type=\"password\" label=\"Password\"></sm-input>`,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Radio.stories.ts",
+                "type": "Story<SMRadioGroupComponent>",
+                "defaultValue": "(args: SMRadioGroupComponent\n) => ({\n  props: args,\n  template: `<sm-radio-group groupLabel=\"Please select the type of label you like\">\n  <sm-radio-btn field_id=\"short\" label=\"Short\">\n    <input type=\"radio\" field_id=\"short\" name=\"gender\" value=\"short\" />\n  </sm-radio-btn>\n  <sm-radio-btn field_id=\"long\"\n    label=\"I like super super super super super super super super super super super super long labels\">\n    <input type=\"radio\" field_id=\"long\" name=\"gender\" value=\"long\" />\n  </sm-radio-btn>\n  <sm-radio-btn field_id=\"disabled\" label=\"Disabled labels\" [disabled]=\"true\">\n    <input type=\"radio\" field_id=\"disabled\" name=\"gender\" disabled value=\"disabled\" />\n  </sm-radio-btn>\n</sm-radio-group>`,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Modal.stories.ts",
+                "type": "Story<SMModalComponent>",
+                "defaultValue": "(args: SMModalComponent\n) => ({\n  props: args,\n  template: `<sm-button (click)=\"modal.open();\">Open Modal</sm-button>\n<sm-modal #modal>\n  <sm-modal-header>Sign Up Modal Example</sm-modal-header>\n  <sm-modal-body>\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-sm-6\">\n          <sm-input label=\"User name\" field_id=\"modalName\" aria-label=\"Please enter your user name to register\" ></sm-input>\n        </div>\n        <div class=\"col-sm-6\">\n          <sm-input label=\"User name\" field_id=\"modalPW\" type=\"password\"\n            aria-label=\"Please enter your password to register\" ></sm-input>\n        </div>\n      </div>\n\n      <sm-radio-group groupLabel=\"Please select the type of label you like\">\n        <sm-radio-btn field_id=\"short\" label=\"Short\">\n          <input type=\"radio\" field_id=\"short\" name=\"gender\" value=\"short\" />\n        </sm-radio-btn>\n        <sm-radio-btn field_id=\"long\"\n          label=\"I like super super super super super super super super super super super super long labels\">\n          <input type=\"radio\" field_id=\"long\" name=\"gender\" value=\"long\" />\n        </sm-radio-btn>\n        <sm-radio-btn field_id=\"disabled\" label=\"Disabled labels\" [disabled]=\"true\">\n          <input type=\"radio\" field_id=\"disabled\" name=\"gender\" disabled value=\"disabled\" />\n        </sm-radio-btn>\n      </sm-radio-group>\n\n      <div class=\"row\">\n        <div class=\"col-sm-12 pt-3 pb-3\">\n          <sm-checkbox label=\"Agree to terms and conditions\" field_id=\"modalCheckbox\">\n            <input sm-checkbox field_id=\"modalCheckbox\" type=\"checkbox\"\n              aria-label=\"Please check here to agree to terms and conditions\" />\n          </sm-checkbox>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-sm-5\">\n          <sm-button class=\"modalButton\" (click)=\"modal.close();\">Save</sm-button>\n        </div>\n        <div class=\"col-sm-5\">\n          <sm-button class=\"modalButton\" (click)=\"modal.close();\">Cancel</sm-button>\n        </div>\n      </div>\n    </div>\n  </sm-modal-body>\n  <sm-modal-footer style=\"min-height: 32px\">\n    <div class=\"container\" style=\"padding: 16px 0px\">\n      <div class=\"row\">\n        <div class=\"col-sm-8 text-center\">\n          <a class=\"card-link\" target=\"_blank\" href=\"https://github.com/smerante/\">GitHub</a>\n          <a class=\"card-link\" target=\"_blank\" href=\"https://bitbucket.org/smmer95/\">Bitbucket</a>\n          <a class=\"card-link\" target=\"_blank\" href=\"https://www.linkedin.com/in/sm-merante/\">Linked In</a>\n        </div>\n        <div class=\"col-sm-2 text-center\">\n          <span class=\"date\">05-11-2021</span>\n        </div>\n      </div>\n    </div>\n  </sm-modal-footer>\n</sm-modal>`,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Tabs.stories.ts",
+                "type": "Story<SMTabsComponent>",
+                "defaultValue": "(args: SMTabsComponent\n) => ({\n  props: args,\n  template: `<sm-tabs>\n  <sm-tab>\n    Tab 1\n  </sm-tab>\n  <sm-tab>\n    Tab 2\n  </sm-tab>\n  <sm-tab>\n    Tab 3\n  </sm-tab>\n  <sm-tab>\n    Tab 4\n  </sm-tab>\n  <sm-tab-content>\n    <span class=\"text-center\">Tab content 1: Really really long long long long long long text</span>\n    <sm-input field_id=\"username\" label=\"Username\"></sm-input>\n    <sm-input type=\"password\" label=\"Password\"></sm-input>\n    <sm-button field_id=\"primary\">Tab 1</sm-button>\n    <sm-button type=\"secondary\">Tab 1</sm-button>\n    <sm-button type=\"tertiary\">Tab 1</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 2</span>\n    <sm-button field_id=\"primary\">Tab 2</sm-button>\n    <sm-button type=\"secondary\">Tab 2</sm-button>\n    <sm-button type=\"tertiary\">Tab 2</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 3</span>\n    <sm-button field_id=\"primary\">Tab 3</sm-button>\n    <sm-button type=\"secondary\">Tab 3</sm-button>\n    <sm-button type=\"tertiary\">Tab 3</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 4</span>\n    <sm-button field_id=\"primary\">Tab 4</sm-button>\n    <sm-button type=\"secondary\">Tab 4</sm-button>\n    <sm-button type=\"tertiary\">Tab 4</sm-button>\n  </sm-tab-content>\n</sm-tabs>`,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Toggle.stories.ts",
+                "type": "Story<SMTabsComponent>",
+                "defaultValue": "(args: SMTabsComponent\n) => ({\n  props: args,\n  template: `<sm-tabs>\n  <sm-tab>\n    Tab 1\n  </sm-tab>\n  <sm-tab>\n    Tab 2\n  </sm-tab>\n  <sm-tab>\n    Tab 3\n  </sm-tab>\n  <sm-tab>\n    Tab 4\n  </sm-tab>\n  <sm-tab-content>\n    <span class=\"text-center\">Tab content 1: Really really long long long long long long text</span>\n    <sm-input field_id=\"username\" label=\"Username\"></sm-input>\n    <sm-input type=\"password\" label=\"Password\"></sm-input>\n    <sm-button field_id=\"primary\">Tab 1</sm-button>\n    <sm-button type=\"secondary\">Tab 1</sm-button>\n    <sm-button type=\"tertiary\">Tab 1</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 2</span>\n    <sm-button field_id=\"primary\">Tab 2</sm-button>\n    <sm-button type=\"secondary\">Tab 2</sm-button>\n    <sm-button type=\"tertiary\">Tab 2</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 3</span>\n    <sm-button field_id=\"primary\">Tab 3</sm-button>\n    <sm-button type=\"secondary\">Tab 3</sm-button>\n    <sm-button type=\"tertiary\">Tab 3</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 4</span>\n    <sm-button field_id=\"primary\">Tab 4</sm-button>\n    <sm-button type=\"secondary\">Tab 4</sm-button>\n    <sm-button type=\"tertiary\">Tab 4</sm-button>\n  </sm-tab-content>\n</sm-tabs>`,\n})"
             },
             {
                 "name": "Tertiary",
@@ -6676,6 +6543,48 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "stories/Cards.stories.ts": [
+                {
+                    "name": "Bottom",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Cards.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind(this,{placement: 'bottom'})"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Cards.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind(this)"
+                },
+                {
+                    "name": "Left",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Cards.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind(this,{placement: 'left'})"
+                },
+                {
+                    "name": "Right",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Cards.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind(this,{placement: 'right'})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Cards.stories.ts",
+                    "type": "Story<SMCardsComponent>",
+                    "defaultValue": "(args: SMCardsComponent) => ({\n  props: args,\n  template: `\n  <sm-card placement=\"${args.placement}\" imgSrc=\"http://robertwimer.com/wp-content/uploads/2018/06/Matrix-Code.jpg\">\n    <card-header>\n      Placement ${args.placement}\n    </card-header>\n    <card-body>\n      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et\n        dolore\n        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea\n        commodo\n        consequat.\n      </p>\n    </card-body>\n    <card-footer>\n      <a class=\"card-link\" target=\"_blank\" href=\"https://github.com/smerante/\">GitHub</a>\n      <a class=\"card-link\" target=\"_blank\" href=\"https://bitbucket.org/Sammer95/\">Bitbucket</a>\n      <a class=\"card-link\" target=\"_blank\" href=\"https://www.linkedin.com/in/sam-merante/\">Linked In</a>\n    </card-footer>\n  </sm-card>`,\n})"
+                }
+            ],
             "projects/components/src/lib/components.module.ts": [
                 {
                     "name": "components",
@@ -6723,6 +6632,140 @@
                     "type": "literal type"
                 }
             ],
+            "stories/Checkbox.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Checkbox.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind(this)"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Checkbox.stories.ts",
+                    "type": "Story<SMCheckboxComponentWrapper>",
+                    "defaultValue": "(args: SMCheckboxComponentWrapper) => ({\n  props: args,\n  template: `<sm-checkbox label=\"Agree to terms and conditions\" field_id=\"modalCheckbox\">\n<input sm-checkbox id=\"modalCheckbox\" type=\"checkbox\"\n  aria-label=\"Please check here to agree to terms and conditions\" />\n</sm-checkbox>\n<div style=\"max-width: 300px\">\n<sm-checkbox label=\"This is a super long wrapping label to show placement of checkbox and label when text wraps\"\n  field_id=\"checkbox2\">\n  <input sm-checkbox id=\"checkbox2\" type=\"checkbox\"\n    aria-label=\"Please check here to agree to terms and conditions\" />\n</sm-checkbox>\n</div>\n<sm-checkbox label=\"I am a disabled checkbox\" field_id=\"checkbox3\">\n<input sm-checkbox id=\"checkbox3\" disabled=\"true\" type=\"checkbox\"\n  aria-label=\"Please check here to agree to terms and conditions\" />\n</sm-checkbox>`,\n})"
+                }
+            ],
+            "stories/DP.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/DP.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind(this)"
+                },
+                {
+                    "name": "Range",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/DP.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind(this)"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/DP.stories.ts",
+                    "type": "Story<DatePickerCalendarComponent>",
+                    "defaultValue": "(args: DatePickerCalendarComponent) => ({\n  props: args,\n  template: `<sm-date-picker [range]=\"${args.range}\" [date]=\"${args.date}\"></sm-date-picker>`,\n})"
+                }
+            ],
+            "stories/Input.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Input.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind(this)"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Input.stories.ts",
+                    "type": "Story<SMInputComponent>",
+                    "defaultValue": "(args: SMInputComponent) => ({\n  props: args,\n  template: `<sm-input field_id=\"username\" label=\"Username\"></sm-input>\n  <sm-input type=\"password\" label=\"Password\"></sm-input>`,\n})"
+                }
+            ],
+            "stories/Radio.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Radio.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind(this)"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Radio.stories.ts",
+                    "type": "Story<SMRadioGroupComponent>",
+                    "defaultValue": "(args: SMRadioGroupComponent\n) => ({\n  props: args,\n  template: `<sm-radio-group groupLabel=\"Please select the type of label you like\">\n  <sm-radio-btn field_id=\"short\" label=\"Short\">\n    <input type=\"radio\" field_id=\"short\" name=\"gender\" value=\"short\" />\n  </sm-radio-btn>\n  <sm-radio-btn field_id=\"long\"\n    label=\"I like super super super super super super super super super super super super long labels\">\n    <input type=\"radio\" field_id=\"long\" name=\"gender\" value=\"long\" />\n  </sm-radio-btn>\n  <sm-radio-btn field_id=\"disabled\" label=\"Disabled labels\" [disabled]=\"true\">\n    <input type=\"radio\" field_id=\"disabled\" name=\"gender\" disabled value=\"disabled\" />\n  </sm-radio-btn>\n</sm-radio-group>`,\n})"
+                }
+            ],
+            "stories/Modal.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Modal.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind(this)"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Modal.stories.ts",
+                    "type": "Story<SMModalComponent>",
+                    "defaultValue": "(args: SMModalComponent\n) => ({\n  props: args,\n  template: `<sm-button (click)=\"modal.open();\">Open Modal</sm-button>\n<sm-modal #modal>\n  <sm-modal-header>Sign Up Modal Example</sm-modal-header>\n  <sm-modal-body>\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-sm-6\">\n          <sm-input label=\"User name\" field_id=\"modalName\" aria-label=\"Please enter your user name to register\" ></sm-input>\n        </div>\n        <div class=\"col-sm-6\">\n          <sm-input label=\"User name\" field_id=\"modalPW\" type=\"password\"\n            aria-label=\"Please enter your password to register\" ></sm-input>\n        </div>\n      </div>\n\n      <sm-radio-group groupLabel=\"Please select the type of label you like\">\n        <sm-radio-btn field_id=\"short\" label=\"Short\">\n          <input type=\"radio\" field_id=\"short\" name=\"gender\" value=\"short\" />\n        </sm-radio-btn>\n        <sm-radio-btn field_id=\"long\"\n          label=\"I like super super super super super super super super super super super super long labels\">\n          <input type=\"radio\" field_id=\"long\" name=\"gender\" value=\"long\" />\n        </sm-radio-btn>\n        <sm-radio-btn field_id=\"disabled\" label=\"Disabled labels\" [disabled]=\"true\">\n          <input type=\"radio\" field_id=\"disabled\" name=\"gender\" disabled value=\"disabled\" />\n        </sm-radio-btn>\n      </sm-radio-group>\n\n      <div class=\"row\">\n        <div class=\"col-sm-12 pt-3 pb-3\">\n          <sm-checkbox label=\"Agree to terms and conditions\" field_id=\"modalCheckbox\">\n            <input sm-checkbox field_id=\"modalCheckbox\" type=\"checkbox\"\n              aria-label=\"Please check here to agree to terms and conditions\" />\n          </sm-checkbox>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-sm-5\">\n          <sm-button class=\"modalButton\" (click)=\"modal.close();\">Save</sm-button>\n        </div>\n        <div class=\"col-sm-5\">\n          <sm-button class=\"modalButton\" (click)=\"modal.close();\">Cancel</sm-button>\n        </div>\n      </div>\n    </div>\n  </sm-modal-body>\n  <sm-modal-footer style=\"min-height: 32px\">\n    <div class=\"container\" style=\"padding: 16px 0px\">\n      <div class=\"row\">\n        <div class=\"col-sm-8 text-center\">\n          <a class=\"card-link\" target=\"_blank\" href=\"https://github.com/smerante/\">GitHub</a>\n          <a class=\"card-link\" target=\"_blank\" href=\"https://bitbucket.org/smmer95/\">Bitbucket</a>\n          <a class=\"card-link\" target=\"_blank\" href=\"https://www.linkedin.com/in/sm-merante/\">Linked In</a>\n        </div>\n        <div class=\"col-sm-2 text-center\">\n          <span class=\"date\">05-11-2021</span>\n        </div>\n      </div>\n    </div>\n  </sm-modal-footer>\n</sm-modal>`,\n})"
+                }
+            ],
+            "stories/Tabs.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Tabs.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind(this)"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Tabs.stories.ts",
+                    "type": "Story<SMTabsComponent>",
+                    "defaultValue": "(args: SMTabsComponent\n) => ({\n  props: args,\n  template: `<sm-tabs>\n  <sm-tab>\n    Tab 1\n  </sm-tab>\n  <sm-tab>\n    Tab 2\n  </sm-tab>\n  <sm-tab>\n    Tab 3\n  </sm-tab>\n  <sm-tab>\n    Tab 4\n  </sm-tab>\n  <sm-tab-content>\n    <span class=\"text-center\">Tab content 1: Really really long long long long long long text</span>\n    <sm-input field_id=\"username\" label=\"Username\"></sm-input>\n    <sm-input type=\"password\" label=\"Password\"></sm-input>\n    <sm-button field_id=\"primary\">Tab 1</sm-button>\n    <sm-button type=\"secondary\">Tab 1</sm-button>\n    <sm-button type=\"tertiary\">Tab 1</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 2</span>\n    <sm-button field_id=\"primary\">Tab 2</sm-button>\n    <sm-button type=\"secondary\">Tab 2</sm-button>\n    <sm-button type=\"tertiary\">Tab 2</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 3</span>\n    <sm-button field_id=\"primary\">Tab 3</sm-button>\n    <sm-button type=\"secondary\">Tab 3</sm-button>\n    <sm-button type=\"tertiary\">Tab 3</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 4</span>\n    <sm-button field_id=\"primary\">Tab 4</sm-button>\n    <sm-button type=\"secondary\">Tab 4</sm-button>\n    <sm-button type=\"tertiary\">Tab 4</sm-button>\n  </sm-tab-content>\n</sm-tabs>`,\n})"
+                }
+            ],
+            "stories/Toggle.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Toggle.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind(this)"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Toggle.stories.ts",
+                    "type": "Story<SMTabsComponent>",
+                    "defaultValue": "(args: SMTabsComponent\n) => ({\n  props: args,\n  template: `<sm-tabs>\n  <sm-tab>\n    Tab 1\n  </sm-tab>\n  <sm-tab>\n    Tab 2\n  </sm-tab>\n  <sm-tab>\n    Tab 3\n  </sm-tab>\n  <sm-tab>\n    Tab 4\n  </sm-tab>\n  <sm-tab-content>\n    <span class=\"text-center\">Tab content 1: Really really long long long long long long text</span>\n    <sm-input field_id=\"username\" label=\"Username\"></sm-input>\n    <sm-input type=\"password\" label=\"Password\"></sm-input>\n    <sm-button field_id=\"primary\">Tab 1</sm-button>\n    <sm-button type=\"secondary\">Tab 1</sm-button>\n    <sm-button type=\"tertiary\">Tab 1</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 2</span>\n    <sm-button field_id=\"primary\">Tab 2</sm-button>\n    <sm-button type=\"secondary\">Tab 2</sm-button>\n    <sm-button type=\"tertiary\">Tab 2</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 3</span>\n    <sm-button field_id=\"primary\">Tab 3</sm-button>\n    <sm-button type=\"secondary\">Tab 3</sm-button>\n    <sm-button type=\"tertiary\">Tab 3</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 4</span>\n    <sm-button field_id=\"primary\">Tab 4</sm-button>\n    <sm-button type=\"secondary\">Tab 4</sm-button>\n    <sm-button type=\"tertiary\">Tab 4</sm-button>\n  </sm-tab-content>\n</sm-tabs>`,\n})"
+                }
+            ],
             "projects/components/src/lib/components/datepicker/date.filters.ts": [
                 {
                     "name": "disableWeekends",
@@ -6731,100 +6774,6 @@
                     "file": "projects/components/src/lib/components/datepicker/date.filters.ts",
                     "type": "DatePickerDisableDateFilter",
                     "defaultValue": "(\r\n  day: Moment\r\n): boolean => {\r\n  if (day) return day.day() === 6 || day.day() === 0;\r\n  else return false;\r\n}"
-                }
-            ],
-            "stories/Button.stories.ts": [
-                {
-                    "name": "Large",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Button.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Button.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Secondary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Button.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Small",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Button.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Button.stories.ts",
-                    "type": "Story<Button>",
-                    "defaultValue": "(args: Button) => ({\n  props: args,\n})"
-                }
-            ],
-            "stories/Header.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Header.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Header.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Header.stories.ts",
-                    "type": "Story<Header>",
-                    "defaultValue": "(args: Header) => ({\n  props: args,\n})"
-                }
-            ],
-            "stories/Page.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Page.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Page.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Page.stories.ts",
-                    "type": "Story<Page>",
-                    "defaultValue": "(args: Page) => ({\n  props: args,\n})"
                 }
             ],
             "projects/components/src/lib/components/datepicker/date-picker.component.ts": [
@@ -6875,22 +6824,22 @@
                     "defaultValue": "moment_"
                 }
             ],
-            "projects/components/src/lib/components/datepicker/date-picker-calendar/calendar-nav/calendar-nav.component.ts": [
-                {
-                    "name": "moment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/components/src/lib/components/datepicker/date-picker-calendar/calendar-nav/calendar-nav.component.ts",
-                    "type": "",
-                    "defaultValue": "moment_"
-                }
-            ],
             "projects/components/src/lib/components/datepicker/date-picker-calendar/calendar-day-view/calendar-day-view.component.ts": [
                 {
                     "name": "moment",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "projects/components/src/lib/components/datepicker/date-picker-calendar/calendar-day-view/calendar-day-view.component.ts",
+                    "type": "",
+                    "defaultValue": "moment_"
+                }
+            ],
+            "projects/components/src/lib/components/datepicker/date-picker-calendar/calendar-nav/calendar-nav.component.ts": [
+                {
+                    "name": "moment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/components/src/lib/components/datepicker/date-picker-calendar/calendar-nav/calendar-nav.component.ts",
                     "type": "",
                     "defaultValue": "moment_"
                 }
@@ -6928,7 +6877,7 @@
                     "subtype": "variable",
                     "file": "stories/CTA.stories.ts",
                     "type": "Story<SMButtonComponent>",
-                    "defaultValue": "(args: SMButtonComponent) => ({\n  props: args,\n  template: `<sm-button type=${args.type}> Click me</sm-button>`,\n})"
+                    "defaultValue": "(args: any) => ({\n  props: args,\n  template: `<sm-button type=\"${args.type}\">${args.content}</sm-button>`,\n})"
                 },
                 {
                     "name": "Tertiary",
@@ -7020,7 +6969,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 1,
+        "count": 0,
         "status": "low",
         "files": [
             {
@@ -7492,56 +7441,6 @@
                 "status": "low"
             },
             {
-                "filePath": "stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Large",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Secondary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Small",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Template",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
                 "filePath": "stories/CTA.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -7582,57 +7481,47 @@
                 "status": "low"
             },
             {
-                "filePath": "stories/Header.stories.ts",
+                "filePath": "stories/Cards.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "LoggedIn",
+                "name": "Bottom",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "stories/Header.stories.ts",
+                "filePath": "stories/Cards.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "LoggedOut",
+                "name": "Default",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "stories/Header.stories.ts",
+                "filePath": "stories/Cards.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Template",
+                "name": "Left",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "stories/Page.stories.ts",
+                "filePath": "stories/Cards.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "LoggedIn",
+                "name": "Right",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "stories/Page.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "stories/Page.stories.ts",
+                "filePath": "stories/Cards.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -7642,30 +7531,153 @@
                 "status": "low"
             },
             {
-                "filePath": "stories/button.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ButtonComponent",
-                "coveragePercent": 83,
-                "coverageCount": "5/6",
-                "status": "very-good"
-            },
-            {
-                "filePath": "stories/header.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "HeaderComponent",
+                "filePath": "stories/Checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "stories/page.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "PageComponent",
+                "filePath": "stories/Checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/DP.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/DP.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Range",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/DP.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Modal.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Modal.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Radio.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Radio.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Tabs.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Tabs.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Toggle.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Toggle.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             }
         ]
