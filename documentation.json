@@ -6251,7 +6251,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Radio.stories.ts",
+                "file": "stories/Modal.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind(this)"
             },
@@ -6259,7 +6259,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Modal.stories.ts",
+                "file": "stories/Radio.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind(this)"
             },
@@ -6276,6 +6276,14 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "stories/Toggle.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind(this)"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Tooltip.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind(this)"
             },
@@ -6434,17 +6442,17 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Radio.stories.ts",
-                "type": "Story<SMRadioGroupComponent>",
-                "defaultValue": "(args: SMRadioGroupComponent\n) => ({\n  props: args,\n  template: `<sm-radio-group groupLabel=\"Please select the type of label you like\">\n  <sm-radio-btn field_id=\"short\" label=\"Short\">\n    <input type=\"radio\" field_id=\"short\" name=\"gender\" value=\"short\" />\n  </sm-radio-btn>\n  <sm-radio-btn field_id=\"long\"\n    label=\"I like super super super super super super super super super super super super long labels\">\n    <input type=\"radio\" field_id=\"long\" name=\"gender\" value=\"long\" />\n  </sm-radio-btn>\n  <sm-radio-btn field_id=\"disabled\" label=\"Disabled labels\" [disabled]=\"true\">\n    <input type=\"radio\" field_id=\"disabled\" name=\"gender\" disabled value=\"disabled\" />\n  </sm-radio-btn>\n</sm-radio-group>`,\n})"
+                "file": "stories/Modal.stories.ts",
+                "type": "Story<SMModalComponent>",
+                "defaultValue": "(args: SMModalComponent\n) => ({\n  props: args,\n  template: `<sm-button (click)=\"modal.open();\">Open Modal</sm-button>\n<sm-modal #modal>\n  <sm-modal-header>Sign Up Modal Example</sm-modal-header>\n  <sm-modal-body>\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-sm-6\">\n          <sm-input label=\"User name\" field_id=\"modalName\" aria-label=\"Please enter your user name to register\" ></sm-input>\n        </div>\n        <div class=\"col-sm-6\">\n          <sm-input label=\"User name\" field_id=\"modalPW\" type=\"password\"\n            aria-label=\"Please enter your password to register\" ></sm-input>\n        </div>\n      </div>\n\n      <sm-radio-group groupLabel=\"Please select the type of label you like\">\n        <sm-radio-btn field_id=\"short\" label=\"Short\">\n          <input type=\"radio\" field_id=\"short\" name=\"gender\" value=\"short\" />\n        </sm-radio-btn>\n        <sm-radio-btn field_id=\"long\"\n          label=\"I like super super super super super super super super super super super super long labels\">\n          <input type=\"radio\" field_id=\"long\" name=\"gender\" value=\"long\" />\n        </sm-radio-btn>\n        <sm-radio-btn field_id=\"disabled\" label=\"Disabled labels\" [disabled]=\"true\">\n          <input type=\"radio\" field_id=\"disabled\" name=\"gender\" disabled value=\"disabled\" />\n        </sm-radio-btn>\n      </sm-radio-group>\n\n      <div class=\"row\">\n        <div class=\"col-sm-12 pt-3 pb-3\">\n          <sm-checkbox label=\"Agree to terms and conditions\" field_id=\"modalCheckbox\">\n            <input sm-checkbox field_id=\"modalCheckbox\" type=\"checkbox\"\n              aria-label=\"Please check here to agree to terms and conditions\" />\n          </sm-checkbox>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-sm-5\">\n          <sm-button class=\"modalButton\" (click)=\"modal.close();\">Save</sm-button>\n        </div>\n        <div class=\"col-sm-5\">\n          <sm-button class=\"modalButton\" (click)=\"modal.close();\">Cancel</sm-button>\n        </div>\n      </div>\n    </div>\n  </sm-modal-body>\n  <sm-modal-footer style=\"min-height: 32px\">\n    <div class=\"container\" style=\"padding: 16px 0px\">\n      <div class=\"row\">\n        <div class=\"col-sm-8 text-center\">\n          <a class=\"card-link\" target=\"_blank\" href=\"https://github.com/smerante/\">GitHub</a>\n          <a class=\"card-link\" target=\"_blank\" href=\"https://bitbucket.org/smmer95/\">Bitbucket</a>\n          <a class=\"card-link\" target=\"_blank\" href=\"https://www.linkedin.com/in/sm-merante/\">Linked In</a>\n        </div>\n        <div class=\"col-sm-2 text-center\">\n          <span class=\"date\">05-11-2021</span>\n        </div>\n      </div>\n    </div>\n  </sm-modal-footer>\n</sm-modal>`,\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Modal.stories.ts",
-                "type": "Story<SMModalComponent>",
-                "defaultValue": "(args: SMModalComponent\n) => ({\n  props: args,\n  template: `<sm-button (click)=\"modal.open();\">Open Modal</sm-button>\n<sm-modal #modal>\n  <sm-modal-header>Sign Up Modal Example</sm-modal-header>\n  <sm-modal-body>\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-sm-6\">\n          <sm-input label=\"User name\" field_id=\"modalName\" aria-label=\"Please enter your user name to register\" ></sm-input>\n        </div>\n        <div class=\"col-sm-6\">\n          <sm-input label=\"User name\" field_id=\"modalPW\" type=\"password\"\n            aria-label=\"Please enter your password to register\" ></sm-input>\n        </div>\n      </div>\n\n      <sm-radio-group groupLabel=\"Please select the type of label you like\">\n        <sm-radio-btn field_id=\"short\" label=\"Short\">\n          <input type=\"radio\" field_id=\"short\" name=\"gender\" value=\"short\" />\n        </sm-radio-btn>\n        <sm-radio-btn field_id=\"long\"\n          label=\"I like super super super super super super super super super super super super long labels\">\n          <input type=\"radio\" field_id=\"long\" name=\"gender\" value=\"long\" />\n        </sm-radio-btn>\n        <sm-radio-btn field_id=\"disabled\" label=\"Disabled labels\" [disabled]=\"true\">\n          <input type=\"radio\" field_id=\"disabled\" name=\"gender\" disabled value=\"disabled\" />\n        </sm-radio-btn>\n      </sm-radio-group>\n\n      <div class=\"row\">\n        <div class=\"col-sm-12 pt-3 pb-3\">\n          <sm-checkbox label=\"Agree to terms and conditions\" field_id=\"modalCheckbox\">\n            <input sm-checkbox field_id=\"modalCheckbox\" type=\"checkbox\"\n              aria-label=\"Please check here to agree to terms and conditions\" />\n          </sm-checkbox>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-sm-5\">\n          <sm-button class=\"modalButton\" (click)=\"modal.close();\">Save</sm-button>\n        </div>\n        <div class=\"col-sm-5\">\n          <sm-button class=\"modalButton\" (click)=\"modal.close();\">Cancel</sm-button>\n        </div>\n      </div>\n    </div>\n  </sm-modal-body>\n  <sm-modal-footer style=\"min-height: 32px\">\n    <div class=\"container\" style=\"padding: 16px 0px\">\n      <div class=\"row\">\n        <div class=\"col-sm-8 text-center\">\n          <a class=\"card-link\" target=\"_blank\" href=\"https://github.com/smerante/\">GitHub</a>\n          <a class=\"card-link\" target=\"_blank\" href=\"https://bitbucket.org/smmer95/\">Bitbucket</a>\n          <a class=\"card-link\" target=\"_blank\" href=\"https://www.linkedin.com/in/sm-merante/\">Linked In</a>\n        </div>\n        <div class=\"col-sm-2 text-center\">\n          <span class=\"date\">05-11-2021</span>\n        </div>\n      </div>\n    </div>\n  </sm-modal-footer>\n</sm-modal>`,\n})"
+                "file": "stories/Radio.stories.ts",
+                "type": "Story<SMRadioGroupComponent>",
+                "defaultValue": "(args: SMRadioGroupComponent\n) => ({\n  props: args,\n  template: `<sm-radio-group groupLabel=\"Please select the type of label you like\">\n  <sm-radio-btn field_id=\"short\" label=\"Short\">\n    <input type=\"radio\" field_id=\"short\" name=\"gender\" value=\"short\" />\n  </sm-radio-btn>\n  <sm-radio-btn field_id=\"long\"\n    label=\"I like super super super super super super super super super super super super long labels\">\n    <input type=\"radio\" field_id=\"long\" name=\"gender\" value=\"long\" />\n  </sm-radio-btn>\n  <sm-radio-btn field_id=\"disabled\" label=\"Disabled labels\" [disabled]=\"true\">\n    <input type=\"radio\" field_id=\"disabled\" name=\"gender\" disabled value=\"disabled\" />\n  </sm-radio-btn>\n</sm-radio-group>`,\n})"
             },
             {
                 "name": "Template",
@@ -6459,8 +6467,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "stories/Toggle.stories.ts",
-                "type": "Story<SMTabsComponent>",
-                "defaultValue": "(args: SMTabsComponent\n) => ({\n  props: args,\n  template: `<sm-tabs>\n  <sm-tab>\n    Tab 1\n  </sm-tab>\n  <sm-tab>\n    Tab 2\n  </sm-tab>\n  <sm-tab>\n    Tab 3\n  </sm-tab>\n  <sm-tab>\n    Tab 4\n  </sm-tab>\n  <sm-tab-content>\n    <span class=\"text-center\">Tab content 1: Really really long long long long long long text</span>\n    <sm-input field_id=\"username\" label=\"Username\"></sm-input>\n    <sm-input type=\"password\" label=\"Password\"></sm-input>\n    <sm-button field_id=\"primary\">Tab 1</sm-button>\n    <sm-button type=\"secondary\">Tab 1</sm-button>\n    <sm-button type=\"tertiary\">Tab 1</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 2</span>\n    <sm-button field_id=\"primary\">Tab 2</sm-button>\n    <sm-button type=\"secondary\">Tab 2</sm-button>\n    <sm-button type=\"tertiary\">Tab 2</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 3</span>\n    <sm-button field_id=\"primary\">Tab 3</sm-button>\n    <sm-button type=\"secondary\">Tab 3</sm-button>\n    <sm-button type=\"tertiary\">Tab 3</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 4</span>\n    <sm-button field_id=\"primary\">Tab 4</sm-button>\n    <sm-button type=\"secondary\">Tab 4</sm-button>\n    <sm-button type=\"tertiary\">Tab 4</sm-button>\n  </sm-tab-content>\n</sm-tabs>`,\n})"
+                "type": "Story<SMToggleComponentWrapper>",
+                "defaultValue": "(args: SMToggleComponentWrapper\n) => ({\n  props: args,\n  template: ` <sm-toggle label=\"Lock Credit Card\" field_id=\"toggle1\">\n  <input sm-toggle id=\"toggle1\" type=\"checkbox\" role=\"switch\" aria-label=\"Lock credit card toggle switch\" />\n</sm-toggle>`,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Tooltip.stories.ts",
+                "type": "Story<SMTooltipComponent>",
+                "defaultValue": "(args: SMTooltipComponent\n) => ({\n  props: args,\n  template: `\n<div style=\"margin-bottom: 128px\"> </div> \n<sm-tooltip tooltipLabel=\"Default tooltip\" tooltipAriaLabel=\"This is a default tooltip\">\n  Lorem ipsum dolor sit amet\n</sm-tooltip>\n<sm-tooltip tooltipAriaLabel=\"This is a tooltip with a long wrapping label\"\n  tooltipLabel=\"Super long long long long long long wrapping label\">\n  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et\n  dolore\n</sm-tooltip>`,\n})"
             },
             {
                 "name": "Tertiary",
@@ -6694,24 +6710,6 @@
                     "defaultValue": "(args: SMInputComponent) => ({\n  props: args,\n  template: `<sm-input field_id=\"username\" label=\"Username\"></sm-input>\n  <sm-input type=\"password\" label=\"Password\"></sm-input>`,\n})"
                 }
             ],
-            "stories/Radio.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Radio.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind(this)"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Radio.stories.ts",
-                    "type": "Story<SMRadioGroupComponent>",
-                    "defaultValue": "(args: SMRadioGroupComponent\n) => ({\n  props: args,\n  template: `<sm-radio-group groupLabel=\"Please select the type of label you like\">\n  <sm-radio-btn field_id=\"short\" label=\"Short\">\n    <input type=\"radio\" field_id=\"short\" name=\"gender\" value=\"short\" />\n  </sm-radio-btn>\n  <sm-radio-btn field_id=\"long\"\n    label=\"I like super super super super super super super super super super super super long labels\">\n    <input type=\"radio\" field_id=\"long\" name=\"gender\" value=\"long\" />\n  </sm-radio-btn>\n  <sm-radio-btn field_id=\"disabled\" label=\"Disabled labels\" [disabled]=\"true\">\n    <input type=\"radio\" field_id=\"disabled\" name=\"gender\" disabled value=\"disabled\" />\n  </sm-radio-btn>\n</sm-radio-group>`,\n})"
-                }
-            ],
             "stories/Modal.stories.ts": [
                 {
                     "name": "Default",
@@ -6728,6 +6726,24 @@
                     "file": "stories/Modal.stories.ts",
                     "type": "Story<SMModalComponent>",
                     "defaultValue": "(args: SMModalComponent\n) => ({\n  props: args,\n  template: `<sm-button (click)=\"modal.open();\">Open Modal</sm-button>\n<sm-modal #modal>\n  <sm-modal-header>Sign Up Modal Example</sm-modal-header>\n  <sm-modal-body>\n    <div class=\"container-fluid\">\n      <div class=\"row\">\n        <div class=\"col-sm-6\">\n          <sm-input label=\"User name\" field_id=\"modalName\" aria-label=\"Please enter your user name to register\" ></sm-input>\n        </div>\n        <div class=\"col-sm-6\">\n          <sm-input label=\"User name\" field_id=\"modalPW\" type=\"password\"\n            aria-label=\"Please enter your password to register\" ></sm-input>\n        </div>\n      </div>\n\n      <sm-radio-group groupLabel=\"Please select the type of label you like\">\n        <sm-radio-btn field_id=\"short\" label=\"Short\">\n          <input type=\"radio\" field_id=\"short\" name=\"gender\" value=\"short\" />\n        </sm-radio-btn>\n        <sm-radio-btn field_id=\"long\"\n          label=\"I like super super super super super super super super super super super super long labels\">\n          <input type=\"radio\" field_id=\"long\" name=\"gender\" value=\"long\" />\n        </sm-radio-btn>\n        <sm-radio-btn field_id=\"disabled\" label=\"Disabled labels\" [disabled]=\"true\">\n          <input type=\"radio\" field_id=\"disabled\" name=\"gender\" disabled value=\"disabled\" />\n        </sm-radio-btn>\n      </sm-radio-group>\n\n      <div class=\"row\">\n        <div class=\"col-sm-12 pt-3 pb-3\">\n          <sm-checkbox label=\"Agree to terms and conditions\" field_id=\"modalCheckbox\">\n            <input sm-checkbox field_id=\"modalCheckbox\" type=\"checkbox\"\n              aria-label=\"Please check here to agree to terms and conditions\" />\n          </sm-checkbox>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"col-sm-5\">\n          <sm-button class=\"modalButton\" (click)=\"modal.close();\">Save</sm-button>\n        </div>\n        <div class=\"col-sm-5\">\n          <sm-button class=\"modalButton\" (click)=\"modal.close();\">Cancel</sm-button>\n        </div>\n      </div>\n    </div>\n  </sm-modal-body>\n  <sm-modal-footer style=\"min-height: 32px\">\n    <div class=\"container\" style=\"padding: 16px 0px\">\n      <div class=\"row\">\n        <div class=\"col-sm-8 text-center\">\n          <a class=\"card-link\" target=\"_blank\" href=\"https://github.com/smerante/\">GitHub</a>\n          <a class=\"card-link\" target=\"_blank\" href=\"https://bitbucket.org/smmer95/\">Bitbucket</a>\n          <a class=\"card-link\" target=\"_blank\" href=\"https://www.linkedin.com/in/sm-merante/\">Linked In</a>\n        </div>\n        <div class=\"col-sm-2 text-center\">\n          <span class=\"date\">05-11-2021</span>\n        </div>\n      </div>\n    </div>\n  </sm-modal-footer>\n</sm-modal>`,\n})"
+                }
+            ],
+            "stories/Radio.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Radio.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind(this)"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Radio.stories.ts",
+                    "type": "Story<SMRadioGroupComponent>",
+                    "defaultValue": "(args: SMRadioGroupComponent\n) => ({\n  props: args,\n  template: `<sm-radio-group groupLabel=\"Please select the type of label you like\">\n  <sm-radio-btn field_id=\"short\" label=\"Short\">\n    <input type=\"radio\" field_id=\"short\" name=\"gender\" value=\"short\" />\n  </sm-radio-btn>\n  <sm-radio-btn field_id=\"long\"\n    label=\"I like super super super super super super super super super super super super long labels\">\n    <input type=\"radio\" field_id=\"long\" name=\"gender\" value=\"long\" />\n  </sm-radio-btn>\n  <sm-radio-btn field_id=\"disabled\" label=\"Disabled labels\" [disabled]=\"true\">\n    <input type=\"radio\" field_id=\"disabled\" name=\"gender\" disabled value=\"disabled\" />\n  </sm-radio-btn>\n</sm-radio-group>`,\n})"
                 }
             ],
             "stories/Tabs.stories.ts": [
@@ -6762,8 +6778,26 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "stories/Toggle.stories.ts",
-                    "type": "Story<SMTabsComponent>",
-                    "defaultValue": "(args: SMTabsComponent\n) => ({\n  props: args,\n  template: `<sm-tabs>\n  <sm-tab>\n    Tab 1\n  </sm-tab>\n  <sm-tab>\n    Tab 2\n  </sm-tab>\n  <sm-tab>\n    Tab 3\n  </sm-tab>\n  <sm-tab>\n    Tab 4\n  </sm-tab>\n  <sm-tab-content>\n    <span class=\"text-center\">Tab content 1: Really really long long long long long long text</span>\n    <sm-input field_id=\"username\" label=\"Username\"></sm-input>\n    <sm-input type=\"password\" label=\"Password\"></sm-input>\n    <sm-button field_id=\"primary\">Tab 1</sm-button>\n    <sm-button type=\"secondary\">Tab 1</sm-button>\n    <sm-button type=\"tertiary\">Tab 1</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 2</span>\n    <sm-button field_id=\"primary\">Tab 2</sm-button>\n    <sm-button type=\"secondary\">Tab 2</sm-button>\n    <sm-button type=\"tertiary\">Tab 2</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 3</span>\n    <sm-button field_id=\"primary\">Tab 3</sm-button>\n    <sm-button type=\"secondary\">Tab 3</sm-button>\n    <sm-button type=\"tertiary\">Tab 3</sm-button>\n  </sm-tab-content>\n  <sm-tab-content>\n    <span class=\"text-center\">tab content 4</span>\n    <sm-button field_id=\"primary\">Tab 4</sm-button>\n    <sm-button type=\"secondary\">Tab 4</sm-button>\n    <sm-button type=\"tertiary\">Tab 4</sm-button>\n  </sm-tab-content>\n</sm-tabs>`,\n})"
+                    "type": "Story<SMToggleComponentWrapper>",
+                    "defaultValue": "(args: SMToggleComponentWrapper\n) => ({\n  props: args,\n  template: ` <sm-toggle label=\"Lock Credit Card\" field_id=\"toggle1\">\n  <input sm-toggle id=\"toggle1\" type=\"checkbox\" role=\"switch\" aria-label=\"Lock credit card toggle switch\" />\n</sm-toggle>`,\n})"
+                }
+            ],
+            "stories/Tooltip.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Tooltip.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind(this)"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Tooltip.stories.ts",
+                    "type": "Story<SMTooltipComponent>",
+                    "defaultValue": "(args: SMTooltipComponent\n) => ({\n  props: args,\n  template: `\n<div style=\"margin-bottom: 128px\"> </div> \n<sm-tooltip tooltipLabel=\"Default tooltip\" tooltipAriaLabel=\"This is a default tooltip\">\n  Lorem ipsum dolor sit amet\n</sm-tooltip>\n<sm-tooltip tooltipAriaLabel=\"This is a tooltip with a long wrapping label\"\n  tooltipLabel=\"Super long long long long long long wrapping label\">\n  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et\n  dolore\n</sm-tooltip>`,\n})"
                 }
             ],
             "projects/components/src/lib/components/datepicker/date.filters.ts": [
@@ -7672,6 +7706,26 @@
             },
             {
                 "filePath": "stories/Toggle.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Tooltip.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Tooltip.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
